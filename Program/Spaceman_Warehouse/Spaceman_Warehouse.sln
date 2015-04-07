@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaceman_Warehouse", "Spaceman_Warehouse\Spaceman_Warehouse.csproj", "{12F2E5B5-8BCC-4E1B-A7E7-2B62D96F601A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spaceman_warehouse", "spaceman_warehouse\spaceman_warehouse.csproj", "{07C8CA89-07A5-4969-BF30-C9F38D98C31D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{12F2E5B5-8BCC-4E1B-A7E7-2B62D96F601A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12F2E5B5-8BCC-4E1B-A7E7-2B62D96F601A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12F2E5B5-8BCC-4E1B-A7E7-2B62D96F601A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12F2E5B5-8BCC-4E1B-A7E7-2B62D96F601A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07C8CA89-07A5-4969-BF30-C9F38D98C31D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C8CA89-07A5-4969-BF30-C9F38D98C31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C8CA89-07A5-4969-BF30-C9F38D98C31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C8CA89-07A5-4969-BF30-C9F38D98C31D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

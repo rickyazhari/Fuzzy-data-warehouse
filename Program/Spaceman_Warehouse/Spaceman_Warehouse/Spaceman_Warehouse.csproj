@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{12F2E5B5-8BCC-4E1B-A7E7-2B62D96F601A}</ProjectGuid>
+    <ProjectGuid>{07C8CA89-07A5-4969-BF30-C9F38D98C31D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Spaceman_Warehouse</RootNamespace>
-    <AssemblyName>Spaceman_Warehouse</AssemblyName>
+    <RootNamespace>spaceman_warehouse</RootNamespace>
+    <AssemblyName>spaceman_warehouse</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -53,10 +54,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ui_uc\header.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -65,22 +62,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ui_uc\header.xaml.cs">
-      <DependentUpon>header.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ui_uc\Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ui_uc\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -107,7 +94,39 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\wood_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\close_mouse_leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\close_mouse-enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\minimize_-mouse_leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\minimize_-mouse_enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maximized_mouse_leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maximized_mouse_enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maximized2_mouse_leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maximized2_mouse_enter.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Spaceman_Warehouse.Properties
+namespace spaceman_warehouse.Properties
 {
 
 

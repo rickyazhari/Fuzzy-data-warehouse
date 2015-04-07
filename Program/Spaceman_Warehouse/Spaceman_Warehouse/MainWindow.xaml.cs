@@ -13,21 +13,85 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Spaceman_Warehouse
+namespace spaceman_warehouse
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private UserControl menu, content, header;
         public MainWindow()
         {
             InitializeComponent();
-            menu = new Menu();
-            wrap_menu.Children.Add(menu);
-            this.header = new header(this);
-            wrap_header.Children.Add(this.header);
+            
+        }
+
+        private void minimizebtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            minimizebtn.Source = new BitmapImage(new Uri("Resources/minimize_-mouse_enter.png",UriKind.Relative));
+        }
+
+        private void minimizebtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            minimizebtn.Source = new BitmapImage(new Uri("Resources/minimize_-mouse_leave.png", UriKind.Relative));
+        }
+
+        private void minimizebtn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = System.Windows.WindowState.Minimized;
+        }
+
+        private void closebtn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void closebtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            closebtn.Source = new BitmapImage(new Uri("Resources/close_mouse-enter.png", UriKind.Relative));
+        }
+
+        private void closebtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            closebtn.Source = new BitmapImage(new Uri("Resources/close_mouse_leave.png", UriKind.Relative));
+        }
+
+        private void maxtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (this.WindowState == System.Windows.WindowState.Normal)
+            {
+                maxtn.Source = new BitmapImage(new Uri("Resources/maximized_mouse_enter.png", UriKind.Relative));
+            }
+            else
+            {
+                maxtn.Source = new BitmapImage(new Uri("Resources/maximized2_mouse_enter.png", UriKind.Relative));
+            }
+        }
+
+        private void maxtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (this.WindowState == System.Windows.WindowState.Normal)
+            {
+                maxtn.Source = new BitmapImage(new Uri("Resources/maximized_mouse_leave.png", UriKind.Relative));
+            }
+            else
+            {
+                maxtn.Source = new BitmapImage(new Uri("Resources/maximized2_mouse_leave.png", UriKind.Relative));
+            }
+        }
+
+        private void maxtn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (this.WindowState == System.Windows.WindowState.Normal)
+            {
+                this.WindowState = System.Windows.WindowState.Maximized;
+                maxtn.Source = new BitmapImage(new Uri("Resources/maximized2_mouse_leave.png", UriKind.Relative));
+            }
+            else
+            {
+                this.WindowState = System.Windows.WindowState.Normal;
+                maxtn.Source = new BitmapImage(new Uri("Resources/maximized_mouse_leave.png", UriKind.Relative));
+            }
         }
     }
 }

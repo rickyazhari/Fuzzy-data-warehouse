@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Spaceman_Warehouse
+namespace spaceman_warehouse
 {
     /// <summary>
     /// Interaction logic for App.xaml
