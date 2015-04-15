@@ -93,5 +93,6 @@ namespace spaceman_warehouse
                 maxtn.Source = new BitmapImage(new Uri("Resources/maximized_mouse_leave.png", UriKind.Relative));
             }
         }
+        
     }
 }
