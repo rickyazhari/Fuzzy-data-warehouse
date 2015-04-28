@@ -1,0 +1,17 @@
+﻿<Application x:Class="Spaceman_warehouse.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="../MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/FirstFloor.ModernUI;component/Assets/ModernUI.xaml"/>
+                <ResourceDictionary Source="/FirstFloor.ModernUI;component/Assets/ModernUI.Light.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+            <Color x:Key="WindowBackgroundColor">#ffffff</Color>
+            <SolidColorBrush x:Key="ButtonBackground" Color="#000000" />
+            <SolidColorBrush x:Key="ButtonBackgroundHover" Color="#FF008BFF" />
+        </ResourceDictionary>     
+    </Application.Resources>
+</Application>
