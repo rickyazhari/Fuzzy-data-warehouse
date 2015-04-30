@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "etl_spaceman_warehouse", "etl_spaceman_warehouse\etl_spaceman_warehouse.dtproj", "{281FED8B-CA00-425A-BD99-602F763D3BF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app_Spaceman_Warehouse", "app_Spaceman_Warehouse\app_Spaceman_Warehouse.csproj", "{F396370C-4DFF-4F4E-A0E0-F51E3D6A9D92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,12 @@ Global
 		{281FED8B-CA00-425A-BD99-602F763D3BF4}.Development|Any CPU.Build.0 = Development
 		{281FED8B-CA00-425A-BD99-602F763D3BF4}.Release|Any CPU.ActiveCfg = Development
 		{281FED8B-CA00-425A-BD99-602F763D3BF4}.Release|Any CPU.Build.0 = Development
+		{F396370C-4DFF-4F4E-A0E0-F51E3D6A9D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F396370C-4DFF-4F4E-A0E0-F51E3D6A9D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F396370C-4DFF-4F4E-A0E0-F51E3D6A9D92}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{F396370C-4DFF-4F4E-A0E0-F51E3D6A9D92}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{F396370C-4DFF-4F4E-A0E0-F51E3D6A9D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F396370C-4DFF-4F4E-A0E0-F51E3D6A9D92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

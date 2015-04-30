@@ -1,0 +1,15 @@
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\app_Spaceman_Warehouse.exe.config
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\app_Spaceman_Warehouse.csprojResolveAssemblyReference.cache
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\home.baml
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\MainWindow.baml
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\home.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\MainWindow.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\App.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\app_Spaceman_Warehouse_MarkupCompile.cache
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\app_Spaceman_Warehouse.g.resources
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\app_Spaceman_Warehouse.Properties.Resources.resources
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\app_Spaceman_Warehouse.csproj.GenerateResource.Cache
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\app_Spaceman_Warehouse.exe
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\app_Spaceman_Warehouse.pdb
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\app_Spaceman_Warehouse.exe
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\app_Spaceman_Warehouse.pdb
