@@ -14,3 +14,5 @@ D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\Spaceman_warehouse\ob
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\Spaceman_warehouse\obj\Debug\Spaceman_warehouse.pdb
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\Spaceman_warehouse\obj\Debug\Assets\App.baml
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\Spaceman_warehouse\obj\Debug\Assets\App.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\Spaceman_warehouse\obj\Debug\home.baml
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\Spaceman_warehouse\obj\Debug\home.g.cs
