@@ -139,5 +139,15 @@ namespace app_Spaceman_Warehouse.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Package {
+            get {
+                object obj = ResourceManager.GetObject("Package", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

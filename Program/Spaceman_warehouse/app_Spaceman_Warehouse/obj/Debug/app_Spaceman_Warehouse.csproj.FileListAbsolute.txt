@@ -13,3 +13,11 @@ D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehous
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\app_Spaceman_Warehouse.pdb
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\app_Spaceman_Warehouse.exe
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\app_Spaceman_Warehouse.pdb
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Microsoft.SQLServer.ManagedDTS.dll
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Resources\Package.dtsx
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\etl_load.baml
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\etl_load.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Microsoft.SqlServer.Diagnostics.STrace.dll
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Microsoft.SqlServer.DTSRuntimeWrap.dll
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\mainmenu.baml
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\mainmenu.g.cs

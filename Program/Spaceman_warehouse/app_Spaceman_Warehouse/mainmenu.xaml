@@ -1,0 +1,368 @@
+﻿<UserControl x:Class="app_Spaceman_Warehouse.mainmenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="1276" Height="464" Background="White">
+   
+    <DockPanel LastChildFill="True">
+        <DockPanel DockPanel.Dock="Top" Width="1276" Height="60">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" Foreground="#FF008BFF" FontSize="24" FontWeight="Bold">Menu Utama</TextBlock>
+        </DockPanel>
+        <DockPanel LastChildFill="True">
+            <DockPanel x:Name="menu_etl" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="105,0,0,0" Cursor="Hand" MouseEnter="menu_etl_MouseEnter" MouseLeave="menu_etl_MouseLeave">
+                <Rectangle Name="etl_top" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="etl_left" DockPanel.Dock="Left" VerticalAlignment="Top" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="etl_bottom" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="etl_right" DockPanel.Dock="Right" VerticalAlignment="Bottom" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
+                <Border Name="etl_inner" Background="White" BorderBrush="#FF008BFF" BorderThickness="1" Height="340" Width="240" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock x:Name="etl_content" Background="White" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold">ETL</TextBlock>
+                </Border>
+            </DockPanel>
+            <DockPanel x:Name="menu_dimensi" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="20,0,0,0" Cursor="Hand" MouseEnter="menu_dimensi_MouseEnter" MouseLeave="menu_dimensi_MouseLeave">
+                <Rectangle Name="dimensi_top" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="dimensi_left" DockPanel.Dock="Left" VerticalAlignment="Top" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="dimensi_bottom" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="dimensi_right" DockPanel.Dock="Right" VerticalAlignment="Bottom" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
+                <Border Name="dimensi_inner" Background="White" BorderBrush="#FF008BFF" BorderThickness="1" Height="340" Width="240" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock x:Name="dimensi_content" Background="White" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold">DIMENSI</TextBlock>
+                </Border>
+            </DockPanel>
+            <DockPanel x:Name="menu_fakta" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="20,0,0,0" Cursor="Hand" MouseEnter="menu_fakta_MouseEnter" MouseLeave="menu_fakta_MouseLeave">
+                <Rectangle Name="fakta_top" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="fakta_left" DockPanel.Dock="Left" VerticalAlignment="Top" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="fakta_bottom" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="fakta_right" DockPanel.Dock="Right" VerticalAlignment="Bottom" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
+                <Border Name="fakta_inner" Background="White" BorderBrush="#FF008BFF" BorderThickness="1" Height="340" Width="240" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock x:Name="fakta_content" Background="White" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold">FAKTA</TextBlock>
+                </Border>
+            </DockPanel>
+            <DockPanel x:Name="menu_olap" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="20,0,0,0" Cursor="Hand" MouseEnter="menu_olap_MouseEnter" MouseLeave="menu_olap_MouseLeave">
+                <Rectangle Name="olap_top" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="olap_left" DockPanel.Dock="Left" VerticalAlignment="Top" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="olap_bottom" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
+                <Rectangle Name="olap_right" DockPanel.Dock="Right" VerticalAlignment="Bottom" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
+                <Border Name="olap_inner" Background="White" BorderBrush="#FF008BFF" BorderThickness="1" Height="340" Width="240" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock x:Name="olap_content" Background="White" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold">OLAP</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+    </DockPanel>
+    
+    
+    <!--resource sotory board-->
+    <UserControl.Resources>
+        <!--ETl resource-->
+            <!--ETL ENter-->
+        <Storyboard x:Key="etl_enter" RepeatBehavior="1x">
+            <DoubleAnimation Storyboard.TargetName="etl_top" Storyboard.TargetProperty="Width" To="250" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="etl_bottom" Storyboard.TargetProperty="Width" To="250" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="etl_left" Storyboard.TargetProperty="Height" To="350" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="etl_right" Storyboard.TargetProperty="Height" To="350" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="etl_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="etl_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="etl_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--ETL leave-->
+        <Storyboard x:Key="etl_leave" RepeatBehavior="1x">
+            <DoubleAnimation Storyboard.TargetName="etl_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="etl_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="etl_left" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="etl_right" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="etl_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="etl_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="etl_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        
+        <!--Dimensi Resource-->
+            <!--dimensi Enter-->
+        <Storyboard x:Key="dimensi_enter" RepeatBehavior="1x">
+            <DoubleAnimation Storyboard.TargetName="dimensi_top" Storyboard.TargetProperty="Width" To="250" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dimensi_bottom" Storyboard.TargetProperty="Width" To="250" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dimensi_left" Storyboard.TargetProperty="Height" To="350" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dimensi_right" Storyboard.TargetProperty="Height" To="350" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dimensi_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dimensi_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dimensi_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi leave-->
+        <Storyboard x:Key="dimensi_leave" RepeatBehavior="1x">
+            <DoubleAnimation Storyboard.TargetName="dimensi_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dimensi_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dimensi_left" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dimensi_right" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dimensi_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dimensi_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dimensi_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        
+        <!--resource fakta-->
+            <!--fakta enter-->
+        <Storyboard x:Key="fakta_enter" RepeatBehavior="1x">
+            <DoubleAnimation Storyboard.TargetName="fakta_top" Storyboard.TargetProperty="Width" To="250" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="fakta_bottom" Storyboard.TargetProperty="Width" To="250" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="fakta_left" Storyboard.TargetProperty="Height" To="350" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="fakta_right" Storyboard.TargetProperty="Height" To="350" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="fakta_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="fakta_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="fakta_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--fakta leave-->
+        <Storyboard x:Key="fakta_leave" RepeatBehavior="1x">
+            <DoubleAnimation Storyboard.TargetName="fakta_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="fakta_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="fakta_left" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="fakta_right" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="fakta_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="fakta_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="fakta_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        
+        <!--olap resource-->
+            <!--olap enter-->
+        <Storyboard x:Key="olap_enter" RepeatBehavior="1x">
+            <DoubleAnimation Storyboard.TargetName="olap_top" Storyboard.TargetProperty="Width" To="250" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="olap_bottom" Storyboard.TargetProperty="Width" To="250" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="olap_left" Storyboard.TargetProperty="Height" To="350" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="olap_right" Storyboard.TargetProperty="Height" To="350" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="olap_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="olap_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="olap_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--olap leave-->
+        <Storyboard x:Key="olap_leave" RepeatBehavior="1x">
+            <DoubleAnimation Storyboard.TargetName="olap_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="olap_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="olap_left" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="olap_right" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="olap_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="olap_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="olap_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+</UserControl>
