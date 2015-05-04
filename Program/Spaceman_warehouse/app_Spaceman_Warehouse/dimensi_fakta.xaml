@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="app_Spaceman_Warehouse.dimensi_fakta"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="1276" Height="Auto" Background="White" Loaded="UserControl_Loaded">
+    <DockPanel LastChildFill="True">
+        
+        
+         <DockPanel LastChildFill="True" x:Name="sub_menu" Width="300" Background="White">
+            <Rectangle x:FieldModifier="public" x:Name="split_border" Fill="#FF008BFF" DockPanel.Dock="Right" Width="1" Height="464" VerticalAlignment="Top"/>
+            <StackPanel x:Name="menu"></StackPanel>
+        </DockPanel>
+        <DockPanel x:Name="sub_content_header">
+            <StackPanel DockPanel.Dock="Top" Height="50">
+                <TextBlock  Height="40" x:Name="content_header" Foreground="#FF008bFF" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="24" Margin="19,0,0,0" Padding="0,10,0,0">TEST</TextBlock>
+            </StackPanel>
+            <StackPanel x:Name="sub_content_content">
+                
+            </StackPanel>
+        </DockPanel>
+    </DockPanel>
+    
+    
+   
+</UserControl>

@@ -95,7 +95,7 @@
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <DoubleAnimation Storyboard.TargetName="content_control" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:0:0.8" Duration="0:0:0:0.8">
+            <DoubleAnimation Storyboard.TargetName="content_control" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:0:0.7" Duration="0:0:0:0.5">
                 <DoubleAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>

@@ -11,8 +11,8 @@
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" Foreground="#FF008BFF" FontSize="24" FontWeight="Bold">Menu Utama</TextBlock>
         </DockPanel>
         <DockPanel LastChildFill="True">
-            <DockPanel x:Name="menu_etl" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="105,0,0,0" Cursor="Hand" MouseEnter="menu_etl_MouseEnter" MouseLeave="menu_etl_MouseLeave">
-                <Rectangle Name="etl_top" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
+            <DockPanel x:Name="menu_etl" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="105,0,0,0" Cursor="Hand" MouseEnter="menu_etl_MouseEnter" MouseLeave="menu_etl_MouseLeave" MouseLeftButtonUp="menu_etl_MouseLeftButtonUp">
+                <Rectangle Name="etl_top" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="0" Height="1" Fill="#FF008BFF"/>
                 <Rectangle Name="etl_left" DockPanel.Dock="Left" VerticalAlignment="Top" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
                 <Rectangle Name="etl_bottom" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
                 <Rectangle Name="etl_right" DockPanel.Dock="Right" VerticalAlignment="Bottom" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
@@ -20,7 +20,7 @@
                     <TextBlock x:Name="etl_content" Background="White" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold">ETL</TextBlock>
                 </Border>
             </DockPanel>
-            <DockPanel x:Name="menu_dimensi" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="20,0,0,0" Cursor="Hand" MouseEnter="menu_dimensi_MouseEnter" MouseLeave="menu_dimensi_MouseLeave">
+            <DockPanel x:Name="menu_dimensi" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="20,0,0,0" Cursor="Hand" MouseEnter="menu_dimensi_MouseEnter" MouseLeave="menu_dimensi_MouseLeave" MouseLeftButtonUp="menu_dimensi_MouseLeftButtonUp">
                 <Rectangle Name="dimensi_top" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
                 <Rectangle Name="dimensi_left" DockPanel.Dock="Left" VerticalAlignment="Top" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
                 <Rectangle Name="dimensi_bottom" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>

@@ -1,0 +1,1351 @@
+﻿<UserControl x:Class="app_Spaceman_Warehouse.dimensi_menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="300" Height="Auto" Background="White">
+    <DockPanel LastChildFill="True">
+        <DockPanel x:Name="dim_waktu" Height="40" DockPanel.Dock="Top" Margin="5,10,0,3" LastChildFill="True" MouseEnter="dim_waktu_MouseEnter" MouseLeave="dim_waktu_MouseLeave" Cursor="Hand">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_waktu_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_waktu_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_waktu_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_waktu_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_waktu_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_waktu_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_waktu_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_waktu_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_waktu_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_waktu_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Waktu</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+        <!--dim konsumen tombol-->
+        <DockPanel x:Name="dim_konsumen" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" Cursor="Hand" MouseEnter="dim_konsumen_MouseEnter" MouseLeave="dim_konsumen_MouseLeave">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_konsumen_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_konsumen_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_konsumen_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_konsumen_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_konsumen_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_konsumen_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_konsumen_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_konsumen_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_konsumen_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_konsumen_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Konsumen</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+        <!--dim staff tombol-->
+        <DockPanel x:Name="dim_staff" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" MouseEnter="dim_staff_MouseEnter" MouseLeave="dim_staff_MouseLeave" Cursor="Hand">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_staff_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_staff_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_staff_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_staff_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_staff_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_staff_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_staff_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_staff_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_staff_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_staff_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Staff Produksi</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+        <!--dim design tombol-->
+        <DockPanel x:Name="dim_design" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_design_MouseEnter" MouseLeave="dim_design_MouseLeave">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_design_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_design_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_design_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_design_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_design_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_design_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_design_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_design_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_design_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_design_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Design</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+        <!--dim job tombol-->
+        <DockPanel x:Name="dim_job" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_job_MouseEnter" MouseLeave="dim_job_MouseLeave">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_job_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_job_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_job_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_job_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_job_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_job_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_job_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_job_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_job_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_job_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Job</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+        <!--dim kredit-->
+        <DockPanel x:Name="dim_kredit" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_kredit_MouseEnter" MouseLeave="dim_kredit_MouseLeave">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_kredit_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_kredit_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_kredit_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_kredit_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_kredit_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_kredit_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_kredit_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_kredit_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_kredit_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_kredit_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Kredit</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+        <!--dim pengiriman tombol-->
+        <DockPanel x:Name="dim_pengiriman" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_pengiriman_MouseEnter" MouseLeave="dim_pengiriman_MouseLeave">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_pengirim_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_pengirim_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_pengirim_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_pengirim_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_pengirim_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_pengirim_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_pengirim_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_pengirim_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_pengirim_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_pengirim_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Pengirim</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+        <!--dim produk tombol-->
+        <DockPanel x:Name="dim_produk" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_produk_MouseEnter" MouseLeave="dim_produk_MouseLeave">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_produk_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_produk_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_produk_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_produk_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_produk_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_produk_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_produk_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_produk_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_produk_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_produk_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Produk</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+        <!--dim size tombol-->
+        <DockPanel x:Name="dim_size" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_size_MouseEnter" MouseLeave="dim_size_MouseLeave">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_size_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_size_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_size_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_size_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_size_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_size_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_size_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_size_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_size_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_size_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Size</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+        <!--menu utama tombol-->
+        <DockPanel x:Name="dim_menu" Margin="5,0,0,0" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_menu_MouseEnter" MouseLeave="dim_menu_MouseLeave" MouseLeftButtonUp="dim_menu_MouseLeftButtonUp">
+            <DockPanel DockPanel.Dock="Right" Width="15">
+                <Rectangle x:Name="dim_menu_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+            </DockPanel>
+            <DockPanel x:Name="dim_menu_wrap" LastChildFill="True">
+                <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
+                    <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
+                        <Rectangle x:Name="dim_menu_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    </DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
+                        <Rectangle x:Name="dim_menu_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    </StackPanel>
+                </DockPanel>
+                <Rectangle x:Name="dim_menu_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+
+                <Rectangle x:Name="dim_menu_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
+                    <Rectangle x:Name="dim_menu_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_menu_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                </DockPanel>
+                <Border x:Name="dim_menu_inner" Background="#FFFFFFFF">
+                    <TextBlock x:Name="dim_menu_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Menu Utama</TextBlock>
+                </Border>
+            </DockPanel>
+        </DockPanel>
+    </DockPanel>
+    <!--User Control Resource-->
+    <UserControl.Resources>
+      <!--Dimensi WAktu resource-->
+      <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_waktu_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_waktu_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_waktu_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_waktu_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+      <!--Dimensi waktu Leave-->
+        <Storyboard x:Key="dim_waktu_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_waktu_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_waktu_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_waktu_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_waktu_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--Dimensi konsumen resource-->
+        <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_konsumen_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_konsumen_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_konsumen_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_konsumen_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi konsumen Leave-->
+        <Storyboard x:Key="dim_konsumen_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_konsumen_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_konsumen_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_konsumen_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_konsumen_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--Dimensi staff resource-->
+        <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_staff_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_staff_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_staff_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_staff_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_staff_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi staff Leave-->
+        <Storyboard x:Key="dim_staff_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_staff_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_staff_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_staff_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_staff_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_staff_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--Dimensi design resource-->
+        <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_design_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_design_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_design_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_design_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_design_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi wdesign Leave-->
+        <Storyboard x:Key="dim_design_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_design_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_design_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_design_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_design_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_design_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--Dimensi job resource-->
+        <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_job_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_job_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_job_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_job_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_job_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi job Leave-->
+        <Storyboard x:Key="dim_job_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_job_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_job_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_job_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_job_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_job_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--Dimensi kredit resource-->
+        <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_kredit_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_kredit_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_kredit_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_kredit_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi kredit Leave-->
+        <Storyboard x:Key="dim_kredit_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_kredit_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_kredit_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_kredit_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_kredit_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--Dimensi pengirim resource-->
+        <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_pengirim_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_pengirim_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_pengirim_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_pengirim_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi pengirim Leave-->
+        <Storyboard x:Key="dim_pengirim_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_pengirim_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_pengirim_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_pengirim_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_pengirim_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--Dimensi produk resource-->
+        <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_produk_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_produk_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_produk_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_produk_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_produk_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi produk Leave-->
+        <Storyboard x:Key="dim_produk_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_produk_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_produk_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_produk_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_produk_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_produk_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--Dimensi WAktu resource-->
+        <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_size_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_size_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_size_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_size_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_size_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi size Leave-->
+        <Storyboard x:Key="dim_size_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_size_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_size_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_size_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_size_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_size_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--menu resource-->
+        <!--Dimensi Enter-->
+        <Storyboard x:Key="dim_menu_enter">
+            <DoubleAnimation Storyboard.TargetName="dim_menu_span" Storyboard.TargetProperty="Width" To="15" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_split_right1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_split_right2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_top" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_bottom" Storyboard.TargetProperty="Width" To="280" BeginTime="0:0:0:0.2" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_split_left1" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_split_left2" Storyboard.TargetProperty="Height" To="20" BeginTime="0:0:0:0.4" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_menu_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--Dimensi menu Leave-->
+        <Storyboard x:Key="dim_menu_leave">
+            <DoubleAnimation Storyboard.TargetName="dim_menu_span" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.6" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_split_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_split_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.5" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_bottom" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_split_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="dim_menu_border_split_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_menu_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+</UserControl>

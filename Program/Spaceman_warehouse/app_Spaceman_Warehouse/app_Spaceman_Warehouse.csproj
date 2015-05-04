@@ -64,6 +64,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="dimensi_fakta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dimensi_menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="etl_load.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -83,6 +91,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dimensi_fakta.xaml.cs">
+      <DependentUpon>dimensi_fakta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="dimensi_menu.xaml.cs">
+      <DependentUpon>dimensi_menu.xaml</DependentUpon>
     </Compile>
     <Compile Include="etl_load.xaml.cs">
       <DependentUpon>etl_load.xaml</DependentUpon>

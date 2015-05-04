@@ -21,3 +21,7 @@ D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehous
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Microsoft.SqlServer.DTSRuntimeWrap.dll
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\mainmenu.baml
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\mainmenu.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\dimensi_fakta.baml
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\dimensi_fakta.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\dimensi_menu.baml
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\dimensi_menu.g.cs

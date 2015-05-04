@@ -84,5 +84,15 @@ namespace app_Spaceman_Warehouse
             sb = (Storyboard)TryFindResource("olap_leave");
             sb.Begin();
         }
+
+        private void menu_etl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.uc_handle("Proses ETL");
+        }
+
+        private void menu_dimensi_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.uc_handle("dimensi");
+        }
     }
 }

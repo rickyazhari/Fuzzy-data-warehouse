@@ -22,10 +22,12 @@ namespace app_Spaceman_Warehouse
     /// </summary>
     public partial class MainWindow : Window
     {
-        UserControl isi_content;
+        UserControl isi_content= null;
+        dimensi_fakta mc;
         public MainWindow()
         {
             InitializeComponent();
+            mc = new dimensi_fakta(this, "");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -34,7 +36,7 @@ namespace app_Spaceman_Warehouse
             status_content.Text = "Home";
             m = (Storyboard)TryFindResource("window_open");
             m.Begin();
-            isi_content = new home(this);
+            isi_content = new mainmenu(this);
             content_control.Children.Add(isi_content);
             x = (Storyboard)TryFindResource("content_fading_in");
             x.Begin();
@@ -88,15 +90,24 @@ namespace app_Spaceman_Warehouse
             if (this.WindowState == System.Windows.WindowState.Maximized)
             {
                this.WindowState = System.Windows.WindowState.Normal;
+               if (mc.split_border.Height > this.Height - (header.Height + footer.Height))
+               {
+                   mc.split_border.Height = this.Height - (header.Height + footer.Height);
+               }
                Storyboard m,x = new Storyboard();
                m = (Storyboard)TryFindResource("window_open");
                m.Begin();
                x = (Storyboard)TryFindResource("content_fading_in");
                x.Begin();
+               
             }
             else
             {
                 this.WindowState = System.Windows.WindowState.Maximized;
+                if (mc.split_border.Height < this.Height - (header.Height + footer.Height))
+                {
+                    mc.split_border.Height = this.Height - (header.Height + footer.Height);
+                }
                 state_window_maximize();
                 Storyboard m = new Storyboard();
                 m = (Storyboard)TryFindResource("content_fading_in");
@@ -209,6 +220,15 @@ namespace app_Spaceman_Warehouse
                     content_control.Children.Clear();
                     content_control.Children.Add(isi_content);
                     status_content.Text = "Main Menu";
+                    x = (Storyboard)TryFindResource("content_fading_in");
+                    x.Begin();
+                    break;
+
+                case "dimensi":
+                    mc = new dimensi_fakta(this,"dimensi");
+                    content_control.Children.Clear();
+                    content_control.Children.Add(mc);
+                    status_content.Text = "Dimensi";
                     x = (Storyboard)TryFindResource("content_fading_in");
                     x.Begin();
                     break;
