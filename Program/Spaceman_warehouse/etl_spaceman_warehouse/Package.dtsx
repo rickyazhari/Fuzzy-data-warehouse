@@ -11,8 +11,8 @@
   DTS:LocaleID="1057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="115"
-  DTS:VersionGUID="{DC0146CE-D0A6-40CF-B012-5EAD8F717CB0}">
+  DTS:VersionBuild="131"
+  DTS:VersionGUID="{84AE012D-28D1-43D9-9DE7-A96358A7203D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -329,10 +329,9 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\building dimension\Derived Column.Outputs[Derived Column Output].Columns[full_date]"
-                      dataType="wstr"
+                      dataType="date"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="50"
                       lineageId="Package\building dimension\Derived Column.Outputs[Derived Column Output].Columns[full_date]"
                       name="full_date"
                       truncationRowDisposition="FailComponent">
@@ -341,13 +340,36 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_WSTR,50)[REPLACE](#{Package\building dimension\Sort 13.Outputs[Sort Output].Columns[waktu]},"-","")</property>
+                          name="Expression">(DT_DATE)#{Package\building dimension\Sort 13.Outputs[Sort Output].Columns[waktu]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_WSTR,50)REPLACE(waktu,"-","")</property>
+                          name="FriendlyExpression">(DT_DATE)waktu</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\building dimension\Derived Column.Outputs[Derived Column Output].Columns[waktu_key]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\building dimension\Derived Column.Outputs[Derived Column Output].Columns[waktu_key]"
+                      name="waktu_key"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,8)[REPLACE](#{Package\building dimension\Sort 13.Outputs[Sort Output].Columns[waktu]},"-","")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,8)REPLACE(waktu,"-","")</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1401,11 +1423,17 @@
                       lineageId="Package\building dimension\Derived Column.Outputs[Derived Column Output].Columns[tahun]" />
                     <inputColumn
                       refId="Package\building dimension\dim waktu.Inputs[OLE DB Destination Input].Columns[full_date]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedDataType="date"
                       cachedName="full_date"
                       externalMetadataColumnId="Package\building dimension\dim waktu.Inputs[OLE DB Destination Input].ExternalColumns[full_date]"
                       lineageId="Package\building dimension\Derived Column.Outputs[Derived Column Output].Columns[full_date]" />
+                    <inputColumn
+                      refId="Package\building dimension\dim waktu.Inputs[OLE DB Destination Input].Columns[waktu_key]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="waktu_key"
+                      externalMetadataColumnId="Package\building dimension\dim waktu.Inputs[OLE DB Destination Input].ExternalColumns[string_tanggal]"
+                      lineageId="Package\building dimension\Derived Column.Outputs[Derived Column Output].Columns[waktu_key]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1437,9 +1465,13 @@
                       name="tahun" />
                     <externalMetadataColumn
                       refId="Package\building dimension\dim waktu.Inputs[OLE DB Destination Input].ExternalColumns[full_date]"
+                      dataType="dbDate"
+                      name="full_date" />
+                    <externalMetadataColumn
+                      refId="Package\building dimension\dim waktu.Inputs[OLE DB Destination Input].ExternalColumns[string_tanggal]"
                       dataType="wstr"
                       length="50"
-                      name="full_date" />
+                      name="string_tanggal" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5125,19 +5157,19 @@
               startId="Package\building dimension\Merge 1.Outputs[Merge Output 1]" />
             <path
               refId="Package\building dimension.Paths[OLE DB Source Output13]"
-              endId="Package\building dimension\Sort 9.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\waktu pengiriman source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output12]"
-              endId="Package\building dimension\Sort 8.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\waktu pembayaran source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output11]"
               endId="Package\building dimension\Sort 6.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\building dimension\kredit source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output12]"
+              endId="Package\building dimension\Sort 10.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\waktu  belanja source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output11]"
+              endId="Package\building dimension\Sort 9.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\waktu pengiriman source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\building dimension.Paths[OLE DB Source Output9]"
               endId="Package\building dimension\Sort 7.Inputs[Sort Input]"
@@ -5155,9 +5187,9 @@
               startId="Package\building dimension\design source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\building dimension.Paths[OLE DB Source Output10]"
-              endId="Package\building dimension\Sort 10.Inputs[Sort Input]"
+              endId="Package\building dimension\Sort 8.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\building dimension\waktu  belanja source.Outputs[OLE DB Source Output]" />
+              startId="Package\building dimension\waktu pembayaran source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\building dimension.Paths[OLE DB Source Output5]"
               endId="Package\building dimension\dim job.Inputs[OLE DB Destination Input]"
@@ -5175,44 +5207,44 @@
               startId="Package\building dimension\konsumen source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\building dimension.Paths[OLE DB Source Output2]"
-              endId="Package\building dimension\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\kota source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output1]"
-              endId="Package\building dimension\Sort 4.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\bagian source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output]"
               endId="Package\building dimension\Sort 3.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\building dimension\staff source.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\building dimension.Paths[OLE DB Source Output6]"
+              refId="Package\building dimension.Paths[OLE DB Source Output1]"
               endId="Package\building dimension\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\building dimension\source jasa kirim.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\building dimension.Paths[OLE DB Source Output]"
+              endId="Package\building dimension\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\kota source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output6]"
+              endId="Package\building dimension\Sort 4.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\bagian source.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\building dimension.Paths[Sort Output11]"
+              endId="Package\building dimension\merge staff dan bagian.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output10]"
+              endId="Package\building dimension\Merge.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 7.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output9]"
               endId="Package\building dimension\Merge.Inputs[Merge Input 2]"
               name="Sort Output"
               startId="Package\building dimension\Sort 8.Outputs[Sort Output]" />
             <path
-              refId="Package\building dimension.Paths[Sort Output10]"
+              refId="Package\building dimension.Paths[Sort Output8]"
               endId="Package\building dimension\dim staff produksi.Inputs[OLE DB Destination Input]"
               name="Sort Output"
               startId="Package\building dimension\Sort 5.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output9]"
-              endId="Package\building dimension\Merge 1.Inputs[Merge Input 1]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 9.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output8]"
-              endId="Package\building dimension\merge staff dan bagian.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 4.Outputs[Sort Output]" />
             <path
               refId="Package\building dimension.Paths[Sort Output7]"
               endId="Package\building dimension\Merge 1.Inputs[Merge Input 2]"
@@ -5220,14 +5252,14 @@
               startId="Package\building dimension\Sort 10.Outputs[Sort Output]" />
             <path
               refId="Package\building dimension.Paths[Sort Output6]"
-              endId="Package\building dimension\Merge 2.Inputs[Merge Input 2]"
+              endId="Package\building dimension\Merge 1.Inputs[Merge Input 1]"
               name="Sort Output"
-              startId="Package\building dimension\Sort 12.Outputs[Sort Output]" />
+              startId="Package\building dimension\Sort 9.Outputs[Sort Output]" />
             <path
               refId="Package\building dimension.Paths[Sort Output3]"
-              endId="Package\building dimension\merge staff dan bagian.Inputs[Merge Join Left Input]"
+              endId="Package\building dimension\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
-              startId="Package\building dimension\Sort 3.Outputs[Sort Output]" />
+              startId="Package\building dimension\Sort.Outputs[Sort Output]" />
             <path
               refId="Package\building dimension.Paths[Sort Output4]"
               endId="Package\building dimension\dim konsumen.Inputs[OLE DB Destination Input]"
@@ -5235,29 +5267,29 @@
               startId="Package\building dimension\Sort 2.Outputs[Sort Output]" />
             <path
               refId="Package\building dimension.Paths[Sort Output2]"
-              endId="Package\building dimension\Derived Column.Inputs[Derived Column Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 13.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output1]"
-              endId="Package\building dimension\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output]"
               endId="Package\building dimension\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\building dimension\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\building dimension.Paths[Sort Output12]"
+              refId="Package\building dimension.Paths[Sort Output1]"
               endId="Package\building dimension\Merge 2.Inputs[Merge Input 1]"
               name="Sort Output"
               startId="Package\building dimension\Sort 11.Outputs[Sort Output]" />
             <path
-              refId="Package\building dimension.Paths[Sort Output5]"
-              endId="Package\building dimension\Merge.Inputs[Merge Input 1]"
+              refId="Package\building dimension.Paths[Sort Output]"
+              endId="Package\building dimension\Merge 2.Inputs[Merge Input 2]"
               name="Sort Output"
-              startId="Package\building dimension\Sort 7.Outputs[Sort Output]" />
+              startId="Package\building dimension\Sort 12.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output12]"
+              endId="Package\building dimension\merge staff dan bagian.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 4.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output5]"
+              endId="Package\building dimension\Derived Column.Inputs[Derived Column Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 13.Outputs[Sort Output]" />
             <path
               refId="Package\building dimension.Paths[Sort Output13]"
               endId="Package\building dimension\dim kredit.Inputs[OLE DB Destination Input]"
@@ -6424,7 +6456,7 @@ where [refTable].[no_produk] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_waktu]) [refTable]
-where [refTable].[full_date] = ?</property>
+where [refTable].[string_tanggal] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -6455,7 +6487,7 @@ where [refTable].[full_date] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="string_tanggal" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -6493,7 +6525,7 @@ where [refTable].[full_date] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">full_date</property>
+                          name="JoinToReferenceColumn">string_tanggal</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -11617,19 +11649,19 @@ where [refTable].[jenis_kredit] = ?</property>
               startId="Package\populasi fact belanja\Merge Join 2.Outputs[Merge Join Output]" />
             <path
               refId="Package\populasi fact belanja.Paths[Merge Output 11]"
-              endId="Package\populasi fact belanja\fact belanja.Inputs[OLE DB Destination Input]"
-              name="Merge Output 1"
-              startId="Package\populasi fact belanja\Merge 2.Outputs[Merge Output 1]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[Merge Output 12]"
               endId="Package\populasi fact belanja\Lookup kredit.Inputs[Lookup Input]"
               name="Merge Output 1"
               startId="Package\populasi fact belanja\Merge 1.Outputs[Merge Output 1]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Merge Output 1]"
+              refId="Package\populasi fact belanja.Paths[Merge Output 12]"
               endId="Package\populasi fact belanja\lookup dim produk.Inputs[Lookup Input]"
               name="Merge Output 1"
               startId="Package\populasi fact belanja\Merge.Outputs[Merge Output 1]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[Merge Output 1]"
+              endId="Package\populasi fact belanja\fact belanja.Inputs[OLE DB Destination Input]"
+              name="Merge Output 1"
+              startId="Package\populasi fact belanja\Merge 2.Outputs[Merge Output 1]" />
             <path
               refId="Package\populasi fact belanja.Paths[OLE DB Source Output]"
               endId="Package\populasi fact belanja\Sort 4.Inputs[Sort Input]"
@@ -11652,54 +11684,54 @@ where [refTable].[jenis_kredit] = ?</property>
               startId="Package\populasi fact belanja\detail belanja source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\populasi fact belanja.Paths[Sort Output9]"
-              endId="Package\populasi fact belanja\Merge 1.Inputs[Merge Input 2]"
-              name="Sort Output"
-              startId="Package\populasi fact belanja\Sort 8.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[Sort Output]"
-              endId="Package\populasi fact belanja\Merge 1.Inputs[Merge Input 1]"
-              name="Sort Output"
-              startId="Package\populasi fact belanja\Sort 7.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[Sort Output1]"
-              endId="Package\populasi fact belanja\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\populasi fact belanja\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[Sort Output2]"
-              endId="Package\populasi fact belanja\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\populasi fact belanja\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[Sort Output3]"
-              endId="Package\populasi fact belanja\Merge 2.Inputs[Merge Input 2]"
-              name="Sort Output"
-              startId="Package\populasi fact belanja\Sort 10.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[Sort Output4]"
-              endId="Package\populasi fact belanja\Merge.Inputs[Merge Input 1]"
-              name="Sort Output"
-              startId="Package\populasi fact belanja\Sort 5.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[Sort Output5]"
               endId="Package\populasi fact belanja\Merge.Inputs[Merge Input 2]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 6.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Sort Output6]"
+              refId="Package\populasi fact belanja.Paths[Sort Output]"
               endId="Package\populasi fact belanja\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Sort Output7]"
+              refId="Package\populasi fact belanja.Paths[Sort Output1]"
               endId="Package\populasi fact belanja\Merge Join 2.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 4.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Sort Output8]"
+              refId="Package\populasi fact belanja.Paths[Sort Output2]"
               endId="Package\populasi fact belanja\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 2.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[Sort Output3]"
+              endId="Package\populasi fact belanja\Merge 1.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\populasi fact belanja\Sort 8.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[Sort Output4]"
+              endId="Package\populasi fact belanja\Merge 1.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\populasi fact belanja\Sort 7.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[Sort Output5]"
+              endId="Package\populasi fact belanja\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\populasi fact belanja\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[Sort Output6]"
+              endId="Package\populasi fact belanja\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\populasi fact belanja\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[Sort Output7]"
+              endId="Package\populasi fact belanja\Merge 2.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\populasi fact belanja\Sort 10.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[Sort Output8]"
+              endId="Package\populasi fact belanja\Merge.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\populasi fact belanja\Sort 5.Outputs[Sort Output]" />
             <path
               refId="Package\populasi fact belanja.Paths[Sort Output10]"
               endId="Package\populasi fact belanja\Merge 2.Inputs[Merge Input 1]"
@@ -12129,7 +12161,7 @@ where [refTable].[no_konsumen] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_waktu]) [refTable]
-where [refTable].[full_date] = ?</property>
+where [refTable].[string_tanggal] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -12160,7 +12192,7 @@ where [refTable].[full_date] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="string_tanggal" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -12198,7 +12230,7 @@ where [refTable].[full_date] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">full_date</property>
+                          name="JoinToReferenceColumn">string_tanggal</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -15796,7 +15828,7 @@ where [refTable].[no_konsumen] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_waktu]) [refTable]
-where [refTable].[full_date] = ?</property>
+where [refTable].[string_tanggal] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -15827,7 +15859,7 @@ where [refTable].[full_date] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="string_tanggal" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -15865,7 +15897,7 @@ where [refTable].[full_date] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">full_date</property>
+                          name="JoinToReferenceColumn">string_tanggal</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -18129,7 +18161,8 @@ where [refTable].[full_date] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\populasi fact pemesanan\Sort 2.Inputs[Sort Input].Columns[waktu_lookup]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="8"
                       cachedName="waktu_lookup"
                       lineageId="Package\populasi fact pemesanan\lookup dim waktu.Outputs[Lookup Match Output].Columns[waktu_lookup]">
                       <properties>
@@ -21883,7 +21916,7 @@ where [refTable].[no_produk] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_waktu]) [refTable]
-where [refTable].[full_date] = ?</property>
+where [refTable].[string_tanggal] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -21914,7 +21947,7 @@ where [refTable].[full_date] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="string_tanggal" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -21952,7 +21985,7 @@ where [refTable].[full_date] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">full_date</property>
+                          name="JoinToReferenceColumn">string_tanggal</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -27203,19 +27236,19 @@ where [refTable].[full_date] = ?</property>
               startId="Package\populasi fact pengiriman produk\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[Merge Output 11]"
-              endId="Package\populasi fact pengiriman produk\fact pengiriman produk.Inputs[OLE DB Destination Input]"
-              name="Merge Output 1"
-              startId="Package\populasi fact pengiriman produk\Merge 2.Outputs[Merge Output 1]" />
-            <path
-              refId="Package\populasi fact pengiriman produk.Paths[Merge Output 12]"
               endId="Package\populasi fact pengiriman produk\Lookup.Inputs[Lookup Input]"
               name="Merge Output 1"
               startId="Package\populasi fact pengiriman produk\Merge 1.Outputs[Merge Output 1]" />
             <path
-              refId="Package\populasi fact pengiriman produk.Paths[Merge Output 1]"
+              refId="Package\populasi fact pengiriman produk.Paths[Merge Output 12]"
               endId="Package\populasi fact pengiriman produk\lookup dim produk.Inputs[Lookup Input]"
               name="Merge Output 1"
               startId="Package\populasi fact pengiriman produk\Merge.Outputs[Merge Output 1]" />
+            <path
+              refId="Package\populasi fact pengiriman produk.Paths[Merge Output 1]"
+              endId="Package\populasi fact pengiriman produk\fact pengiriman produk.Inputs[OLE DB Destination Input]"
+              name="Merge Output 1"
+              startId="Package\populasi fact pengiriman produk\Merge 2.Outputs[Merge Output 1]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output]"
               endId="Package\populasi fact pengiriman produk\Sort 6.Inputs[Sort Input]"
@@ -27238,24 +27271,24 @@ where [refTable].[full_date] = ?</property>
               startId="Package\populasi fact pengiriman produk\pengiriman source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[Sort Output10]"
+              endId="Package\populasi fact pengiriman produk\Merge Join 1.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\populasi fact pengiriman produk\Sort 6.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output9]"
+              endId="Package\populasi fact pengiriman produk\Merge.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\populasi fact pengiriman produk\Sort 5.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output8]"
               endId="Package\populasi fact pengiriman produk\Merge.Inputs[Merge Input 2]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 7.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output9]"
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output7]"
               endId="Package\populasi fact pengiriman produk\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 4.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output8]"
-              endId="Package\populasi fact pengiriman produk\Merge 2.Inputs[Merge Input 2]"
-              name="Sort Output"
-              startId="Package\populasi fact pengiriman produk\Sort 11.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output7]"
-              endId="Package\populasi fact pengiriman produk\join tabel.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\populasi fact pengiriman produk\Sort.Outputs[Sort Output]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[Sort Output6]"
               endId="Package\populasi fact pengiriman produk\Merge 1.Inputs[Merge Input 1]"
@@ -27263,9 +27296,9 @@ where [refTable].[full_date] = ?</property>
               startId="Package\populasi fact pengiriman produk\Sort 8.Outputs[Sort Output]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[Sort Output3]"
-              endId="Package\populasi fact pengiriman produk\Merge.Inputs[Merge Input 1]"
+              endId="Package\populasi fact pengiriman produk\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
-              startId="Package\populasi fact pengiriman produk\Sort 5.Outputs[Sort Output]" />
+              startId="Package\populasi fact pengiriman produk\Sort 3.Outputs[Sort Output]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[Sort Output4]"
               endId="Package\populasi fact pengiriman produk\Merge Join.Inputs[Merge Join Left Input]"
@@ -27273,24 +27306,24 @@ where [refTable].[full_date] = ?</property>
               startId="Package\populasi fact pengiriman produk\Sort 2.Outputs[Sort Output]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[Sort Output2]"
-              endId="Package\populasi fact pengiriman produk\Merge Join 1.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\populasi fact pengiriman produk\Sort 6.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output1]"
-              endId="Package\populasi fact pengiriman produk\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\populasi fact pengiriman produk\Sort 3.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output]"
               endId="Package\populasi fact pengiriman produk\Merge 1.Inputs[Merge Input 2]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 9.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output5]"
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output1]"
               endId="Package\populasi fact pengiriman produk\join tabel.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output]"
+              endId="Package\populasi fact pengiriman produk\join tabel.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\populasi fact pengiriman produk\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output5]"
+              endId="Package\populasi fact pengiriman produk\Merge 2.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\populasi fact pengiriman produk\Sort 11.Outputs[Sort Output]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[Sort Output11]"
               endId="Package\populasi fact pengiriman produk\Merge 2.Inputs[Merge Input 1]"
@@ -28339,7 +28372,7 @@ where [refTable].[no_produk] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_waktu]) [refTable]
-where [refTable].[full_date] = ?</property>
+where [refTable].[string_tanggal] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -28370,7 +28403,7 @@ where [refTable].[full_date] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="string_tanggal" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -28408,7 +28441,7 @@ where [refTable].[full_date] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">full_date</property>
+                          name="JoinToReferenceColumn">string_tanggal</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -32497,19 +32530,19 @@ where [refTable].[full_date] = ?</property>
               startId="Package\populasi fact populer design\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\populasi fact populer design.Paths[Merge Output 12]"
+              endId="Package\populasi fact populer design\operating fuzzy function.Inputs[Derived Column Input]"
+              name="Merge Output 1"
+              startId="Package\populasi fact populer design\Merge 2.Outputs[Merge Output 1]" />
+            <path
+              refId="Package\populasi fact populer design.Paths[Merge Output 1]"
               endId="Package\populasi fact populer design\lookup dim produk.Inputs[Lookup Input]"
               name="Merge Output 1"
               startId="Package\populasi fact populer design\Merge.Outputs[Merge Output 1]" />
             <path
-              refId="Package\populasi fact populer design.Paths[Merge Output 1]"
+              refId="Package\populasi fact populer design.Paths[Merge Output 11]"
               endId="Package\populasi fact populer design\Lookup dim design.Inputs[Lookup Input]"
               name="Merge Output 1"
               startId="Package\populasi fact populer design\Merge 1.Outputs[Merge Output 1]" />
-            <path
-              refId="Package\populasi fact populer design.Paths[Merge Output 11]"
-              endId="Package\populasi fact populer design\operating fuzzy function.Inputs[Derived Column Input]"
-              name="Merge Output 1"
-              startId="Package\populasi fact populer design\Merge 2.Outputs[Merge Output 1]" />
             <path
               refId="Package\populasi fact populer design.Paths[OLE DB Source Output]"
               endId="Package\populasi fact populer design\Sort.Inputs[Sort Input]"
@@ -32527,44 +32560,44 @@ where [refTable].[full_date] = ?</property>
               startId="Package\populasi fact populer design\service order source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\populasi fact populer design.Paths[Sort Output7]"
-              endId="Package\populasi fact populer design\Merge 2.Inputs[Merge Input 1]"
-              name="Sort Output"
-              startId="Package\populasi fact populer design\Sort 7.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact populer design.Paths[Sort Output]"
-              endId="Package\populasi fact populer design\Merge 2.Inputs[Merge Input 2]"
-              name="Sort Output"
-              startId="Package\populasi fact populer design\Sort 8.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact populer design.Paths[Sort Output1]"
-              endId="Package\populasi fact populer design\Merge.Inputs[Merge Input 1]"
-              name="Sort Output"
-              startId="Package\populasi fact populer design\Sort 3.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact populer design.Paths[Sort Output2]"
-              endId="Package\populasi fact populer design\Merge Join 1.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\populasi fact populer design\Sort 2.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact populer design.Paths[Sort Output3]"
               endId="Package\populasi fact populer design\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populasi fact populer design\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact populer design.Paths[Sort Output4]"
+              refId="Package\populasi fact populer design.Paths[Sort Output]"
               endId="Package\populasi fact populer design\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populasi fact populer design\Sort.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact populer design.Paths[Sort Output5]"
+              refId="Package\populasi fact populer design.Paths[Sort Output1]"
               endId="Package\populasi fact populer design\Merge 1.Inputs[Merge Input 1]"
               name="Sort Output"
               startId="Package\populasi fact populer design\Sort 5.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact populer design.Paths[Sort Output6]"
+              refId="Package\populasi fact populer design.Paths[Sort Output2]"
               endId="Package\populasi fact populer design\Merge 1.Inputs[Merge Input 2]"
               name="Sort Output"
               startId="Package\populasi fact populer design\Sort 6.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact populer design.Paths[Sort Output3]"
+              endId="Package\populasi fact populer design\Merge 2.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\populasi fact populer design\Sort 7.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact populer design.Paths[Sort Output4]"
+              endId="Package\populasi fact populer design\Merge 2.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\populasi fact populer design\Sort 8.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact populer design.Paths[Sort Output5]"
+              endId="Package\populasi fact populer design\Merge.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\populasi fact populer design\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact populer design.Paths[Sort Output6]"
+              endId="Package\populasi fact populer design\Merge Join 1.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\populasi fact populer design\Sort 2.Outputs[Sort Output]" />
             <path
               refId="Package\populasi fact populer design.Paths[Sort Output8]"
               endId="Package\populasi fact populer design\Merge.Inputs[Merge Input 2]"
@@ -33002,7 +33035,7 @@ where [refTable].[full_date] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_waktu]) [refTable]
-where [refTable].[full_date] = ?</property>
+where [refTable].[string_tanggal] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -33033,7 +33066,7 @@ where [refTable].[full_date] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="string_tanggal" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -33071,7 +33104,7 @@ where [refTable].[full_date] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">full_date</property>
+                          name="JoinToReferenceColumn">string_tanggal</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -37091,7 +37124,7 @@ where [refTable].[no_produk] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_waktu]) [refTable]
-where [refTable].[full_date] = ?</property>
+where [refTable].[string_tanggal] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -37122,7 +37155,7 @@ where [refTable].[full_date] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="string_tanggal" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -37160,7 +37193,7 @@ where [refTable].[full_date] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">full_date</property>
+                          name="JoinToReferenceColumn">string_tanggal</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -43828,7 +43861,7 @@ where [refTable].[full_date] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_waktu]) [refTable]
-where [refTable].[full_date] = ?</property>
+where [refTable].[string_tanggal] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -43859,7 +43892,7 @@ where [refTable].[full_date] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="no_waktu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="string_tanggal" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hari" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tanggal" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nama_bulan" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="bulan" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tahun" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="full_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -43897,7 +43930,7 @@ where [refTable].[full_date] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">full_date</property>
+                          name="JoinToReferenceColumn">string_tanggal</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -48536,7 +48569,7 @@ where [refTable].[no_produk] = ?</property>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{43869180-3614-4FA2-B9D8-A4AC478230C9}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="delete from fact_pemesanan;&#xA;&#xA;delete from fact_pengiriman_produk;&#xA;&#xA;delete from fact_belanja;&#xA;&#xA;delete from fact_biaya_produksi;&#xA;&#xA;delete from fact_pop_produk;&#xA;&#xA;delete from fact_pop_design;&#xA;&#xA;delete from fact_pembayaran_konsumen;&#xA;&#xA;delete from fact_size_produk;&#xA;&#xA;delete from dim_waktu;&#xA;DBCC checkident(dim_waktu,reseed,0);&#xA;insert into dim_waktu( full_date, hari, tanggal, nama_bulan, bulan, tahun) values ('00000000','Null',0,'Null',0,0);&#xA;&#xA;delete from dim_produk;&#xA;insert into dim_produk(no_produk,nama_produk) values(0,'Null');&#xA;&#xA;delete from dim_konsumen;&#xA;insert into dim_konsumen(no_konsumen, nama_konsumen, nama_kota ) values(0,'Null','Null');&#xA;&#xA;delete from dim_pengiriman;&#xA;insert into dim_pengiriman(no_pengiriman,jenis_pengiriman) values(0,'Null');&#xA;&#xA;delete from dim_staff_produksi;&#xA;insert into dim_staff_produksi(no_staff,nama_staff,nama_bagian) values (0,'Null','Null');&#xA;&#xA;delete from dim_job;&#xA;insert into dim_job(no_job,keterangan_job) values (0,'Null');&#xA;&#xA;delete from dim_kredit;&#xA;DBCC checkident(dim_kredit,reseed,0);&#xA;insert into dim_kredit ( jenis_kredit) values ('Null');&#xA;&#xA;delete from dim_design;&#xA;insert into dim_design(no_design, nama_design) values (0,'Null');&#xA;&#xA;delete from dim_size;&#xA;insert into dim_size (no_size, nama_size)values(0,'Null');&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="delete from fact_pemesanan;&#xA;&#xA;delete from fact_pengiriman_produk;&#xA;&#xA;delete from fact_belanja;&#xA;&#xA;delete from fact_biaya_produksi;&#xA;&#xA;delete from fact_pop_produk;&#xA;&#xA;delete from fact_pop_design;&#xA;&#xA;delete from fact_pembayaran_konsumen;&#xA;&#xA;delete from fact_size_produk;&#xA;&#xA;delete from dim_waktu;&#xA;DBCC checkident(dim_waktu,reseed,0);&#xA;insert into dim_waktu( string_tanggal, hari, tanggal, nama_bulan, bulan, tahun) values ('00000000','Null',0,'Null',0,0);&#xA;&#xA;delete from dim_produk;&#xA;insert into dim_produk(no_produk,nama_produk) values(0,'Null');&#xA;&#xA;delete from dim_konsumen;&#xA;insert into dim_konsumen(no_konsumen, nama_konsumen, nama_kota ) values(0,'Null','Null');&#xA;&#xA;delete from dim_pengiriman;&#xA;insert into dim_pengiriman(no_pengiriman,jenis_pengiriman) values(0,'Null');&#xA;&#xA;delete from dim_staff_produksi;&#xA;insert into dim_staff_produksi(no_staff,nama_staff,nama_bagian) values (0,'Null','Null');&#xA;&#xA;delete from dim_job;&#xA;insert into dim_job(no_job,keterangan_job) values (0,'Null');&#xA;&#xA;delete from dim_kredit;&#xA;DBCC checkident(dim_kredit,reseed,0);&#xA;insert into dim_kredit ( jenis_kredit) values ('Null');&#xA;&#xA;delete from dim_design;&#xA;insert into dim_design(no_design, nama_design) values (0,'Null');&#xA;&#xA;delete from dim_size;&#xA;insert into dim_size (no_size, nama_size)values(0,'Null');&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -48969,18 +49002,6 @@ where [refTable].[no_produk] = ?</property>
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="107,42"
-          Id="Package\building dimension\Sort 1"
-          TopLeft="1405.66666666667,86.1666666666667" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\building dimension\dim staff produksi"
-          TopLeft="1875.66666666667,341.166666666667" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\building dimension\Sort 5"
-          TopLeft="1911.66666666667,267.166666666667" />
-        <NodeLayout
           Size="159,42"
           Id="Package\building dimension\source jasa kirim"
           TopLeft="1555.66666666667,15.1666666666667" />
@@ -48998,76 +49019,76 @@ where [refTable].[no_produk] = ?</property>
           TopLeft="1773.66666666667,113.166666666667" />
         <NodeLayout
           Size="107,42"
-          Id="Package\building dimension\Sort 9"
-          TopLeft="483.75,77.5" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\building dimension\dim design"
-          TopLeft="2493.66666666667,108.166666666667" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\building dimension\Sort"
-          TopLeft="1242.66666666667,83.1666666666667" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\building dimension\waktu  belanja source"
-          TopLeft="660,10" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\building dimension\dim produk"
-          TopLeft="1029.66666666667,189.166666666667" />
+          Id="Package\building dimension\Sort 5"
+          TopLeft="1911.66666666667,267.166666666667" />
         <NodeLayout
           Size="107,42"
           Id="Package\building dimension\Sort 4"
           TopLeft="1971.66666666667,111.166666666667" />
         <NodeLayout
           Size="107,42"
-          Id="Package\building dimension\Sort 8"
-          TopLeft="258.75,80" />
+          Id="Package\building dimension\Sort 9"
+          TopLeft="483.75,77.5" />
         <NodeLayout
-          Size="134,42"
-          Id="Package\building dimension\staff source"
-          TopLeft="1762.66666666667,28.1666666666667" />
+          Size="98,42"
+          Id="Package\building dimension\Sort"
+          TopLeft="1242.66666666667,83.1666666666667" />
         <NodeLayout
           Size="130,42"
-          Id="Package\building dimension\Merge Join"
-          TopLeft="1302.66666666667,173.166666666667" />
+          Id="Package\building dimension\dim design"
+          TopLeft="2493.66666666667,108.166666666667" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\building dimension\dim produk"
+          TopLeft="1029.66666666667,189.166666666667" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\building dimension\waktu  belanja source"
+          TopLeft="660,10" />
         <NodeLayout
           Size="107,42"
-          Id="Package\building dimension\Sort 2"
-          TopLeft="1311.66666666667,228.166666666667" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\building dimension\konsumen source"
-          TopLeft="1214.66666666667,14.1666666666667" />
-        <NodeLayout
-          Size="197,42"
-          Id="Package\building dimension\waktu pengiriman source"
-          TopLeft="440,11.25" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\building dimension\design source"
-          TopLeft="2488.66666666667,16.1666666666667" />
+          Id="Package\building dimension\Sort 8"
+          TopLeft="258.75,80" />
         <NodeLayout
           Size="117,42"
           Id="Package\building dimension\Merge 2"
           TopLeft="387.5,276.25" />
         <NodeLayout
-          Size="126,42"
-          Id="Package\building dimension\dim kredit"
-          TopLeft="2308.66666666667,191.166666666667" />
+          Size="130,42"
+          Id="Package\building dimension\Merge Join"
+          TopLeft="1302.66666666667,173.166666666667" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\building dimension\Derived Column"
+          TopLeft="366.25,415" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\building dimension\Sort 7"
+          TopLeft="41.25,76.25" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\building dimension\konsumen source"
+          TopLeft="1214.66666666667,14.1666666666667" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\building dimension\produk source"
+          TopLeft="1028.66666666667,15.1666666666667" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\building dimension\design source"
+          TopLeft="2488.66666666667,16.1666666666667" />
         <NodeLayout
           Size="113,42"
           Id="Package\building dimension\Sort 13"
           TopLeft="391.25,345" />
         <NodeLayout
+          Size="126,42"
+          Id="Package\building dimension\dim kredit"
+          TopLeft="2308.66666666667,191.166666666667" />
+        <NodeLayout
           Size="107,42"
           Id="Package\building dimension\Sort 6"
           TopLeft="2318.66666666667,110.166666666667" />
-        <NodeLayout
-          Size="199,42"
-          Id="Package\building dimension\waktu pemesanan source"
-          TopLeft="0.666666666666686,10" />
         <NodeLayout
           Size="117,42"
           Id="Package\building dimension\Merge 1"
@@ -49081,6 +49102,10 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\building dimension\source job"
           TopLeft="2142.66666666667,28.1666666666667" />
         <NodeLayout
+          Size="134,42"
+          Id="Package\building dimension\staff source"
+          TopLeft="1762.66666666667,28.1666666666667" />
+        <NodeLayout
           Size="108,42"
           Id="Package\building dimension\Merge"
           TopLeft="133.75,162.5" />
@@ -49093,10 +49118,6 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\building dimension\Sort 11"
           TopLeft="618.75,217.5" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\building dimension\Derived Column"
-          TopLeft="366.25,415" />
-        <NodeLayout
           Size="148,42"
           Id="Package\building dimension\dim konsumen"
           TopLeft="1292.66666666667,301.166666666667" />
@@ -49104,6 +49125,10 @@ where [refTable].[no_produk] = ?</property>
           Size="128,42"
           Id="Package\building dimension\dim waktu"
           TopLeft="373.75,488.75" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\building dimension\waktu pemesanan source"
+          TopLeft="0.666666666666686,10" />
         <NodeLayout
           Size="113,42"
           Id="Package\building dimension\Sort 10"
@@ -49113,10 +49138,6 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\building dimension\source jenis size"
           TopLeft="2662.66666666667,16.1666666666667" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\building dimension\Sort 7"
-          TopLeft="41.25,76.25" />
-        <NodeLayout
           Size="203,42"
           Id="Package\building dimension\waktu pembayaran source"
           TopLeft="216,10" />
@@ -49125,143 +49146,33 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\building dimension\kredit source"
           TopLeft="2302.66666666667,19.1666666666667" />
         <NodeLayout
-          Size="146,42"
-          Id="Package\building dimension\produk source"
-          TopLeft="1028.66666666667,15.1666666666667" />
+          Size="107,42"
+          Id="Package\building dimension\Sort 2"
+          TopLeft="1311.66666666667,228.166666666667" />
         <NodeLayout
           Size="171,42"
           Id="Package\building dimension\OLE DB Destination"
           TopLeft="1544.66666666667,130.166666666667" />
         <NodeLayout
-          Size="145,42"
-          Id="Package\building dimension\bagian source"
-          TopLeft="1947.66666666667,26.1666666666667" />
+          Size="197,42"
+          Id="Package\building dimension\waktu pengiriman source"
+          TopLeft="440,11.25" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\building dimension\Sort 1"
+          TopLeft="1405.66666666667,86.1666666666667" />
         <NodeLayout
           Size="114,42"
           Id="Package\building dimension\dim job"
           TopLeft="2147.66666666667,111.166666666667" />
-        <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output3]"
-          TopLeft="1293.41666666667,56.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output2]"
-          TopLeft="1461.16666666667,57.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29"
-              Start="0,0"
-              End="0,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output1]"
-          TopLeft="2022.66666666667,68.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43"
-              Start="0,0"
-              End="0,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output]"
-          TopLeft="1828.41666666667,70.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43"
-              Start="0,0"
-              End="0,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[Merge Output 12]"
-          TopLeft="608.75,174.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="10,63.75"
-              Start="0,0"
-              End="2.5,63.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
-                  <mssgle:LineSegment
-                    End="-22.5,59.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5,59.75"
-                    Point2="-22.5,63.75"
-                    Point3="-18.5,63.75" />
-                  <mssgle:LineSegment
-                    End="2.5,63.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="145,42"
+          Id="Package\building dimension\bagian source"
+          TopLeft="1947.66666666667,26.1666666666667" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\building dimension\dim staff produksi"
+          TopLeft="1875.66666666667,341.166666666667" />
         <EdgeLayout
           Id="Package\building dimension.Paths[Merge Output 11]"
           TopLeft="133.75,183.5">
@@ -49420,30 +49331,30 @@ where [refTable].[no_produk] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\building dimension.Paths[Sort Output12]"
-          TopLeft="618.75,244.166666666667">
+          TopLeft="2025.16666666667,153.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-114.25,53.0833333333333"
+              EndConnector="-29.5,47"
               Start="0,0"
-              End="-106.75,53.0833333333333">
+              End="-29.5,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-44.2155963302752,0" />
+                    End="0,23.9620253164557" />
                   <mssgle:CubicBezierSegment
-                    Point1="-44.2155963302752,0"
-                    Point2="-48.2155963302752,0"
-                    Point3="-48.2155963302752,4" />
+                    Point1="0,23.9620253164557"
+                    Point2="0,27.9620253164557"
+                    Point3="-4,27.9620253164557" />
                   <mssgle:LineSegment
-                    End="-48.2155963302752,49.0833333333333" />
+                    End="-25.5,27.9620253164557" />
                   <mssgle:CubicBezierSegment
-                    Point1="-48.2155963302752,49.0833333333333"
-                    Point2="-48.2155963302752,53.0833333333333"
-                    Point3="-52.2155963302752,53.0833333333333" />
+                    Point1="-25.5,27.9620253164557"
+                    Point2="-29.5,27.9620253164557"
+                    Point3="-29.5,31.9620253164557" />
                   <mssgle:LineSegment
-                    End="-106.75,53.0833333333333" />
+                    End="-29.5,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -49454,6 +49365,74 @@ where [refTable].[no_produk] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\building dimension.Paths[Sort Output11]"
+          TopLeft="1827.16666666667,155.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.5,45"
+              Start="0,0"
+              End="108.5,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.7721518987342" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.7721518987342"
+                    Point2="0,26.7721518987342"
+                    Point3="4,26.7721518987342" />
+                  <mssgle:LineSegment
+                    End="104.5,26.7721518987342" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104.5,26.7721518987342"
+                    Point2="108.5,26.7721518987342"
+                    Point3="108.5,30.7721518987342" />
+                  <mssgle:LineSegment
+                    End="108.5,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[Sort Output10]"
+          TopLeft="94.75,118.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93,44.25"
+              Start="0,0"
+              End="93,36.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.125" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.125"
+                    Point2="0,22.125"
+                    Point3="4,22.125" />
+                  <mssgle:LineSegment
+                    End="89,22.125" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89,22.125"
+                    Point2="93,22.125"
+                    Point3="93,26.125" />
+                  <mssgle:LineSegment
+                    End="93,36.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[Sort Output9]"
           TopLeft="312.25,122">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -49487,7 +49466,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output10]"
+          Id="Package\building dimension.Paths[Sort Output8]"
           TopLeft="1961.41666666667,309.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -49500,74 +49479,6 @@ where [refTable].[no_produk] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output9]"
-          TopLeft="537.25,119.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="111.833333333333,34.25"
-              Start="0,0"
-              End="111.833333333333,26.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.2727655986509" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.2727655986509"
-                    Point2="0,20.2727655986509"
-                    Point3="4,20.2727655986509" />
-                  <mssgle:LineSegment
-                    End="107.833333333333,20.2727655986509" />
-                  <mssgle:CubicBezierSegment
-                    Point1="107.833333333333,20.2727655986509"
-                    Point2="111.833333333333,20.2727655986509"
-                    Point3="111.833333333333,24.2727655986509" />
-                  <mssgle:LineSegment
-                    End="111.833333333333,26.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output8]"
-          TopLeft="2025.16666666667,153.166666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-29.5,47"
-              Start="0,0"
-              End="-29.5,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.9620253164557" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.9620253164557"
-                    Point2="0,27.9620253164557"
-                    Point3="-4,27.9620253164557" />
-                  <mssgle:LineSegment
-                    End="-25.5,27.9620253164557" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-25.5,27.9620253164557"
-                    Point2="-29.5,27.9620253164557"
-                    Point3="-29.5,31.9620253164557" />
-                  <mssgle:LineSegment
-                    End="-29.5,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -49612,30 +49523,30 @@ where [refTable].[no_produk] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\building dimension.Paths[Sort Output6]"
-          TopLeft="244.25,247.25">
+          TopLeft="537.25,119.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="143.25,50"
+              EndConnector="111.833333333333,34.25"
               Start="0,0"
-              End="135.75,50">
+              End="111.833333333333,26.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="67.625,0" />
+                    End="0,16.2727655986509" />
                   <mssgle:CubicBezierSegment
-                    Point1="67.625,0"
-                    Point2="71.625,0"
-                    Point3="71.625,4" />
+                    Point1="0,16.2727655986509"
+                    Point2="0,20.2727655986509"
+                    Point3="4,20.2727655986509" />
                   <mssgle:LineSegment
-                    End="71.625,46" />
+                    End="107.833333333333,20.2727655986509" />
                   <mssgle:CubicBezierSegment
-                    Point1="71.625,46"
-                    Point2="71.625,50"
-                    Point3="75.625,50" />
+                    Point1="107.833333333333,20.2727655986509"
+                    Point2="111.833333333333,20.2727655986509"
+                    Point3="111.833333333333,24.2727655986509" />
                   <mssgle:LineSegment
-                    End="135.75,50" />
+                    End="111.833333333333,26.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -49646,30 +49557,18 @@ where [refTable].[no_produk] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\building dimension.Paths[Sort Output5]"
-          TopLeft="94.75,118.25">
+          TopLeft="445.5,387">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="93,44.25"
+              EndConnector="0,28"
               Start="0,0"
-              End="93,36.75">
+              End="0,20.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.125" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.125"
-                    Point2="0,22.125"
-                    Point3="4,22.125" />
-                  <mssgle:LineSegment
-                    End="89,22.125" />
-                  <mssgle:CubicBezierSegment
-                    Point1="89,22.125"
-                    Point2="93,22.125"
-                    Point3="93,26.125" />
-                  <mssgle:LineSegment
-                    End="93,36.75" />
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -49702,62 +49601,6 @@ where [refTable].[no_produk] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\building dimension.Paths[Sort Output3]"
-          TopLeft="1827.16666666667,155.166666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="108.5,45"
-              Start="0,0"
-              End="108.5,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.7721518987342" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.7721518987342"
-                    Point2="0,26.7721518987342"
-                    Point3="4,26.7721518987342" />
-                  <mssgle:LineSegment
-                    End="104.5,26.7721518987342" />
-                  <mssgle:CubicBezierSegment
-                    Point1="104.5,26.7721518987342"
-                    Point2="108.5,26.7721518987342"
-                    Point3="108.5,30.7721518987342" />
-                  <mssgle:LineSegment
-                    End="108.5,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output2]"
-          TopLeft="445.5,387">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28"
-              Start="0,0"
-              End="0,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output1]"
           TopLeft="1291.66666666667,125.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -49791,7 +49634,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output]"
+          Id="Package\building dimension.Paths[Sort Output2]"
           TopLeft="1459.16666666667,128.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -49825,51 +49668,75 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\building dimension.Paths[Sort Output1]"
+          TopLeft="618.75,244.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-114.25,53.0833333333333"
+              Start="0,0"
+              End="-106.75,53.0833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-44.2155963302752,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-44.2155963302752,0"
+                    Point2="-48.2155963302752,0"
+                    Point3="-48.2155963302752,4" />
+                  <mssgle:LineSegment
+                    End="-48.2155963302752,49.0833333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48.2155963302752,49.0833333333333"
+                    Point2="-48.2155963302752,53.0833333333333"
+                    Point3="-52.2155963302752,53.0833333333333" />
+                  <mssgle:LineSegment
+                    End="-106.75,53.0833333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[Sort Output]"
+          TopLeft="244.25,247.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="143.25,50"
+              Start="0,0"
+              End="135.75,50">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="67.625,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.625,0"
+                    Point2="71.625,0"
+                    Point3="71.625,4" />
+                  <mssgle:LineSegment
+                    End="71.625,46" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71.625,46"
+                    Point2="71.625,50"
+                    Point3="75.625,50" />
+                  <mssgle:LineSegment
+                    End="135.75,50" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\building dimension.Paths[OLE DB Source Output13]"
-          TopLeft="537.875,53.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24.25"
-              Start="0,0"
-              End="0,16.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output12]"
-          TopLeft="314.875,52">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28"
-              Start="0,0"
-              End="0,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output11]"
           TopLeft="2372.41666666667,61.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -49891,7 +49758,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output10]"
+          Id="Package\building dimension.Paths[OLE DB Source Output12]"
           TopLeft="749.375,52">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -49904,6 +49771,50 @@ where [refTable].[no_produk] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,16.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[OLE DB Source Output11]"
+          TopLeft="537.875,53.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.25"
+              Start="0,0"
+              End="0,16.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[OLE DB Source Output10]"
+          TopLeft="314.875,52">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -49980,18 +49891,18 @@ where [refTable].[no_produk] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\building dimension.Paths[OLE DB Source Output6]"
-          TopLeft="1632.66666666667,57.1666666666667">
+          TopLeft="2022.66666666667,68.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,73"
+              EndConnector="0,43"
               Start="0,0"
-              End="0,65.5">
+              End="0,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,65.5" />
+                    End="0,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -50044,22 +49955,131 @@ where [refTable].[no_produk] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[OLE DB Source Output3]"
+          TopLeft="1293.41666666667,56.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[OLE DB Source Output2]"
+          TopLeft="1828.41666666667,70.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[OLE DB Source Output1]"
+          TopLeft="1632.66666666667,57.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73"
+              Start="0,0"
+              End="0,65.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[OLE DB Source Output]"
+          TopLeft="1461.16666666667,57.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\building dimension.Paths[Merge Output 12]"
+          TopLeft="608.75,174.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10,63.75"
+              Start="0,0"
+              End="2.5,63.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,59.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,59.75"
+                    Point2="-22.5,63.75"
+                    Point3="-18.5,63.75" />
+                  <mssgle:LineSegment
+                    End="2.5,63.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\building dimension\dim staff produksi">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\building dimension\source jasa kirim">
     <Properties>
@@ -50100,19 +50120,6 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\building dimension\waktu  belanja source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\building dimension\dim produk">
     <Properties>
       <Property>
@@ -50126,7 +50133,7 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\building dimension\staff source">
+    design-time-name="Package\building dimension\waktu  belanja source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -50152,7 +50159,7 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\building dimension\waktu pengiriman source">
+    design-time-name="Package\building dimension\produk source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -50191,7 +50198,7 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\building dimension\waktu pemesanan source">
+    design-time-name="Package\building dimension\source job">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -50204,7 +50211,7 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\building dimension\source job">
+    design-time-name="Package\building dimension\staff source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -50256,6 +50263,19 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\building dimension\waktu pemesanan source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\building dimension\source jenis size">
     <Properties>
       <Property>
@@ -50295,7 +50315,7 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\building dimension\produk source">
+    design-time-name="Package\building dimension\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -50308,7 +50328,20 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\building dimension\OLE DB Destination">
+    design-time-name="Package\building dimension\waktu pengiriman source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\building dimension\dim job">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -50334,7 +50367,7 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\building dimension\dim job">
+    design-time-name="Package\building dimension\dim staff produksi">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -50352,25 +50385,37 @@ where [refTable].[no_produk] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="139,42"
+          Id="Package\populasi fact belanja\Merge Join 2"
+          TopLeft="616,213" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\populasi fact belanja\Lookup dim waktu"
+          TopLeft="938,83" />
+        <NodeLayout
           Size="107,42"
           Id="Package\populasi fact belanja\Sort 5"
           TopLeft="837,169" />
         <NodeLayout
           Size="107,42"
           Id="Package\populasi fact belanja\Sort 2"
-          TopLeft="460,81" />
+          TopLeft="459,80" />
         <NodeLayout
-          Size="134,42"
-          Id="Package\populasi fact belanja\fact belanja"
-          TopLeft="420,501" />
+          Size="117,42"
+          Id="Package\populasi fact belanja\Merge 2"
+          TopLeft="148,498" />
         <NodeLayout
-          Size="167,42"
-          Id="Package\populasi fact belanja\lookup dim produk"
-          TopLeft="797,305" />
+          Size="107,42"
+          Id="Package\populasi fact belanja\Sort 8"
+          TopLeft="626,387" />
         <NodeLayout
           Size="176,42"
           Id="Package\populasi fact belanja\detail belanja source"
           TopLeft="57,11" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\populasi fact belanja\lookup dim produk"
+          TopLeft="797,305" />
         <NodeLayout
           Size="139,42"
           Id="Package\populasi fact belanja\Merge Join 1"
@@ -50380,17 +50425,13 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact belanja\Sort"
           TopLeft="91,78" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\populasi fact belanja\Sort 4"
-          TopLeft="632,142" />
-        <NodeLayout
-          Size="117,42"
-          Id="Package\populasi fact belanja\Merge 2"
-          TopLeft="148,498" />
-        <NodeLayout
           Size="195,42"
           Id="Package\populasi fact belanja\derived no match kredirt"
           TopLeft="160,266" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\populasi fact belanja\Sort 4"
+          TopLeft="632,142" />
         <NodeLayout
           Size="108,42"
           Id="Package\populasi fact belanja\Merge"
@@ -50400,9 +50441,9 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact belanja\Sort 6"
           TopLeft="1124,222" />
         <NodeLayout
-          Size="191,42"
-          Id="Package\populasi fact belanja\derive no match produk"
-          TopLeft="811,385" />
+          Size="107,42"
+          Id="Package\populasi fact belanja\Sort 9"
+          TopLeft="231,415" />
         <NodeLayout
           Size="140,42"
           Id="Package\populasi fact belanja\kredit source"
@@ -50412,17 +50453,13 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact belanja\Merge Join"
           TopLeft="163,134" />
         <NodeLayout
-          Size="232,42"
-          Id="Package\populasi fact belanja\derive colom waktu dan nominal"
-          TopLeft="794,14" />
-        <NodeLayout
           Size="140,42"
           Id="Package\populasi fact belanja\service order"
           TopLeft="617,14" />
         <NodeLayout
-          Size="165,42"
-          Id="Package\populasi fact belanja\Lookup dim waktu"
-          TopLeft="938,83" />
+          Size="181,42"
+          Id="Package\populasi fact belanja\deriv no match waktu"
+          TopLeft="1097,151" />
         <NodeLayout
           Size="113,42"
           Id="Package\populasi fact belanja\Sort 10"
@@ -50432,17 +50469,21 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact belanja\Lookup kredit"
           TopLeft="290,350" />
         <NodeLayout
-          Size="181,42"
-          Id="Package\populasi fact belanja\deriv no match waktu"
-          TopLeft="1097,151" />
-        <NodeLayout
           Size="107,42"
           Id="Package\populasi fact belanja\Sort 3"
           TopLeft="416,206" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\populasi fact belanja\Sort 9"
-          TopLeft="231,415" />
+          Size="191,42"
+          Id="Package\populasi fact belanja\derive no match produk"
+          TopLeft="811,385" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\populasi fact belanja\fact belanja"
+          TopLeft="420,501" />
+        <NodeLayout
+          Size="232,42"
+          Id="Package\populasi fact belanja\derive colom waktu dan nominal"
+          TopLeft="794,14" />
         <NodeLayout
           Size="107,42"
           Id="Package\populasi fact belanja\Sort 1"
@@ -50456,17 +50497,133 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact belanja\Sort 7"
           TopLeft="629,306" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\populasi fact belanja\Sort 8"
-          TopLeft="626,387" />
-        <NodeLayout
           Size="147,42"
           Id="Package\populasi fact belanja\belanja source"
           TopLeft="268,14" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\populasi fact belanja\Merge Join 2"
-          TopLeft="616,213" />
+        <EdgeLayout
+          Id="Package\populasi fact belanja.Paths[Derived Column Output3]"
+          TopLeft="947.333333333333,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73.1666666666667,27"
+              Start="0,0"
+              End="73.1666666666667,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,6.9109589041096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,6.9109589041096"
+                    Point2="0,10.9109589041096"
+                    Point3="4,10.9109589041096" />
+                  <mssgle:LineSegment
+                    End="69.1666666666667,10.9109589041096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69.1666666666667,10.9109589041096"
+                    Point2="73.1666666666667,10.9109589041096"
+                    Point3="73.1666666666667,14.9109589041096" />
+                  <mssgle:LineSegment
+                    End="73.1666666666667,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact belanja.Paths[Derived Column Output2]"
+          TopLeft="811,407">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-78,0"
+              Start="0,0"
+              End="-70.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-70.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact belanja.Paths[Derived Column Output1]"
+          TopLeft="226.333333333333,308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-101.833333333333,24"
+              Start="0,0"
+              End="-101.833333333333,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,5.71719226856561" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,5.71719226856561"
+                    Point2="0,9.71719226856561"
+                    Point3="-4,9.71719226856561" />
+                  <mssgle:LineSegment
+                    End="-97.8333333333333,9.71719226856561" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-97.8333333333333,9.71719226856561"
+                    Point2="-101.833333333333,9.71719226856561"
+                    Point3="-101.833333333333,13.7171922685656" />
+                  <mssgle:LineSegment
+                    End="-101.833333333333,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact belanja.Paths[Derived Column Output]"
+          TopLeft="1187.5,193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10,29"
+              Start="0,0"
+              End="-10,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="-4,14.5" />
+                  <mssgle:LineSegment
+                    End="-6,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6,14.5"
+                    Point2="-10,14.5"
+                    Point3="-10,18.5" />
+                  <mssgle:LineSegment
+                    End="-10,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\populasi fact belanja.Paths[Sort Output10]"
           TopLeft="284.5,457">
@@ -50502,75 +50659,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output9]"
-          TopLeft="626,408">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-50,-31.3333333333333"
-              Start="0,0"
-              End="-42.5,-31.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-24.8990825688074,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-24.8990825688074,0"
-                    Point2="-28.8990825688074,0"
-                    Point3="-28.8990825688074,-4" />
-                  <mssgle:LineSegment
-                    End="-28.8990825688074,-27.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-28.8990825688074,-27.3333333333333"
-                    Point2="-28.8990825688074,-31.3333333333333"
-                    Point3="-32.8990825688074,-31.3333333333333" />
-                  <mssgle:LineSegment
-                    End="-42.5,-31.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output8]"
-          TopLeft="513.5,123">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-44,25"
-              Start="0,0"
-              End="-44,17.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.5"
-                    Point2="0,12.5"
-                    Point3="-4,12.5" />
-                  <mssgle:LineSegment
-                    End="-40,12.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-40,12.5"
-                    Point2="-44,12.5"
-                    Point3="-44,16.5" />
-                  <mssgle:LineSegment
-                    End="-44,17.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output7]"
+          Id="Package\populasi fact belanja.Paths[Sort Output1]"
           TopLeft="685.5,184">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50592,7 +50681,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output6]"
+          Id="Package\populasi fact belanja.Paths[Sort Output]"
           TopLeft="523,230.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50614,7 +50703,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output5]"
+          Id="Package\populasi fact belanja.Paths[Sort Output9]"
           TopLeft="1124,245">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50636,7 +50725,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output4]"
+          Id="Package\populasi fact belanja.Paths[Sort Output8]"
           TopLeft="944,190">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50664,7 +50753,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output3]"
+          Id="Package\populasi fact belanja.Paths[Sort Output7]"
           TopLeft="124.5,374">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50698,7 +50787,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output2]"
+          Id="Package\populasi fact belanja.Paths[Sort Output6]"
           TopLeft="189,99">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50726,7 +50815,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output1]"
+          Id="Package\populasi fact belanja.Paths[Sort Output5]"
           TopLeft="283,102">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50754,7 +50843,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output]"
+          Id="Package\populasi fact belanja.Paths[Sort Output4]"
           TopLeft="629,327">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50779,6 +50868,74 @@ where [refTable].[no_produk] = ?</property>
                     Point3="-34.6330275229358,38.3333333333333" />
                   <mssgle:LineSegment
                     End="-45.5,38.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact belanja.Paths[Sort Output3]"
+          TopLeft="626,408">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-50,-31.3333333333333"
+              Start="0,0"
+              End="-42.5,-31.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-24.8990825688074,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.8990825688074,0"
+                    Point2="-28.8990825688074,0"
+                    Point3="-28.8990825688074,-4" />
+                  <mssgle:LineSegment
+                    End="-28.8990825688074,-27.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-28.8990825688074,-27.3333333333333"
+                    Point2="-28.8990825688074,-31.3333333333333"
+                    Point3="-32.8990825688074,-31.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-42.5,-31.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact belanja.Paths[Sort Output2]"
+          TopLeft="512.5,122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43,26"
+              Start="0,0"
+              End="-43,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="-4,13" />
+                  <mssgle:LineSegment
+                    End="-39,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39,13"
+                    Point2="-43,13"
+                    Point3="-43,17" />
+                  <mssgle:LineSegment
+                    End="-43,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -50833,18 +50990,30 @@ where [refTable].[no_produk] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\populasi fact belanja.Paths[OLE DB Source Output1]"
-          TopLeft="517.25,56">
+          TopLeft="521,56">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,25"
+              EndConnector="-8.5,24"
               Start="0,0"
-              End="0,17.5">
+              End="-8.5,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="0,8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8"
+                    Point2="0,12"
+                    Point3="-4,12" />
+                  <mssgle:LineSegment
+                    End="-4.5,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.5,12"
+                    Point2="-8.5,12"
+                    Point3="-8.5,16" />
+                  <mssgle:LineSegment
+                    End="-8.5,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -50876,29 +51045,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Merge Output 12]"
-          TopLeft="459,371">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-26,0"
-              Start="0,0"
-              End="-18.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Merge Output 11]"
+          Id="Package\populasi fact belanja.Paths[Merge Output 1]"
           TopLeft="265,520.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50920,7 +51067,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Merge Output 1]"
+          Id="Package\populasi fact belanja.Paths[Merge Output 12]"
           TopLeft="988,268">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -50945,6 +51092,28 @@ where [refTable].[no_produk] = ?</property>
                     Point3="-107.5,22.5" />
                   <mssgle:LineSegment
                     End="-107.5,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact belanja.Paths[Merge Output 11]"
+          TopLeft="459,371">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-26,0"
+              Start="0,0"
+              End="-18.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -51259,135 +51428,34 @@ where [refTable].[no_produk] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Derived Column Output3]"
-          TopLeft="947.333333333333,56">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="73.1666666666667,27"
-              Start="0,0"
-              End="73.1666666666667,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,6.9109589041096" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,6.9109589041096"
-                    Point2="0,10.9109589041096"
-                    Point3="4,10.9109589041096" />
-                  <mssgle:LineSegment
-                    End="69.1666666666667,10.9109589041096" />
-                  <mssgle:CubicBezierSegment
-                    Point1="69.1666666666667,10.9109589041096"
-                    Point2="73.1666666666667,10.9109589041096"
-                    Point3="73.1666666666667,14.9109589041096" />
-                  <mssgle:LineSegment
-                    End="73.1666666666667,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Derived Column Output2]"
-          TopLeft="811,407">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-78,0"
-              Start="0,0"
-              End="-70.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-70.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Derived Column Output1]"
-          TopLeft="226.333333333333,308">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-101.833333333333,24"
-              Start="0,0"
-              End="-101.833333333333,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,5.71719226856561" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,5.71719226856561"
-                    Point2="0,9.71719226856561"
-                    Point3="-4,9.71719226856561" />
-                  <mssgle:LineSegment
-                    End="-97.8333333333333,9.71719226856561" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-97.8333333333333,9.71719226856561"
-                    Point2="-101.833333333333,9.71719226856561"
-                    Point3="-101.833333333333,13.7171922685656" />
-                  <mssgle:LineSegment
-                    End="-101.833333333333,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Derived Column Output]"
-          TopLeft="1187.5,193">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-10,29"
-              Start="0,0"
-              End="-10,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.5"
-                    Point2="0,14.5"
-                    Point3="-4,14.5" />
-                  <mssgle:LineSegment
-                    End="-6,14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6,14.5"
-                    Point2="-10,14.5"
-                    Point3="-10,18.5" />
-                  <mssgle:LineSegment
-                    End="-10,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\populasi fact belanja\fact belanja">
+    design-time-name="Package\populasi fact belanja\Lookup dim waktu">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dim_waktu]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populasi fact belanja\detail belanja source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -51423,19 +51491,6 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\populasi fact belanja\detail belanja source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\populasi fact belanja\kredit source">
     <Properties>
       <Property>
@@ -51462,29 +51517,6 @@ where [refTable].[no_produk] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\populasi fact belanja\Lookup dim waktu">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dim_waktu]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\populasi fact belanja\Lookup kredit">
     <Properties>
       <Property>
@@ -51504,6 +51536,19 @@ where [refTable].[no_produk] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populasi fact belanja\fact belanja">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -53142,7 +53187,7 @@ where [refTable].[no_produk] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -53307,7 +53352,41 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output10]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output9]"
+          TopLeft="889,302">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-64,23.3333333333333"
+              Start="0,0"
+              End="-56.5,23.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-32.9908256880734,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-32.9908256880734,0"
+                    Point2="-36.9908256880734,0"
+                    Point3="-36.9908256880734,4" />
+                  <mssgle:LineSegment
+                    End="-36.9908256880734,19.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-36.9908256880734,19.3333333333333"
+                    Point2="-36.9908256880734,23.3333333333333"
+                    Point3="-40.9908256880734,23.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-56.5,23.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output8]"
           TopLeft="890,356">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -53341,7 +53420,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output9]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output7]"
           TopLeft="585,250">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -53363,7 +53442,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output8]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output5]"
           TopLeft="464,463">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -53376,40 +53455,6 @@ where [refTable].[no_produk] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output7]"
-          TopLeft="115,127">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93.5,36"
-              Start="0,0"
-              End="93.5,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14"
-                    Point2="0,18"
-                    Point3="4,18" />
-                  <mssgle:LineSegment
-                    End="89.5,18" />
-                  <mssgle:CubicBezierSegment
-                    Point1="89.5,18"
-                    Point2="93.5,18"
-                    Point3="93.5,22" />
-                  <mssgle:LineSegment
-                    End="93.5,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -53453,31 +53498,31 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output5]"
-          TopLeft="316.5,128">
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output]"
+          TopLeft="115,127">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-88.8333333333333,35"
+              EndConnector="93.5,36"
               Start="0,0"
-              End="-88.8333333333333,27.5">
+              End="93.5,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.7303370786517" />
+                    End="0,14" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.7303370786517"
-                    Point2="0,20.7303370786517"
-                    Point3="-4,20.7303370786517" />
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
                   <mssgle:LineSegment
-                    End="-84.8333333333333,20.7303370786517" />
+                    End="89.5,18" />
                   <mssgle:CubicBezierSegment
-                    Point1="-84.8333333333333,20.7303370786517"
-                    Point2="-88.8333333333333,20.7303370786517"
-                    Point3="-88.8333333333333,24.7303370786517" />
+                    Point1="89.5,18"
+                    Point2="93.5,18"
+                    Point3="93.5,22" />
                   <mssgle:LineSegment
-                    End="-88.8333333333333,27.5" />
+                    End="93.5,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -53509,41 +53554,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output3]"
-          TopLeft="889,302">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-64,23.3333333333333"
-              Start="0,0"
-              End="-56.5,23.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-32.9908256880734,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-32.9908256880734,0"
-                    Point2="-36.9908256880734,0"
-                    Point3="-36.9908256880734,4" />
-                  <mssgle:LineSegment
-                    End="-36.9908256880734,19.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-36.9908256880734,19.3333333333333"
-                    Point2="-36.9908256880734,23.3333333333333"
-                    Point3="-40.9908256880734,23.3333333333333" />
-                  <mssgle:LineSegment
-                    End="-56.5,23.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output2]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output10]"
           TopLeft="720,132">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -53565,7 +53576,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output1]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output3]"
           TopLeft="512.75,128">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -53587,7 +53598,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output2]"
           TopLeft="311.5,361">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -53612,6 +53623,40 @@ where [refTable].[no_produk] = ?</property>
                     Point3="-77,-24" />
                   <mssgle:LineSegment
                     End="-77,-32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output1]"
+          TopLeft="316.5,128">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-88.8333333333333,35"
+              Start="0,0"
+              End="-88.8333333333333,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7303370786517" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7303370786517"
+                    Point2="0,20.7303370786517"
+                    Point3="-4,20.7303370786517" />
+                  <mssgle:LineSegment
+                    End="-84.8333333333333,20.7303370786517" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-84.8333333333333,20.7303370786517"
+                    Point2="-88.8333333333333,20.7303370786517"
+                    Point3="-88.8333333333333,24.7303370786517" />
+                  <mssgle:LineSegment
+                    End="-88.8333333333333,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -53709,29 +53754,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Merge Output 12]"
-          TopLeft="176,301">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-31,0"
-              Start="0,0"
-              End="-23.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-23.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Merge Output 11]"
+          Id="Package\populasi fact pengiriman produk.Paths[Merge Output 1]"
           TopLeft="520,507">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -53765,7 +53788,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Merge Output 1]"
+          Id="Package\populasi fact pengiriman produk.Paths[Merge Output 12]"
           TopLeft="717,331.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -53778,6 +53801,28 @@ where [refTable].[no_produk] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="-34.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact pengiriman produk.Paths[Merge Output 11]"
+          TopLeft="176,301">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31,0"
+              Start="0,0"
+              End="-23.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-23.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -54489,75 +54534,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Sort Output7]"
-          TopLeft="621,583">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50,34"
-              Start="0,0"
-              End="42.5,34">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="21,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21,0"
-                    Point2="25,0"
-                    Point3="25,4" />
-                  <mssgle:LineSegment
-                    End="25,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25,30"
-                    Point2="25,34"
-                    Point3="29,34" />
-                  <mssgle:LineSegment
-                    End="42.5,34" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Sort Output6]"
-          TopLeft="244.5,423">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-54.1666666666667,142"
-              Start="0,0"
-              End="-54.1666666666667,134.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,80.0505902192243" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,80.0505902192243"
-                    Point2="0,84.0505902192243"
-                    Point3="-4,84.0505902192243" />
-                  <mssgle:LineSegment
-                    End="-50.1666666666667,84.0505902192243" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-50.1666666666667,84.0505902192243"
-                    Point2="-54.1666666666667,84.0505902192243"
-                    Point3="-54.1666666666667,88.0505902192243" />
-                  <mssgle:LineSegment
-                    End="-54.1666666666667,134.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Sort Output5]"
+          Id="Package\populasi fact populer design.Paths[Sort Output1]"
           TopLeft="312.5,523">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -54591,7 +54568,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Sort Output4]"
+          Id="Package\populasi fact populer design.Paths[Sort Output]"
           TopLeft="254,165">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -54625,7 +54602,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Sort Output3]"
+          Id="Package\populasi fact populer design.Paths[Sort Output7]"
           TopLeft="456.5,163">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -54659,7 +54636,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Sort Output2]"
+          Id="Package\populasi fact populer design.Paths[Sort Output6]"
           TopLeft="634.5,157">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -54681,7 +54658,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Sort Output1]"
+          Id="Package\populasi fact populer design.Paths[Sort Output5]"
           TopLeft="628.5,445">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -54715,7 +54692,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Sort Output]"
+          Id="Package\populasi fact populer design.Paths[Sort Output4]"
           TopLeft="628,666">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -54740,6 +54717,74 @@ where [refTable].[no_produk] = ?</property>
                     Point3="28.8532110091743,-43.3333333333334" />
                   <mssgle:LineSegment
                     End="35.5,-43.3333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact populer design.Paths[Sort Output3]"
+          TopLeft="621,583">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50,34"
+              Start="0,0"
+              End="42.5,34">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="21,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21,0"
+                    Point2="25,0"
+                    Point3="25,4" />
+                  <mssgle:LineSegment
+                    End="25,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25,30"
+                    Point2="25,34"
+                    Point3="29,34" />
+                  <mssgle:LineSegment
+                    End="42.5,34" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact populer design.Paths[Sort Output2]"
+          TopLeft="244.5,423">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-54.1666666666667,142"
+              Start="0,0"
+              End="-54.1666666666667,134.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.0505902192243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,80.0505902192243"
+                    Point2="0,84.0505902192243"
+                    Point3="-4,84.0505902192243" />
+                  <mssgle:LineSegment
+                    End="-50.1666666666667,84.0505902192243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-50.1666666666667,84.0505902192243"
+                    Point2="-54.1666666666667,84.0505902192243"
+                    Point3="-54.1666666666667,88.0505902192243" />
+                  <mssgle:LineSegment
+                    End="-54.1666666666667,134.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -54815,7 +54860,29 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Merge Output 12]"
+          Id="Package\populasi fact populer design.Paths[Merge Output 11]"
+          TopLeft="267,586.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41,0"
+              Start="0,0"
+              End="33.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populasi fact populer design.Paths[Merge Output 1]"
           TopLeft="664,501.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -54837,7 +54904,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Merge Output 11]"
+          Id="Package\populasi fact populer design.Paths[Merge Output 12]"
           TopLeft="728.25,638">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -54850,28 +54917,6 @@ where [refTable].[no_produk] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,57.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact populer design.Paths[Merge Output 1]"
-          TopLeft="267,586.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="41,0"
-              Start="0,0"
-              End="33.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="33.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -55999,6 +56044,10 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact produksi cost\Sort 6"
           TopLeft="327,352" />
         <NodeLayout
+          Size="167,42"
+          Id="Package\populasi fact produksi cost\pemesanan source"
+          TopLeft="493,16" />
+        <NodeLayout
           Size="107,42"
           Id="Package\populasi fact produksi cost\Sort 9"
           TopLeft="696,677" />
@@ -56027,17 +56076,21 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact produksi cost\Sort 1"
           TopLeft="283,115" />
         <NodeLayout
+          Size="139,42"
+          Id="Package\populasi fact produksi cost\Merge Join 1"
+          TopLeft="281,261" />
+        <NodeLayout
           Size="162,44"
           Id="Package\populasi fact produksi cost\lookup dim waktu"
           TopLeft="716,247" />
         <NodeLayout
-          Size="162,42"
-          Id="Package\populasi fact produksi cost\fact produksi cost"
-          TopLeft="484,746" />
-        <NodeLayout
           Size="107,42"
           Id="Package\populasi fact produksi cost\Sort 7"
           TopLeft="375,545" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\populasi fact produksi cost\fact produksi cost"
+          TopLeft="484,746" />
         <NodeLayout
           Size="117,42"
           Id="Package\populasi fact produksi cost\Merge 1"
@@ -56047,10 +56100,6 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact produksi cost\Merge Join"
           TopLeft="386,182" />
         <NodeLayout
-          Size="167,42"
-          Id="Package\populasi fact produksi cost\pemesanan source"
-          TopLeft="493,16" />
-        <NodeLayout
           Size="179,42"
           Id="Package\populasi fact produksi cost\derived no match job"
           TopLeft="102,639" />
@@ -56059,9 +56108,9 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact produksi cost\Lookup dim produk"
           TopLeft="569,444" />
         <NodeLayout
-          Size="139,42"
-          Id="Package\populasi fact produksi cost\Merge Join 1"
-          TopLeft="281,261" />
+          Size="117,42"
+          Id="Package\populasi fact produksi cost\Merge 2"
+          TopLeft="505,591" />
         <NodeLayout
           Size="107,42"
           Id="Package\populasi fact produksi cost\Sort 5"
@@ -56071,29 +56120,21 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact produksi cost\Derived Column"
           TopLeft="519,255" />
         <NodeLayout
-          Size="152,42"
-          Id="Package\populasi fact produksi cost\Lookup dim job"
-          TopLeft="108,552" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\populasi fact produksi cost\Sort 8"
-          TopLeft="372,640" />
-        <NodeLayout
           Size="98,42"
           Id="Package\populasi fact produksi cost\Sort"
           TopLeft="72,116" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\populasi fact produksi cost\Sort 3"
-          TopLeft="688,359" />
         <NodeLayout
           Size="179,42"
           Id="Package\populasi fact produksi cost\derive no match staff"
           TopLeft="841,582" />
         <NodeLayout
-          Size="117,42"
-          Id="Package\populasi fact produksi cost\Merge 2"
-          TopLeft="505,591" />
+          Size="107,42"
+          Id="Package\populasi fact produksi cost\Sort 3"
+          TopLeft="688,359" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\populasi fact produksi cost\Lookup dim job"
+          TopLeft="108,552" />
         <NodeLayout
           Size="191,42"
           Id="Package\populasi fact produksi cost\derive no match produk"
@@ -56110,6 +56151,44 @@ where [refTable].[no_produk] = ?</property>
           Size="181,42"
           Id="Package\populasi fact produksi cost\deriv no match waktu"
           TopLeft="927,243" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\populasi fact produksi cost\Sort 8"
+          TopLeft="372,640" />
+        <EdgeLayout
+          Id="Package\populasi fact produksi cost.Paths[Sort Output8]"
+          TopLeft="336.5,157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="114.5,25"
+              Start="0,0"
+              End="114.5,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="4,12.5" />
+                  <mssgle:LineSegment
+                    End="110.5,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="110.5,12.5"
+                    Point2="114.5,12.5"
+                    Point3="114.5,16.5" />
+                  <mssgle:LineSegment
+                    End="114.5,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\populasi fact produksi cost.Paths[Sort Output7]"
           TopLeft="579.5,155">
@@ -57004,43 +57083,22 @@ where [refTable].[no_produk] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populasi fact produksi cost.Paths[Sort Output8]"
-          TopLeft="336.5,157">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="114.5,25"
-              Start="0,0"
-              End="114.5,17.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.5"
-                    Point2="0,12.5"
-                    Point3="4,12.5" />
-                  <mssgle:LineSegment
-                    End="110.5,12.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="110.5,12.5"
-                    Point2="114.5,12.5"
-                    Point3="114.5,16.5" />
-                  <mssgle:LineSegment
-                    End="114.5,17.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\populasi fact produksi cost\pemesanan source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\populasi fact produksi cost\Lookup">
     <Properties>
@@ -57102,19 +57160,6 @@ where [refTable].[no_produk] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\populasi fact produksi cost\fact produksi cost">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\populasi fact produksi cost\pemesanan source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

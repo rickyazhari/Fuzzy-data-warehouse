@@ -42,7 +42,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <!--isi user control-->
-                    <StackPanel Name="content_control"></StackPanel>
+                    <StackPanel Name="content_control" DockPanel.Dock="Top"></StackPanel>
                 </DockPanel>
             </DockPanel>
         </Border>

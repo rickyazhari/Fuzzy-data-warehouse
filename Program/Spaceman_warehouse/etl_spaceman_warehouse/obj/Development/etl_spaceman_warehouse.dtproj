@@ -16,17 +16,17 @@
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{c3870883-fed7-4d96-9ed8-bcebf942c646}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">etl_spaceman_warehouse</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
           </SSIS:Property>
           <SSIS:Property SSIS:Name="CreationDate">2015-04-26T16:19:18.5771139+07:00</SSIS:Property>
-          <SSIS:Property SSIS:Name="CreatorName">Coret\kari</SSIS:Property>
-          <SSIS:Property SSIS:Name="CreatorComputerName">CORET</SSIS:Property>
+          <SSIS:Property SSIS:Name="CreatorName">coret\kari</SSIS:Property>
+          <SSIS:Property SSIS:Name="CreatorComputerName">coret</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAejC0VjqBMEOilCFHgYpvQgAAAAACAAAAAAAQZgAAAAEAACAAAAACxlkO9hZlcpK0OnVEDYqSkIX/4YTpfVXtyVVwdTTNBAAAAAAOgAAAAAIAACAAAAB0sYDwx262d0ucg1bB6L8sNTAgyi9mQl+j+1PEdTDbuJAAAAA7dEZZbhWqj3KkttAp/3JY5l6IfLj1YXrs1pfQ6uxeMCzUSGjyEn7jamLrZ0iyJ1+qhIYCem1MdsOC1gTthsLDMWoiujN4j7RLahFnZXEpPFQFB0ZBNQc5tJ1vnTq8Ty41Ne8OodoMsHKGi0YN2hRMNR+dELhKComfX3GlEfhad2ppxias0IYIZQ9LHh/dempAAAAAvqJ6ytbUhTB2owp8sC1TThHx7CUyls4IjMqnRDhQ/lM3vXiM6iwXuK4VRoEyS4r7GIXxdqlWBvHWzimk2CxgwQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAejC0VjqBMEOilCFHgYpvQgAAAAACAAAAAAAQZgAAAAEAACAAAAAje+Hcw8jZVxhXPz4G3SxiDbi5yswwzKW8lmL163dUWwAAAAAOgAAAAAIAACAAAABUNT1ocDzVxxG+5Egtn3RKr8KLpmTGkvDYPXpVMYKY95AAAAD3szodva7nBcq8NCdgIA5D32QrrHmRBs6wTAQEHJHdxKn1HpQCXmYe+q98az9NYUuFo/xVfvqB8m7cu9ef3e5m28sZHOQsPrQjz2ZxzNkGHlGhJzhJ4Hy+Xfddtiaf78GIzgOJ+wiuPyWcyMFk20bB7QNaO23Jtdd6KWV/LuKYTCLs/2h3oyK+s4eHPP5EwutAAAAAKz6fthPd5FOJKhYN8HjQUkSvHFtaNFaDzMzURsq8hXRFATwTndbPv/dYlmy1Dc5niZwlcGAYbGKo0J1NkCj+aw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">115</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">131</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{DC0146CE-D0A6-40CF-B012-5EAD8F717CB0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{84AE012D-28D1-43D9-9DE7-A96358A7203D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

@@ -5,12 +5,12 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace app_spaceman_warehouse
+namespace app_Spaceman_Warehouse
 {
-    class kon
+    public class kon
     {
         private SqlCommand com = null;
-        private string konf = "server=CORET/SPACEMAN;UID=Coret/kari;PWD=;Database=dw_spaceman";
+        private string konf = @"Data Source=CORET\SPACEMAN;Integrated Security=SSPI;Initial Catalog=dw_spaceman";
         private SqlConnection koneksi = null;
         
         private void open_kon()

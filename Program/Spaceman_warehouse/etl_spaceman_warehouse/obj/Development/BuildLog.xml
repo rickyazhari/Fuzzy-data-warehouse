@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>etl_spaceman_warehouse</Name>
-    <LastWriteTime>2015-04-27T12:00:11.491106Z</LastWriteTime>
+    <LastWriteTime>2015-05-07T01:54:48.2274246Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2015-05-06T14:26:11.5828567Z</LastWriteTime>
+      <LastWriteTime>2015-05-07T08:07:38.758866Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

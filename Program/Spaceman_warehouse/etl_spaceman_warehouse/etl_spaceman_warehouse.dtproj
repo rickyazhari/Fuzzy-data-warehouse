@@ -16,17 +16,17 @@
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{c3870883-fed7-4d96-9ed8-bcebf942c646}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">etl_spaceman_warehouse</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
           </SSIS:Property>
           <SSIS:Property SSIS:Name="CreationDate">2015-04-26T16:19:18.5771139+07:00</SSIS:Property>
-          <SSIS:Property SSIS:Name="CreatorName">Coret\kari</SSIS:Property>
-          <SSIS:Property SSIS:Name="CreatorComputerName">CORET</SSIS:Property>
+          <SSIS:Property SSIS:Name="CreatorName">coret\kari</SSIS:Property>
+          <SSIS:Property SSIS:Name="CreatorComputerName">coret</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjVETGVM7Z0qNa0dYlo89rwAAAAACAAAAAAAQZgAAAAEAACAAAAC88i3ckzj9k8Pip/Wgdje7e5DER8CyEC5c5CvukqejIQAAAAAOgAAAAAIAACAAAACjva1mOvuJPuLpr2/NOY9Kw1f4NWzvubvu3t4Tri3vmpAAAADNe76RyX9H4eLhfr2gqwce0hk8MutWLsr0zSnsMYa5TEds+65l97HohUu1iK93KMmCPme0mPEvK7YQeDov+OZBJ+hGcC8gk3ExDanTwjOrx6QCrKF8Hir4sK+Oej8oop1WebfLDD64qg7SMqXl/VU22h/mGdM14UbrWl2tKbjlEgsyrSlO91CQZiZNYRBitqBAAAAAfbr+bxsoyTdAPAZ55cIsNPsQQuNV/vpqitGFt6KsFpA9p6C09oDDBfJf2LqaOlyN5SSFRH7zSupY+6+JbqGuSw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAejC0VjqBMEOilCFHgYpvQgAAAAACAAAAAAAQZgAAAAEAACAAAACpqoaoBHoGNnYpwIyPYZGj/BHtyPmxpAPP5Q1h8JEY5gAAAAAOgAAAAAIAACAAAADytZUQJL3vN+m8qSIVgy66POHLzZsPXxswCEfSIx8O9ZAAAAAdJMc+xjtgemKaQVknLir353i/dq/yAYl+JGO37tajckxaMTqdCVoFbyJNUSb4ekYZo/ZyblJHer0dvYzdSdSzb0YWcsyd/AOE1+KfA5ssg4fzIMOwAAFL/w/9X71EeJvwPvTYpQubJA6oSfWKwgYdeuCkC89nioCQ0N3B+Zb2AO7D/zWGoOybkKgHkSslHEtAAAAAOGY9IBfGspaPZVquLZWA2+xg4I8eERq9xF/ppoPTuyip3P45Aciji35iHEIHWi0zIDxrDQ6LlyOjJzH4DGc8bQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>

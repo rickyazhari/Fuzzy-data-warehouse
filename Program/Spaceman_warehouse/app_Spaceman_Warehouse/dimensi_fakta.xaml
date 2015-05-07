@@ -6,22 +6,234 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Width="1276" Height="Auto" Background="White" Loaded="UserControl_Loaded">
     <DockPanel LastChildFill="True">
-        
-        
          <DockPanel LastChildFill="True" x:Name="sub_menu" Width="300" Background="White">
             <Rectangle x:FieldModifier="public" x:Name="split_border" Fill="#FF008BFF" DockPanel.Dock="Right" Width="1" Height="464" VerticalAlignment="Top"/>
             <StackPanel x:Name="menu"></StackPanel>
         </DockPanel>
         <DockPanel x:Name="sub_content_header">
             <StackPanel DockPanel.Dock="Top" Height="50">
-                <TextBlock  Height="40" x:Name="content_header" Foreground="#FF008bFF" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="24" Margin="19,0,0,0" Padding="0,10,0,0">TEST</TextBlock>
+                <TextBlock  Height="45" x:Name="content_header" Foreground="#FF008bFF" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="24" Margin="19,0,0,0" Padding="0,10,0,0">TEST</TextBlock>
             </StackPanel>
-            <StackPanel x:Name="sub_content_content">
-                
-            </StackPanel>
+            <DockPanel LastChildFill="True">
+                <DockPanel LastChildFill="True" x:Name="sub_content_content" DockPanel.Dock="Top" Margin="10,0">
+                    <DataGrid x:Name="tabel_view" ItemsSource="{Binding}" HorizontalScrollBarVisibility="Visible" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" GridLinesVisibility="Horizontal" BorderThickness="0" BorderBrush="White" Background="{x:Null}" HeadersVisibility="Column" CanUserAddRows="False" SnapsToDevicePixels="True">
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="Background" Value="#FF008BFF"></Setter>
+                                <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+                                <Setter Property="FontWeight" Value="Bold"></Setter>
+                                <Setter Property="MinWidth" Value="140"></Setter>
+                                <Setter Property="FontSize" Value="16"></Setter>
+                                <Setter Property="Height" Value="35"></Setter>
+                                <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Setter Property="Height" Value="30"></Setter>
+                                <Setter Property="Margin" Value="0,0,0,0"></Setter>
+                                
+                                <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+                                <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}">
+                                <Setter Property="BorderThickness" Value="0,1,0,0"></Setter>
+                                <Setter Property="BorderBrush" Value="AliceBlue"></Setter>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+                </DockPanel>
+                <Grid DockPanel.Dock="Top" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="45"></ColumnDefinition>
+                        <ColumnDefinition Width="45"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="45"></ColumnDefinition>
+                        <ColumnDefinition Width="45"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="border_button_first" Grid.Column="0" Background="#ffffffff" BorderBrush="#FF008bFF" BorderThickness="1" CornerRadius="25" Height="35" Width="35" Cursor="Hand" MouseLeftButtonUp="border_button_first_MouseLeftButtonUp" MouseEnter="border_button_first_MouseEnter" MouseLeave="border_button_first_MouseLeave">
+                     <TextBlock x:Name="border_button_name_first" Background="#FFFFFFFF" Foreground="#FF008bFF" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">&lt;&lt;</TextBlock> 
+                    </Border>
+                    <Border x:Name="border_button_prev" Grid.Column="1" Background="#ffffffff" BorderBrush="#FF008bFF" BorderThickness="1" CornerRadius="25" Height="35" Width="35" Cursor="Hand" MouseLeftButtonUp="border_button_prev_MouseLeftButtonUp" MouseEnter="border_button_prev_MouseEnter" MouseLeave="border_button_prev_MouseLeave">
+                        <TextBlock x:Name="border_button_name_prev" Background="#FFFFFFFF" Foreground="#FF008bFF" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">&lt;</TextBlock>
+                     </Border>
+                    <Border x:Name="border_status_list" Grid.Column="2" Background="#FF008BFF" BorderBrush="#FF008bFF" BorderThickness="1"  CornerRadius="5" Height="35" Width="100">
+                         <TextBlock x:Name="border_status_list_content" Background="#FF008BFF" Foreground="#FFFFFFFF" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center">1</TextBlock>
+                    </Border>
+                    <Border x:Name="border_button_next" Grid.Column="3" Background="#ffffffff" BorderBrush="#FF008bFF" BorderThickness="1" CornerRadius="25" Height="35" Width="35" Cursor="Hand" MouseLeftButtonUp="border_button_next_MouseLeftButtonUp" MouseEnter="border_button_next_MouseEnter" MouseLeave="border_button_next_MouseLeave">
+                        <TextBlock x:Name="border_button_name_next" Background="#FFFFFFFF" Foreground="#FF008bFF" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">&gt;</TextBlock>
+                    </Border>
+                    <Border x:Name="border_button_last" Grid.Column="4" Background="#ffffffff" BorderBrush="#FF008bFF" BorderThickness="1" CornerRadius="25" Height="35" Width="35" Cursor="Hand" MouseLeftButtonUp="border_button_last_MouseLeftButtonUp" MouseEnter="border_button_last_MouseEnter" MouseLeave="border_button_last_MouseLeave">
+                        <TextBlock x:Name="border_button_name_last" Background="#FFFFFFFF" Foreground="#FF008bFF" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">&gt;&gt;</TextBlock>
+                    </Border>
+                </Grid>
+            </DockPanel>    
         </DockPanel>
     </DockPanel>
+
+
+    <UserControl.Resources>
+        
+        <!--tombol first enter-->
+        <Storyboard x:Key="first_enter">
+            <ColorAnimation Storyboard.TargetName="border_button_name_first" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_first" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_name_first" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--tombol first leave-->
+        <Storyboard x:Key="first_leave">
+            <ColorAnimation Storyboard.TargetName="border_button_name_first" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_first" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_name_first" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--tombol prev enter-->
+        <Storyboard x:Key="prev_enter">
+            <ColorAnimation Storyboard.TargetName="border_button_name_prev" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_prev" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_name_prev" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--tombol first leave-->
+        <Storyboard x:Key="prev_leave">
+            <ColorAnimation Storyboard.TargetName="border_button_name_prev" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_prev" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_name_prev" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--tombol first enter-->
+        <Storyboard x:Key="next_enter">
+            <ColorAnimation Storyboard.TargetName="border_button_name_next" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_next" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_name_next" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--tombol first leave-->
+        <Storyboard x:Key="next_leave">
+            <ColorAnimation Storyboard.TargetName="border_button_name_next" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_next" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_name_next" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+
+        <!--tombol first enter-->
+        <Storyboard x:Key="last_enter">
+            <ColorAnimation Storyboard.TargetName="border_button_name_last" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_last" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_name_last" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+        <!--tombol first leave-->
+        <Storyboard x:Key="last_leave">
+            <ColorAnimation Storyboard.TargetName="border_button_name_last" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_last" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="border_button_name_last" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+        </Storyboard>
+       
+        <Storyboard x:Key="fade_tabel">
+            <DoubleAnimation Storyboard.TargetName="tabel_view" Storyboard.TargetProperty="Opacity" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="tabel_view" Storyboard.TargetProperty="Opacity" To="1" BeginTime="0:0:0:0" Duration="0:0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
     
     
-   
 </UserControl>

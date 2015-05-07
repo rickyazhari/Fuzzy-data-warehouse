@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Width="300" Height="Auto" Background="White">
     <DockPanel LastChildFill="True">
-        <DockPanel x:Name="dim_waktu" Height="40" DockPanel.Dock="Top" Margin="5,10,0,3" LastChildFill="True" MouseEnter="dim_waktu_MouseEnter" MouseLeave="dim_waktu_MouseLeave" Cursor="Hand">
+        <DockPanel x:Name="dim_waktu" Height="40" DockPanel.Dock="Top" Margin="5,10,0,3" LastChildFill="True" MouseEnter="dim_waktu_MouseEnter" MouseLeave="dim_waktu_MouseLeave" Cursor="Hand" MouseLeftButtonUp="dim_waktu_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_waktu_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -32,7 +32,7 @@
             </DockPanel>
         </DockPanel>
         <!--dim konsumen tombol-->
-        <DockPanel x:Name="dim_konsumen" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" Cursor="Hand" MouseEnter="dim_konsumen_MouseEnter" MouseLeave="dim_konsumen_MouseLeave">
+        <DockPanel x:Name="dim_konsumen" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" Cursor="Hand" MouseEnter="dim_konsumen_MouseEnter" MouseLeave="dim_konsumen_MouseLeave" MouseLeftButtonUp="dim_konsumen_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_konsumen_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -58,7 +58,7 @@
             </DockPanel>
         </DockPanel>
         <!--dim staff tombol-->
-        <DockPanel x:Name="dim_staff" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" MouseEnter="dim_staff_MouseEnter" MouseLeave="dim_staff_MouseLeave" Cursor="Hand">
+        <DockPanel x:Name="dim_staff" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" MouseEnter="dim_staff_MouseEnter" MouseLeave="dim_staff_MouseLeave" Cursor="Hand" MouseLeftButtonUp="dim_staff_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_staff_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -84,7 +84,7 @@
             </DockPanel>
         </DockPanel>
         <!--dim design tombol-->
-        <DockPanel x:Name="dim_design" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_design_MouseEnter" MouseLeave="dim_design_MouseLeave">
+        <DockPanel x:Name="dim_design" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_design_MouseEnter" MouseLeave="dim_design_MouseLeave" MouseLeftButtonUp="dim_design_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_design_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -110,7 +110,7 @@
             </DockPanel>
         </DockPanel>
         <!--dim job tombol-->
-        <DockPanel x:Name="dim_job" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_job_MouseEnter" MouseLeave="dim_job_MouseLeave">
+        <DockPanel x:Name="dim_job" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_job_MouseEnter" MouseLeave="dim_job_MouseLeave" MouseLeftButtonUp="dim_job_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_job_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -136,7 +136,7 @@
             </DockPanel>
         </DockPanel>
         <!--dim kredit-->
-        <DockPanel x:Name="dim_kredit" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_kredit_MouseEnter" MouseLeave="dim_kredit_MouseLeave">
+        <DockPanel x:Name="dim_kredit" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_kredit_MouseEnter" MouseLeave="dim_kredit_MouseLeave" MouseLeftButtonUp="dim_kredit_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_kredit_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -162,7 +162,7 @@
             </DockPanel>
         </DockPanel>
         <!--dim pengiriman tombol-->
-        <DockPanel x:Name="dim_pengiriman" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_pengiriman_MouseEnter" MouseLeave="dim_pengiriman_MouseLeave">
+        <DockPanel x:Name="dim_pengiriman" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_pengiriman_MouseEnter" MouseLeave="dim_pengiriman_MouseLeave" MouseLeftButtonUp="dim_pengiriman_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_pengirim_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -188,7 +188,7 @@
             </DockPanel>
         </DockPanel>
         <!--dim produk tombol-->
-        <DockPanel x:Name="dim_produk" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_produk_MouseEnter" MouseLeave="dim_produk_MouseLeave">
+        <DockPanel x:Name="dim_produk" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_produk_MouseEnter" MouseLeave="dim_produk_MouseLeave" MouseLeftButtonUp="dim_produk_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_produk_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -214,7 +214,7 @@
             </DockPanel>
         </DockPanel>
         <!--dim size tombol-->
-        <DockPanel x:Name="dim_size" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_size_MouseEnter" MouseLeave="dim_size_MouseLeave">
+        <DockPanel x:Name="dim_size" Margin="5,0,0,3" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_size_MouseEnter" MouseLeave="dim_size_MouseLeave" MouseLeftButtonUp="dim_size_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_size_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>

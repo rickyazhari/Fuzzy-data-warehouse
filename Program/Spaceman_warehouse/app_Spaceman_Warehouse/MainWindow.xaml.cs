@@ -24,15 +24,16 @@ namespace app_Spaceman_Warehouse
     {
         UserControl isi_content= null;
         dimensi_fakta mc;
+        public Storyboard x,m = new Storyboard();
         public MainWindow()
         {
             InitializeComponent();
-            mc = new dimensi_fakta(this, "");
+            mc = new dimensi_fakta(this, "","");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Storyboard m,x = new Storyboard();
+            
             status_content.Text = "Home";
             m = (Storyboard)TryFindResource("window_open");
             m.Begin();
@@ -94,7 +95,6 @@ namespace app_Spaceman_Warehouse
                {
                    mc.split_border.Height = this.Height - (header.Height + footer.Height);
                }
-               Storyboard m,x = new Storyboard();
                m = (Storyboard)TryFindResource("window_open");
                m.Begin();
                x = (Storyboard)TryFindResource("content_fading_in");
@@ -109,7 +109,7 @@ namespace app_Spaceman_Warehouse
                     mc.split_border.Height = this.Height - (header.Height + footer.Height);
                 }
                 state_window_maximize();
-                Storyboard m = new Storyboard();
+               
                 m = (Storyboard)TryFindResource("content_fading_in");
                 m.Begin();
             }
@@ -132,7 +132,7 @@ namespace app_Spaceman_Warehouse
 
         private void Window_StateChanged(object sender, EventArgs e)
         {
-            Storyboard m ,x= new Storyboard();
+            
             if (this.WindowState == System.Windows.WindowState.Maximized)
             {
                 state_window_maximize();
@@ -149,7 +149,7 @@ namespace app_Spaceman_Warehouse
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            Storyboard m,x = new Storyboard();
+            
             if (this.WindowState == System.Windows.WindowState.Maximized)
             {
                 state_window_maximize();
@@ -199,10 +199,14 @@ namespace app_Spaceman_Warehouse
             sb.Begin();
         }
 
-
+        public void fading()
+        {
+            x = (Storyboard)TryFindResource("content_fading_in");
+            x.Begin();
+        }
         public void uc_handle(string y)
         {
-            Storyboard x = new Storyboard();
+            
             switch (y)
             {
 
@@ -225,12 +229,11 @@ namespace app_Spaceman_Warehouse
                     break;
 
                 case "dimensi":
-                    mc = new dimensi_fakta(this,"dimensi");
+                    mc = new dimensi_fakta(this,"dimensi","");
                     content_control.Children.Clear();
                     content_control.Children.Add(mc);
                     status_content.Text = "Dimensi";
-                    x = (Storyboard)TryFindResource("content_fading_in");
-                    x.Begin();
+                    fading();
                     break;
             }
         }
