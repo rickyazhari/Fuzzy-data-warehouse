@@ -235,6 +235,14 @@ namespace app_Spaceman_Warehouse
                     status_content.Text = "Dimensi";
                     fading();
                     break;
+
+                case "fakta":
+                    mc = new dimensi_fakta(this, "fakta", "");
+                    content_control.Children.Clear();
+                    content_control.Children.Add(mc);
+                    status_content.Text = "Fakta";
+                    fading();
+                    break;
             }
         }
         private void status_content_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)

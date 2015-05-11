@@ -12,11 +12,24 @@
         </DockPanel>
         <DockPanel x:Name="sub_content_header">
             <StackPanel DockPanel.Dock="Top" Height="50">
-                <TextBlock  Height="45" x:Name="content_header" Foreground="#FF008bFF" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="24" Margin="19,0,0,0" Padding="0,10,0,0">TEST</TextBlock>
+                <TextBlock  Height="45" x:Name="content_header" Foreground="#FF008bFF" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="24" Margin="19,0,0,0" Padding="0,10,0,0" FontWeight="Bold">TEST</TextBlock>
             </StackPanel>
             <DockPanel LastChildFill="True">
                 <DockPanel LastChildFill="True" x:Name="sub_content_content" DockPanel.Dock="Top" Margin="10,0">
                     <DataGrid x:Name="tabel_view" ItemsSource="{Binding}" HorizontalScrollBarVisibility="Visible" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" GridLinesVisibility="Horizontal" BorderThickness="0" BorderBrush="White" Background="{x:Null}" HeadersVisibility="Column" CanUserAddRows="False" SnapsToDevicePixels="True">
+                        <DataGrid.Resources>
+                            <Style TargetType="{x:Type ScrollBar}">
+                                <Setter Property="Background" Value="#FFFFFFFF"></Setter>
+                                <Setter Property="BorderThickness" Value="0"></Setter>
+                            </Style>
+                            <Style TargetType="{x:Type Thumb}">
+                                <Setter Property="SnapsToDevicePixels" Value="True"></Setter>
+                                <Setter Property="OverridesDefaultStyle" Value="True"></Setter>
+                                <Setter Property="IsTabStop" Value="False"></Setter>
+                                <Setter Property="Focusable" Value="False"></Setter>
+                            </Style>
+                            
+                        </DataGrid.Resources>
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="{x:Type DataGridColumnHeader}">
                                 <Setter Property="Background" Value="#FF008BFF"></Setter>

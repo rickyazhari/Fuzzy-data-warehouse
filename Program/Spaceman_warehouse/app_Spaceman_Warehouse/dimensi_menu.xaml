@@ -27,7 +27,7 @@
                     <Rectangle x:Name="dim_waktu_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_waktu_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_waktu_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Waktu</TextBlock>
+                    <TextBlock x:Name="dim_waktu_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Dimensi Waktu</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -53,7 +53,7 @@
                     <Rectangle x:Name="dim_konsumen_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_konsumen_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_konsumen_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Konsumen</TextBlock>
+                    <TextBlock x:Name="dim_konsumen_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Dimensi Konsumen</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -79,7 +79,7 @@
                     <Rectangle x:Name="dim_staff_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_staff_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_staff_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Staff Produksi</TextBlock>
+                    <TextBlock x:Name="dim_staff_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Dimensi Staff Produksi</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -105,7 +105,7 @@
                     <Rectangle x:Name="dim_design_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_design_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_design_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Design</TextBlock>
+                    <TextBlock x:Name="dim_design_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Dimensi Design</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -131,7 +131,7 @@
                     <Rectangle x:Name="dim_job_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_job_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_job_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Job</TextBlock>
+                    <TextBlock x:Name="dim_job_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Dimensi Job</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -157,7 +157,7 @@
                     <Rectangle x:Name="dim_kredit_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_kredit_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_kredit_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Kredit</TextBlock>
+                    <TextBlock x:Name="dim_kredit_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Dimensi Kredit</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -183,7 +183,7 @@
                     <Rectangle x:Name="dim_pengirim_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_pengirim_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_pengirim_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Pengirim</TextBlock>
+                    <TextBlock x:Name="dim_pengirim_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Dimensi Pengirim</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -209,7 +209,7 @@
                     <Rectangle x:Name="dim_produk_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_produk_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_produk_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Produk</TextBlock>
+                    <TextBlock x:Name="dim_produk_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Dimensi Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -235,7 +235,7 @@
                     <Rectangle x:Name="dim_size_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_size_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_size_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Dimensi Size</TextBlock>
+                    <TextBlock x:Name="dim_size_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Dimensi Size</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -261,7 +261,7 @@
                     <Rectangle x:Name="dim_menu_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="dim_menu_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_menu_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Menu Utama</TextBlock>
+                    <TextBlock x:Name="dim_menu_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Menu Utama</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>

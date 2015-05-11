@@ -76,6 +76,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="fakta_menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="home.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,6 +106,9 @@
       <DependentUpon>etl_load.xaml</DependentUpon>
     </Compile>
     <Compile Include="extract_transform_load.cs" />
+    <Compile Include="fakta_menu.xaml.cs">
+      <DependentUpon>fakta_menu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="home.xaml.cs">
       <DependentUpon>home.xaml</DependentUpon>
     </Compile>

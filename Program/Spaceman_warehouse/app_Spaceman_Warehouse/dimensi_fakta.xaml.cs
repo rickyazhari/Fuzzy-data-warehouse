@@ -47,7 +47,9 @@ namespace app_Spaceman_Warehouse
             }
             else
             {
-
+                menu_content = new fakta_menu(root);
+                menu.Children.Clear();
+                menu.Children.Add(menu_content);
             }
             split_border.Height = root.Height - (root.header.Height + root.footer.Height);
             status_tabel = y;
@@ -57,65 +59,80 @@ namespace app_Spaceman_Warehouse
         {
             if (status_tabel == "dimensi")
             {
-               uc_dimensi_handle(status_content,page_lower);
+               uc_dimensi_handle(status_tabel,status_content,page_lower);
             }
             else
             {
-
+                uc_dimensi_handle(status_tabel, status_content, page_lower);
             }
         }
 
-        private void uc_dimensi_handle(string x, int y)
+        private void uc_dimensi_handle(string v,string x, int y)
         {
+            status_tabel = v;
             status_content = x;
-             switch (status_content)
+            if (status_tabel == "dimensi")
+            {
+                switch (status_content)
                 {
-                    case "konsumen" :
+                    case "konsumen":
                         content_header.Text = "Dimensi Konsumen";
-                        com = "select * from dim_konsumen";
+                        com = "select  no_konsumen as 'No', nama_konsumen as 'Nama Konsumen', nama_kota as 'Nama Kota' from dim_konsumen";
                         root.status_content.Text = "Dimensi Konsumen";
                         break;
-                    case "produk"   :
+                    case "produk":
                         content_header.Text = "Dimensi Produk";
-                        com = "select * from dim_Produk";
+                        com = "select no_produk as 'No Produk', nama_produk as 'Nama Produk' from dim_Produk";
                         root.status_content.Text = "Dimensi Produk";
                         break;
-                    case "pengiriman" :
+                    case "pengiriman":
                         content_header.Text = "Dimensi Pengiriman";
-                        com = "select * from dim_pengiriman";
+                        com = "select no_pengiriman as 'No Pengiriman', jenis_pengiriman as 'Jenis Pengiriman' from dim_pengiriman";
                         root.status_content.Text = "Dimensi Pengiriman";
                         break;
-                    case "kredit"   :
+                    case "kredit":
                         content_header.Text = "Dimensi Kredit";
-                        com = "select * from dim_kredit";
+                        com = "select no_kredit as 'No Kredit', jenis_kredit as 'Jenis Kredit' from dim_kredit";
                         root.status_content.Text = "Dimensi Kredit";
                         break;
-                    case "design"   :
+                    case "design":
                         content_header.Text = "Dimensi Design";
-                        com = "select * from dim_design";
+                        com = "select no_design as 'No Design', nama_design as 'Nama Design' from dim_design";
                         root.status_content.Text = "Dimensi Design";
                         break;
-                    case "staff_produksi" :
+                    case "staff_produksi":
                         content_header.Text = "Dimensi Staff Produksi";
-                        com = "select * from dim_staff_produksi";
+                        com = "select no_staff as 'No', nama_staff as 'Nama Staff', nama_bagian as 'Nama Bagian' from dim_staff_produksi";
                         root.status_content.Text = "Dimensi Staff Produksi";
                         break;
-                    case "size" :
+                    case "size":
                         content_header.Text = "Dimensi Size";
-                        com = "select * from dim_size";
+                        com = "select no_size as 'No Size', nama_size as 'Nama Size' from dim_size";
                         root.status_content.Text = "Dimensi Size";
                         break;
-                    case "job"  :
+                    case "job":
                         content_header.Text = "Dimensi Job";
-                        com = "select * from dim_job";
+                        com = "select no_job as 'No Job', keterangan_job as 'Keterangan Job' from dim_job";
                         root.status_content.Text = "Dimensi Job";
                         break;
                     default:
                         content_header.Text = "Dimensi Waktu";
-                        com = "select * from dim_waktu";
+                        com = "select no_waktu as 'No Waktu', string_tanggal as 'STR Tanggal', full_date as 'Full Date', hari as 'Hari', tanggal as 'Tanggal', Nama_bulan as 'Nama Bulan', bulan as 'Bulan', tahun as 'Tahun' from dim_waktu";
                         root.status_content.Text = "Dimensi Waktu";
                         break;
                 }
+            }
+            else
+            {
+                switch (status_content)
+                {
+                    default :
+                        content_header.Text = "Fakta Pemesanan";
+                        com = "select dim_waktu.string_tanggal as 'Waktu', dim_konsumen.nama_konsumen as 'Konsumen',dim_produk.nama_produk as 'Produk',fact_pemesanan.jumlah as 'Jumlah', fact_pemesanan.saldo_order as 'Saldo' from fact_pemesanan join dim_waktu on fact_pemesanan.waktu = dim_waktu.no_waktu join dim_konsumen on fact_pemesanan.konsumen = dim_konsumen.no_konsumen join dim_produk on fact_pemesanan.produk = dim_produk.no_produk";
+                        root.status_content.Text = "Fakta Pemesanan";
+                        break;
+                }
+            }
             page_lower = y;
             tabel_dw = new DataTable();
             tabel_dw = sql.tampil_data(com);
@@ -167,7 +184,7 @@ namespace app_Spaceman_Warehouse
                 border_status_list_content.Text = page_lower + " - " + row_count + " dari " + row_count + " row";
                 
             }
-            uc_dimensi_handle(status_content, page_lower);
+            uc_dimensi_handle(status_tabel,status_content, page_lower);
             
         }
 
@@ -176,7 +193,7 @@ namespace app_Spaceman_Warehouse
             if (page_lower > 1)
             {
                 page_lower -= show_page;
-                uc_dimensi_handle(status_content,page_lower);
+                uc_dimensi_handle(status_tabel,status_content,page_lower);
                 Storyboard x = new Storyboard();
                 x = (Storyboard)TryFindResource("fade_tabel");
                 x.Begin();
@@ -195,7 +212,7 @@ namespace app_Spaceman_Warehouse
                 {
                     page_lower = (row_count - (row_count % show_page)) + 1;
                 }
-                uc_dimensi_handle(status_content, page_lower);
+                uc_dimensi_handle(status_tabel,status_content, page_lower);
                 Storyboard x = new Storyboard();
                 x = (Storyboard)TryFindResource("fade_tabel");
                 x.Begin();
@@ -206,7 +223,7 @@ namespace app_Spaceman_Warehouse
         {
             if (page_lower > 1)
             {
-                uc_dimensi_handle(status_content, 1);
+                uc_dimensi_handle(status_tabel,status_content, 1);
                 Storyboard x = new Storyboard();
                 x = (Storyboard)TryFindResource("fade_tabel");
                 x.Begin();

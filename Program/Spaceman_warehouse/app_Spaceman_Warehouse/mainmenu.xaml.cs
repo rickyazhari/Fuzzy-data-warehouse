@@ -94,5 +94,10 @@ namespace app_Spaceman_Warehouse
         {
             root.uc_handle("dimensi");
         }
+
+        private void menu_fakta_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.uc_handle("fakta");
+        }
     }
 }
