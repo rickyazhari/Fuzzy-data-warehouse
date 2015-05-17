@@ -4,109 +4,109 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Background="White">
+             d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel LastChildFill="True">
         <!--Fakta Pemesanan tombol-->
         <DockPanel x:Name="fakta_pemesanan"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,10,0,3" LastChildFill="True" MouseEnter="fakta_pemesanan_MouseEnter" MouseLeave="fakta_pemesanan_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
-                <Rectangle x:Name="fakta_pemesanan_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pemesanan_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
             <DockPanel x:Name="fakta_pemesanan_wrap" LastChildFill="True">
                 <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
                     <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pemesanan_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                        <Rectangle x:Name="fakta_pemesanan_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                     </DockPanel>
                     <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pemesanan_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                        <Rectangle x:Name="fakta_pemesanan_border_split_right2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
                     </StackPanel>
                 </DockPanel>
-                <Rectangle x:Name="fakta_pemesanan_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pemesanan_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
 
-                <Rectangle x:Name="fakta_pemesanan_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pemesanan_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
                 <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
-                    <Rectangle x:Name="fakta_pemesanan_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
-                    <Rectangle x:Name="fakta_pemesanan_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle x:Name="fakta_pemesanan_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="fakta_pemesanan_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
-                <Border x:Name="fakta_pemesanan_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="fakta_pemesanan_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Pemesanan Produk</TextBlock>
+                <Border x:Name="fakta_pemesanan_inner" Background="#FF008BFF">
+                    <TextBlock x:Name="fakta_pemesanan_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Pemesanan Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
         <!--Fakta pop produk tombol-->
         <DockPanel x:Name="fakta_pop_produk"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pop_produk_MouseEnter" MouseLeave="fakta_pop_produk_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
-                <Rectangle x:Name="fakta_pop_produk_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pop_produk_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
             <DockPanel x:Name="fakta_pop_produk_wrap" LastChildFill="True">
                 <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
                     <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pop_produk_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                        <Rectangle x:Name="fakta_pop_produk_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                     </DockPanel>
                     <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pop_produk_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                        <Rectangle x:Name="fakta_pop_produk_border_split_right2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
                     </StackPanel>
                 </DockPanel>
-                <Rectangle x:Name="fakta_pop_produk_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pop_produk_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
 
-                <Rectangle x:Name="fakta_pop_produk_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pop_produk_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
                 <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
-                    <Rectangle x:Name="fakta_pop_produk_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
-                    <Rectangle x:Name="fakta_pop_produk_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle x:Name="fakta_pop_produk_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="fakta_pop_produk_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
-                <Border x:Name="fakta_pop_produk_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="fakta_pop_produk_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Kepopuleran Produk</TextBlock>
+                <Border x:Name="fakta_pop_produk_inner" Background="#FF008BFF">
+                    <TextBlock x:Name="fakta_pop_produk_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Kepopuleran Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
         <!-- fakta pop design tombol-->
         <DockPanel x:Name="fakta_pop_design"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pop_design_MouseEnter" MouseLeave="fakta_pop_design_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
-                <Rectangle x:Name="fakta_pop_design_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pop_design_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
             <DockPanel x:Name="fakta_pop_design_wrap" LastChildFill="True">
                 <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
                     <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pop_design_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                        <Rectangle x:Name="fakta_pop_design_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                     </DockPanel>
                     <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pop_design_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                        <Rectangle x:Name="fakta_pop_design_border_split_right2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
                     </StackPanel>
                 </DockPanel>
-                <Rectangle x:Name="fakta_pop_design_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pop_design_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
 
-                <Rectangle x:Name="fakta_pop_design_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pop_design_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
                 <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
-                    <Rectangle x:Name="fakta_pop_design_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
-                    <Rectangle x:Name="fakta_pop_design_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle x:Name="fakta_pop_design_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="fakta_pop_design_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
-                <Border x:Name="fakta_pop_design_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="fakta_pop_design_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Kepopuleran Design</TextBlock>
+                <Border x:Name="fakta_pop_design_inner" Background="#FF008BFF">
+                    <TextBlock x:Name="fakta_pop_design_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Kepopuleran Design</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
         <!-- fakta Pembayaran Konsumen-->
         <DockPanel x:Name="fakta_pembayaran"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pembayaran_MouseEnter" MouseLeave="fakta_pembayaran_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
-                <Rectangle x:Name="fakta_pembayaran_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pembayaran_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
             <DockPanel x:Name="fakta_pembayaran_wrap" LastChildFill="True">
                 <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
                     <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pembayaran_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                        <Rectangle x:Name="fakta_pembayaran_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                     </DockPanel>
                     <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pembayaran_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                        <Rectangle x:Name="fakta_pembayaran_border_split_right2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
                     </StackPanel>
                 </DockPanel>
-                <Rectangle x:Name="fakta_pembayaran_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pembayaran_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
 
-                <Rectangle x:Name="fakta_pembayaran_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pembayaran_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
                 <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
-                    <Rectangle x:Name="fakta_pembayaran_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
-                    <Rectangle x:Name="fakta_pembayaran_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle x:Name="fakta_pembayaran_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="fakta_pembayaran_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
-                <Border x:Name="fakta_pembayaran_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="fakta_pembayaran_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Pembayaran Konsumen</TextBlock>
+                <Border x:Name="fakta_pembayaran_inner" Background="#FF008BFF">
+                    <TextBlock x:Name="fakta_pembayaran_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Pelunasan Konsumen</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -114,26 +114,26 @@
         <!--fakta size produk tombol-->
         <DockPanel x:Name="fakta_size"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_size_MouseEnter" MouseLeave="fakta_size_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
-                <Rectangle x:Name="fakta_size_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_size_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
             <DockPanel x:Name="fakta_size_wrap" LastChildFill="True">
                 <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
                     <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_size_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                        <Rectangle x:Name="fakta_size_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                     </DockPanel>
                     <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_size_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                        <Rectangle x:Name="fakta_size_border_split_right2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
                     </StackPanel>
                 </DockPanel>
-                <Rectangle x:Name="fakta_size_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_size_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
 
-                <Rectangle x:Name="fakta_size_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_size_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
                 <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
-                    <Rectangle x:Name="fakta_size_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
-                    <Rectangle x:Name="fakta_size_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle x:Name="fakta_size_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="fakta_size_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
-                <Border x:Name="fakta_size_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="fakta_size_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Size Produk</TextBlock>
+                <Border x:Name="fakta_size_inner" Background="#FF008BFF">
+                    <TextBlock x:Name="fakta_size_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Size Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -141,52 +141,52 @@
         <!--fakta pengiriman produk tombol-->
         <DockPanel x:Name="fakta_pengiriman"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pengiriman_MouseEnter" MouseLeave="fakta_pengiriman_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
-                <Rectangle x:Name="fakta_pengiriman_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pengiriman_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
             <DockPanel x:Name="fakta_pengiriman_wrap" LastChildFill="True">
                 <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
                     <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pengiriman_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                        <Rectangle x:Name="fakta_pengiriman_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                     </DockPanel>
                     <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_pengiriman_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                        <Rectangle x:Name="fakta_pengiriman_border_split_right2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
                     </StackPanel>
                 </DockPanel>
-                <Rectangle x:Name="fakta_pengiriman_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pengiriman_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
 
-                <Rectangle x:Name="fakta_pengiriman_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_pengiriman_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
                 <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
-                    <Rectangle x:Name="fakta_pengiriman_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
-                    <Rectangle x:Name="fakta_pengiriman_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle x:Name="fakta_pengiriman_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="fakta_pengiriman_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
-                <Border x:Name="fakta_pengiriman_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="fakta_pengiriman_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Pengiriman Produk</TextBlock>
+                <Border x:Name="fakta_pengiriman_inner" Background="#FF008BFF">
+                    <TextBlock x:Name="fakta_pengiriman_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Pengiriman Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
         <!--belanja buton-->
         <DockPanel x:Name="fakta_belanja"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_belanja_MouseEnter" MouseLeave="fakta_belanja_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
-                <Rectangle x:Name="fakta_belanja_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_belanja_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
             <DockPanel x:Name="fakta_belanja_wrap" LastChildFill="True">
                 <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
                     <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_belanja_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                        <Rectangle x:Name="fakta_belanja_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                     </DockPanel>
                     <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_belanja_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                        <Rectangle x:Name="fakta_belanja_border_split_right2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
                     </StackPanel>
                 </DockPanel>
-                <Rectangle x:Name="fakta_belanja_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_belanja_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
 
-                <Rectangle x:Name="fakta_belanja_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_belanja_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
                 <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
-                    <Rectangle x:Name="fakta_belanja_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
-                    <Rectangle x:Name="fakta_belanja_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle x:Name="fakta_belanja_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="fakta_belanja_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
-                <Border x:Name="fakta_belanja_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="fakta_belanja_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Belanja Produksi</TextBlock>
+                <Border x:Name="fakta_belanja_inner" Background="#FF008BFF">
+                    <TextBlock x:Name="fakta_belanja_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Belanja Bahan</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -194,26 +194,26 @@
         <!--fact Biaya staff produksi button-->
         <DockPanel x:Name="fakta_cost"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_cost_MouseEnter" MouseLeave="fakta_cost_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
-                <Rectangle x:Name="fakta_cost_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_cost_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
             <DockPanel x:Name="fakta_cost_wrap" LastChildFill="True">
                 <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
                     <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_cost_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                        <Rectangle x:Name="fakta_cost_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                     </DockPanel>
                     <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
-                        <Rectangle x:Name="fakta_cost_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                        <Rectangle x:Name="fakta_cost_border_split_right2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
                     </StackPanel>
                 </DockPanel>
-                <Rectangle x:Name="fakta_cost_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_cost_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
 
-                <Rectangle x:Name="fakta_cost_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="fakta_cost_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
                 <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
-                    <Rectangle x:Name="fakta_cost_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
-                    <Rectangle x:Name="fakta_cost_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle x:Name="fakta_cost_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="fakta_cost_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
-                <Border x:Name="fakta_cost_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="fakta_cost_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Biaya Staff Produksi</TextBlock>
+                <Border x:Name="fakta_cost_inner" Background="#FF008BFF">
+                    <TextBlock x:Name="fakta_cost_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Produksi Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -221,26 +221,26 @@
         <!--menu utama tombol-->
         <DockPanel x:Name="dim_menu" Margin="5,0,0,0" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_menu_MouseEnter" MouseLeave="dim_menu_MouseLeave" MouseLeftButtonUp="dim_menu_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
-                <Rectangle x:Name="dim_menu_span" Height="1" Width="0" Fill="#FF008BFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="dim_menu_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
             <DockPanel x:Name="dim_menu_wrap" LastChildFill="True">
                 <DockPanel LastChildFill="True" DockPanel.Dock="Right" Height="40" Width="1">
                     <DockPanel LastChildFill="False" DockPanel.Dock="Top" Height="20" Width="1">
-                        <Rectangle x:Name="dim_menu_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                        <Rectangle x:Name="dim_menu_border_split_right1" DockPanel.Dock="Bottom" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                     </DockPanel>
                     <StackPanel DockPanel.Dock="Bottom" Height="20" Width="1">
-                        <Rectangle x:Name="dim_menu_border_split_right2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
+                        <Rectangle x:Name="dim_menu_border_split_right2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
                     </StackPanel>
                 </DockPanel>
-                <Rectangle x:Name="dim_menu_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="dim_menu_border_top" Height="1" Width="0" DockPanel.Dock="Top" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
 
-                <Rectangle x:Name="dim_menu_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FF008BFF" HorizontalAlignment="Right"></Rectangle>
+                <Rectangle x:Name="dim_menu_border_bottom" Height="1" Width="0" DockPanel.Dock="Bottom" Fill="#FFFFFFFF" HorizontalAlignment="Right"></Rectangle>
                 <DockPanel LastChildFill="True" DockPanel.Dock="Left" Height="39" Width="1">
-                    <Rectangle x:Name="dim_menu_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FF008BFF" VerticalAlignment="Top"></Rectangle>
-                    <Rectangle x:Name="dim_menu_border_split_left2" Height="0" Width="1" Fill="#FF008BFF" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle x:Name="dim_menu_border_split_left1" Height="0" Width="1" DockPanel.Dock="Top" Fill="#FFFFFFFF" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle x:Name="dim_menu_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
-                <Border x:Name="dim_menu_inner" Background="#FFFFFFFF">
-                    <TextBlock x:Name="dim_menu_content" Background="#FFFFFFFF" Foreground="#FF008BFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Menu Utama</TextBlock>
+                <Border x:Name="dim_menu_inner" Background="#FF008BFF">
+                    <TextBlock x:Name="dim_menu_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Menu Utama</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
@@ -285,17 +285,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -338,17 +338,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pemesanan_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -393,17 +393,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -446,17 +446,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_produk_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -501,17 +501,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_design_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_design_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_design_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_design_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_design_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_design_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -554,17 +554,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_design_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_design_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_design_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_design_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pop_design_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pop_design_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -609,17 +609,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -662,17 +662,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pembayaran_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -717,17 +717,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_size_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_size_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_size_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_size_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_size_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_size_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -770,17 +770,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_size_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_size_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_size_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_size_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_size_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_size_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -825,17 +825,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -878,17 +878,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_pengiriman_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -933,17 +933,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_belanja_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_belanja_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_belanja_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_belanja_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_belanja_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_belanja_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -986,17 +986,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_belanja_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_belanja_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_belanja_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_belanja_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_belanja_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_belanja_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -1041,17 +1041,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_cost_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_cost_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_cost_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_cost_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_cost_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_cost_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -1094,17 +1094,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_cost_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_cost_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_cost_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_cost_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="fakta_cost_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="fakta_cost_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -1148,17 +1148,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="dim_menu_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="dim_menu_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.5" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
@@ -1201,17 +1201,17 @@
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <ColorAnimation Storyboard.TargetName="dim_menu_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="dim_menu_inner" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FFFFfFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+            <ColorAnimation Storyboard.TargetName="dim_menu_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
                 <ColorAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>

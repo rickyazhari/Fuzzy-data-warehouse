@@ -6,17 +6,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Width="1276" Height="Auto" Background="White" Loaded="UserControl_Loaded">
     <DockPanel LastChildFill="True">
-         <DockPanel LastChildFill="True" x:Name="sub_menu" Width="300" Background="White">
-            <Rectangle x:FieldModifier="public" x:Name="split_border" Fill="#FF008BFF" DockPanel.Dock="Right" Width="1" Height="464" VerticalAlignment="Top"/>
-            <StackPanel x:Name="menu"></StackPanel>
+        <DockPanel  LastChildFill="True" x:Name="sub_menu" Width="45" Background="#FFFFFFFF" DockPanel.Dock="Left">
+            <DockPanel DockPanel.Dock="Top" Height="45" LastChildFill="false">
+                <TextBlock x:Name="submenulabel" DockPanel.Dock="Left" Width="0" Foreground="White" Margin="10,0,0,0" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Text="MENU DIMENSI" FontWeight="Bold"/>
+                <TextBlock x:Name="submenubtn" DockPanel.Dock="Right" Width="45" Height="45" HorizontalAlignment="Stretch" VerticalAlignment="Center" Cursor="Hand" MouseLeftButtonUp="menubtn_MouseLeftButtonUp">Test</TextBlock>
+            </DockPanel>
+            <Rectangle DockPanel.Dock="Top" Width="300" Height="1" Fill="#FFF9F4F4"></Rectangle>
+            <StackPanel Margin="-50,0,0,0"  Visibility="Hidden" Opacity="0" x:Name="menu" Width="300"></StackPanel>
         </DockPanel>
         <DockPanel x:Name="sub_content_header">
-            <StackPanel DockPanel.Dock="Top" Height="50">
+            <StackPanel DockPanel.Dock="Top" Height="50" Name="tabel_header">
                 <TextBlock  Height="45" x:Name="content_header" Foreground="#FF008bFF" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="24" Margin="19,0,0,0" Padding="0,10,0,0" FontWeight="Bold">TEST</TextBlock>
             </StackPanel>
-            <DockPanel LastChildFill="True">
+            <DockPanel LastChildFill="True" x:Name="tabel_wrapper" Margin="0,0,5,0">
                 <DockPanel LastChildFill="True" x:Name="sub_content_content" DockPanel.Dock="Top" Margin="10,0">
-                    <DataGrid x:Name="tabel_view" ItemsSource="{Binding}" HorizontalScrollBarVisibility="Visible" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" GridLinesVisibility="Horizontal" BorderThickness="0" BorderBrush="White" Background="{x:Null}" HeadersVisibility="Column" CanUserAddRows="False" SnapsToDevicePixels="True">
+                    <DataGrid Margin="0,5,0,0" x:Name="tabel_view" ItemsSource="{Binding}" HorizontalScrollBarVisibility="Visible" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" GridLinesVisibility="Horizontal" BorderThickness="0" BorderBrush="White" Background="{x:Null}" HeadersVisibility="Column" CanUserAddRows="False" SnapsToDevicePixels="True">
                         <DataGrid.Resources>
                             <Style TargetType="{x:Type ScrollBar}">
                                 <Setter Property="Background" Value="#FFFFFFFF"></Setter>
@@ -246,7 +250,65 @@
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
         </Storyboard>
+        
+        <Storyboard x:Key="tampil_menu">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="menu" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0:0.4" Value="{x:Static Visibility.Visible}">
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimation Storyboard.TargetName="menu" Storyboard.TargetProperty="Opacity" To="1" BeginTime="0:0:0:0.3" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="sub_menu" Storyboard.TargetProperty="Width" To="300" BeginTime="0:0:0:0.0" Duration="0:0:0:0.3">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="submenulabel" Storyboard.TargetProperty="Width" To="245" BeginTime="0:0:0:0.0" Duration="0:0:0:0.3">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="sub_menu" Storyboard.TargetProperty="(DockPanel.Background).(SolidColorBrush.Color)" To="#FF008BFF" BeginTime="0:0:0:0.1" Duration="0:0:0:0.3">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ThicknessAnimationUsingKeyFrames  Storyboard.TargetName="menu" Storyboard.TargetProperty="Margin" BeginTime="0:0:0:0.4">
+                <SplineThicknessKeyFrame Value="0,0,0,0" KeyTime="0:0:0:0.2"></SplineThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="hide_menu">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="menu" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0:0.1" Value="{x:Static Visibility.Hidden}">
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimation Storyboard.TargetName="menu" Storyboard.TargetProperty="Opacity" To="0" BeginTime="0:0:0:0.0" Duration="0:0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="sub_menu" Storyboard.TargetProperty="Width" To="45" BeginTime="0:0:0:0.0" Duration="0:0:0:0.3">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="submenulabel" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0.0" Duration="0:0:0:0.3">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="sub_menu" Storyboard.TargetProperty="(DockPanel.Background).(SolidColorBrush.Color)" To="#FFFFFFFF" BeginTime="0:0:0:0.1" Duration="0:0:0:0.2">
+                <ColorAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut"></QuadraticEase>
+                </ColorAnimation.EasingFunction>
+            </ColorAnimation>
+            <ThicknessAnimationUsingKeyFrames  Storyboard.TargetName="menu" Storyboard.TargetProperty="Margin" BeginTime="0:0:0:0.2">
+                <SplineThicknessKeyFrame Value="-50,0,0,0" KeyTime="0:0:0:0.1"></SplineThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
     </UserControl.Resources>
-    
-    
+
 </UserControl>

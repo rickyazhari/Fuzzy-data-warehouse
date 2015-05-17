@@ -23,12 +23,12 @@ namespace app_Spaceman_Warehouse
     public partial class MainWindow : Window
     {
         UserControl isi_content= null;
-        dimensi_fakta mc;
+        public dimensi_fakta mc;
         public Storyboard x,m = new Storyboard();
         public MainWindow()
         {
             InitializeComponent();
-            mc = new dimensi_fakta(this, "","");
+            mc = new dimensi_fakta(this, "", "");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -91,9 +91,25 @@ namespace app_Spaceman_Warehouse
             if (this.WindowState == System.Windows.WindowState.Maximized)
             {
                this.WindowState = System.Windows.WindowState.Normal;
-               if (mc.split_border.Height > this.Height - (header.Height + footer.Height))
+               content.Width = this.Width;
+               content_control.Width = content.Width;
+               content.Height = this.Height - (header.Height + footer.Height)-4;
+               content_control.Height = content.Height;
+               if (mc.menu.Height > this.Height - (header.Height + footer.Height))
                {
-                   mc.split_border.Height = this.Height - (header.Height + footer.Height);
+                   mc.menu.Height = content_control.Height-4;
+               }
+
+               if (mc.Width > this.Width)
+               {
+                   content.Width = this.Width;
+                   content_control.Width = content.Width;
+                   mc.Width = content_control.Width;
+                   /*mc.sub_content_header.Width = this.Width - mc.sub_menu.Width-4;
+                   mc.tabel_header.Width = mc.sub_content_header.Width-4;
+                   mc.tabel_wrapper.Width = mc.sub_content_header.Width-4;
+                   mc.tabel_view.Width = mc.sub_content_header.Width-4;*/
+                   
                }
                m = (Storyboard)TryFindResource("window_open");
                m.Begin();
@@ -104,9 +120,25 @@ namespace app_Spaceman_Warehouse
             else
             {
                 this.WindowState = System.Windows.WindowState.Maximized;
-                if (mc.split_border.Height < this.Height - (header.Height + footer.Height))
+                content.Width = this.Width;
+                content_control.Width = content.Width;
+                content.Height = this.Height - (header.Height + footer.Height)-4;
+                content_control.Height = content.Height;
+                if (mc.Height < this.Height - (header.Height + footer.Height))
                 {
-                    mc.split_border.Height = this.Height - (header.Height + footer.Height);
+                    mc.Height = this.Height - (header.Height + footer.Height)-4;
+                    mc.sub_menu.Height = this.Height - (header.Height + footer.Height)-4;
+                }
+
+                if (mc.Width < this.Width)
+                {
+                    content.Width = this.Width;
+                    content_control.Width = this.Width;
+                    mc.Width = content_control.Width;
+                    /*mc.sub_content_header.Width = mc.Width - mc.sub_menu.Width-4;
+                    mc.tabel_header.Width = mc.sub_content_header.Width-4;
+                    mc.tabel_wrapper.Width = mc.sub_content_header.Width-4;
+                    mc.tabel_view.Width = mc.sub_content_header.Width-4;*/
                 }
                 state_window_maximize();
                
@@ -130,7 +162,7 @@ namespace app_Spaceman_Warehouse
             this.Close();
         }
 
-        private void Window_StateChanged(object sender, EventArgs e)
+        /*private void Window_StateChanged(object sender, EventArgs e)
         {
             
             if (this.WindowState == System.Windows.WindowState.Maximized)
@@ -145,7 +177,7 @@ namespace app_Spaceman_Warehouse
             }
             x = (Storyboard)TryFindResource("content_fading_in");
             x.Begin();
-        }
+        }*/
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
@@ -229,7 +261,7 @@ namespace app_Spaceman_Warehouse
                     break;
 
                 case "dimensi":
-                    mc = new dimensi_fakta(this,"dimensi","");
+                    mc = new dimensi_fakta(this, "dimensi", "");
                     content_control.Children.Clear();
                     content_control.Children.Add(mc);
                     status_content.Text = "Dimensi";

@@ -44,14 +44,18 @@ namespace app_Spaceman_Warehouse
                 menu_content = new dimensi_menu(root);
                 menu.Children.Clear();
                 menu.Children.Add(menu_content);
+                submenulabel.Text = "Dimensi Menu";
             }
             else
             {
                 menu_content = new fakta_menu(root);
                 menu.Children.Clear();
                 menu.Children.Add(menu_content);
+                submenulabel.Text = "Fakta Menu";
             }
-            split_border.Height = root.Height - (root.header.Height + root.footer.Height);
+            this.Width = root.Width;
+            this.Height = root.Height - (root.header.Height + root.footer.Height) - 4;
+            sub_menu.Height = root.Height - (root.header.Height + root.footer.Height)-4;
             status_tabel = y;
         }
 
@@ -285,6 +289,22 @@ namespace app_Spaceman_Warehouse
             Storyboard x = new Storyboard();
             x = (Storyboard)TryFindResource("last_leave");
             x.Begin();
+        }
+
+        private void menubtn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (sub_menu.Width < 300)
+            {
+                Storyboard x = new Storyboard();
+                x = (Storyboard)TryFindResource("tampil_menu");
+                x.Begin();
+            }
+            else
+            {
+                Storyboard x = new Storyboard();
+                x = (Storyboard)TryFindResource("hide_menu");
+                x.Begin();
+            }
         }
     }
 }

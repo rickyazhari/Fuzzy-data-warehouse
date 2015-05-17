@@ -1,7 +1,7 @@
 ﻿<Window x:Name="Spaceman_industries_warehouse" x:Class="app_Spaceman_Warehouse.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="600" Width="1280" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Loaded="Window_Loaded" StateChanged="Window_StateChanged" SizeChanged="Window_SizeChanged">
+        Title="MainWindow" Height="600" Width="1280" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Loaded="Window_Loaded"  SizeChanged="Window_SizeChanged">
     <Grid>
         <Border Name="wrapper" BorderBrush="#FF008BFF" Background="#FFFFFFFF" BorderThickness="2">
             <DockPanel LastChildFill="True">
@@ -42,7 +42,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <!--isi user control-->
-                    <StackPanel Name="content_control" DockPanel.Dock="Top"></StackPanel>
+                    <StackPanel Name="content_control" DockPanel.Dock="Top" HorizontalAlignment="Left"></StackPanel>
                 </DockPanel>
             </DockPanel>
         </Border>
@@ -95,6 +95,14 @@
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="content_control" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0:0" Value="{x:Static Visibility.Hidden}">
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="content_control" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0:0.6" Value="{x:Static Visibility.Visible}">
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
             <DoubleAnimation Storyboard.TargetName="content_control" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:0:0.7" Duration="0:0:0:0.5">
                 <DoubleAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>

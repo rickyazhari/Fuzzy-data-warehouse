@@ -23,7 +23,6 @@ namespace app_Spaceman_Warehouse
     {
         Storyboard sb;
         MainWindow root;
-        dimensi_fakta mc;
         public dimensi_menu(MainWindow x)
         {
             InitializeComponent();
@@ -177,73 +176,73 @@ namespace app_Spaceman_Warehouse
 
         private void dim_konsumen_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mc = new dimensi_fakta(root, "dimensi", "konsumen");
+            root.mc = new dimensi_fakta(root, "dimensi", "konsumen");
             root.content_control.Children.Clear();
-            root.content_control.Children.Add(mc);
+            root.content_control.Children.Add(root.mc);
             root.fading();
         }
 
         private void dim_waktu_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mc = new dimensi_fakta(root, "dimensi", "waktu");
+            root.mc = new dimensi_fakta(root, "dimensi", "waktu");
             root.content_control.Children.Clear();
-            root.content_control.Children.Add(mc);
+            root.content_control.Children.Add(root.mc);
             root.fading();
         }
 
         private void dim_staff_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mc = new dimensi_fakta(root, "dimensi", "staff_produksi");
+            root.mc = new dimensi_fakta(root, "dimensi", "staff_produksi");
             root.content_control.Children.Clear();
-            root.content_control.Children.Add(mc);
+            root.content_control.Children.Add(root.mc);
             root.fading();
         }
 
         private void dim_design_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mc = new dimensi_fakta(root, "dimensi", "design");
+            root.mc = new dimensi_fakta(root, "dimensi", "design");
             root.content_control.Children.Clear();
-            root.content_control.Children.Add(mc);
+            root.content_control.Children.Add(root.mc);
             root.fading();
         }
 
         private void dim_job_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mc = new dimensi_fakta(root, "dimensi", "job");
+            root.mc = new dimensi_fakta(root, "dimensi", "job");
             root.content_control.Children.Clear();
-            root.content_control.Children.Add(mc);
+            root.content_control.Children.Add(root.mc);
             root.fading();
         }
 
         private void dim_kredit_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mc = new dimensi_fakta(root, "dimensi", "kredit");
+            root.mc = new dimensi_fakta(root, "dimensi", "kredit");
             root.content_control.Children.Clear();
-            root.content_control.Children.Add(mc);
+            root.content_control.Children.Add(root.mc);
             root.fading();
         }
 
         private void dim_pengiriman_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mc = new dimensi_fakta(root, "dimensi", "pengiriman");
+            root.mc = new dimensi_fakta(root, "dimensi", "pengiriman");
             root.content_control.Children.Clear();
-            root.content_control.Children.Add(mc);
+            root.content_control.Children.Add(root.mc);
             root.fading();
         }
 
         private void dim_produk_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mc = new dimensi_fakta(root, "dimensi", "produk");
+            root.mc = new dimensi_fakta(root, "dimensi", "produk");
             root.content_control.Children.Clear();
-            root.content_control.Children.Add(mc);
+            root.content_control.Children.Add(root.mc);
             root.fading();
         }
 
         private void dim_size_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mc = new dimensi_fakta(root, "dimensi", "size");
+            root.mc = new dimensi_fakta(root, "dimensi", "size");
             root.content_control.Children.Clear();
-            root.content_control.Children.Add(mc);
+            root.content_control.Children.Add(root.mc);
             root.fading();
         }
     }
