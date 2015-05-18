@@ -123,6 +123,16 @@ namespace app_Spaceman_Warehouse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menu_tombol {
+            get {
+                object obj = ResourceManager.GetObject("menu_tombol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize__mouse_enter {
             get {
                 object obj = ResourceManager.GetObject("minimize__mouse_enter", resourceCulture);

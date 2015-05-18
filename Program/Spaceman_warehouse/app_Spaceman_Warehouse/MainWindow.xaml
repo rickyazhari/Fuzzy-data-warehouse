@@ -59,12 +59,12 @@
                     <QuadraticEase EasingMode="EaseInOut"></QuadraticEase>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
-            <DoubleAnimation Storyboard.TargetName="border_top_content" Storyboard.TargetProperty="Width" From="0" To="1274" BeginTime="0:0:0" Duration="0:0:0.7">
+            <DoubleAnimation Storyboard.TargetName="border_top_content" Storyboard.TargetProperty="Width" From="0" To="1280" BeginTime="0:0:0" Duration="0:0:0.7">
                 <DoubleAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
-            <DoubleAnimation Storyboard.TargetName="border_bottom_content" Storyboard.TargetProperty="Width"  From="0" To="1274" BeginTime="0:0:0" Duration="0:0:0:0.7">
+            <DoubleAnimation Storyboard.TargetName="border_bottom_content" Storyboard.TargetProperty="Width"  From="0" To="1280" BeginTime="0:0:0" Duration="0:0:0:0.7">
                 <DoubleAnimation.EasingFunction>
                     <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
                 </DoubleAnimation.EasingFunction>

@@ -130,8 +130,33 @@ namespace app_Spaceman_Warehouse
             {
                 switch (status_content)
                 {
+                    case "pop-produk":
+                        content_header.Text = "Fakta Kepopuleran Produk";
+                        com = "select dim_waktu.string_tanggal as 'Waktu', dim_produk.nama_produk as 'Produk', fact_pop_produk.jumlah as 'Jumlah', (select round(mda_populer_produk,2) from fmt_populer_produk where populer_produk = fact_pop_produk.no_pop_produk and ca_populer_produk = 'kurang populer') as 'Kurang Populer',(select round(mda_populer_produk,2) from fmt_populer_produk where populer_produk = fact_pop_produk.no_pop_produk and ca_populer_produk = 'populer') as 'Populer',(select round(mda_populer_produk,2) from fmt_populer_produk where populer_produk = fact_pop_produk.no_pop_produk and ca_populer_produk = 'sangat populer') as 'Sangat Populer' from fact_pop_produk join dim_waktu on dim_waktu.no_waktu = fact_pop_produk.waktu join dim_produk on dim_produk.no_produk = fact_pop_produk.produk order by waktu asc";
+                        break;
+                    
+                    case "pop-design":
+                        content_header.Text = "Fakta Kepopuleran Design";
+                        com = "select dim_waktu.string_tanggal as 'Waktu', dim_produk.nama_produk as 'Produk', dim_design.nama_design as 'Design', fact_pop_design.jumlah as 'Jumlah', (select round(mda_pop_design,2) from fmt_populer_design where pop_design = fact_pop_design.no_pop_design and ca_pop_design='kurang populer') as 'Kurang Populer', (select round(mda_pop_design,2) from fmt_populer_design where pop_design = fact_pop_design.no_pop_design and ca_pop_design='populer') as 'Populer', (select round(mda_pop_design,2) from fmt_populer_design where pop_design = fact_pop_design.no_pop_design and ca_pop_design='sangat populer') as 'Sangat Populer' from fact_pop_design join dim_waktu on dim_waktu.no_waktu = fact_pop_design.waktu join dim_produk on dim_produk.no_produk = fact_pop_design.produk join dim_design on dim_design.no_design = fact_pop_design.design order by waktu asc";
+                        break;
+
+                    case "pelunasan":
+                        content_header.Text = "Fakta Pelunasan Konsumen";
+                        com = "select dim_waktu.string_tanggal as 'Waktu', dim_konsumen.nama_konsumen as 'Konsumen', fact_pembayaran_konsumen.rentang_pembayaran as 'Rentang Pelunasan',(Select round(mda_pembayaran,2) from fmt_rentang_pembayaran where pembayaran_konsumen = fact_pembayaran_konsumen.id_pembayaran and ca_pembayaran ='tepat waktu') as 'Tepat Waktu', (Select round(mda_pembayaran,2) from fmt_rentang_pembayaran where pembayaran_konsumen = fact_pembayaran_konsumen.id_pembayaran and ca_pembayaran ='sedikit terlambat') as 'Sedikit Terlambat', (Select round(mda_pembayaran,2) from fmt_rentang_pembayaran where pembayaran_konsumen = fact_pembayaran_konsumen.id_pembayaran and ca_pembayaran ='terlambat') as 'Terlambat', (Select round(mda_pembayaran,2) from fmt_rentang_pembayaran where pembayaran_konsumen = fact_pembayaran_konsumen.id_pembayaran and ca_pembayaran ='sangat terlambat') as 'Sangat Terlambat' from fact_pembayaran_konsumen join dim_waktu on dim_waktu.no_waktu = fact_pembayaran_konsumen.waktu join dim_konsumen on dim_konsumen.no_konsumen = fact_pembayaran_konsumen.konsumen order by waktu asc"; 
+                        break;
+
+                    case "size":
+                        content_header.Text = "Fakta Size Produk";
+                        com = "select dim_waktu.string_tanggal as 'Waktu', dim_produk.nama_produk as'Produk', dim_size.nama_size as 'Size', fact_size_produk.gender as 'Gender', fact_size_produk.jumlah as 'Jumlah' from fact_size_produk join dim_waktu on dim_waktu.no_waktu = fact_size_produk.waktu join dim_produk on dim_produk.no_produk = fact_size_produk.produk join dim_size on dim_size.no_size = fact_size_produk.size order by waktu asc";
+                        break;
+
+                    case "pengiriman":
+                        content_header.Text = "Fakta Pengiriman Produk";
+                        com = "select dim_waktu.string_tanggal as 'Waktu', dim_produk.nama_produk as 'Produk', dim_pengiriman.jenis_pengiriman as 'Pengiriman', fact_pengiriman_produk.jumlah as 'Jumlah', fact_pengiriman_produk.saldo as 'Nominal' from fact_pengiriman_produk join dim_waktu on dim_waktu.no_waktu = fact_pengiriman_produk.waktu join dim_produk on dim_produk.no_produk = fact_pengiriman_produk.produk join dim_pengiriman on dim_pengiriman.no_pengiriman = fact_pengiriman_produk.pengiriman order by waktu asc";
+                        break;
+
                     default :
-                        content_header.Text = "Fakta Pemesanan";
+                        content_header.Text = "Fakta Pemesanan Produk";
                         com = "select dim_waktu.string_tanggal as 'Waktu', dim_konsumen.nama_konsumen as 'Konsumen',dim_produk.nama_produk as 'Produk',fact_pemesanan.jumlah as 'Jumlah', fact_pemesanan.saldo_order as 'Saldo' from fact_pemesanan join dim_waktu on fact_pemesanan.waktu = dim_waktu.no_waktu join dim_konsumen on fact_pemesanan.konsumen = dim_konsumen.no_konsumen join dim_produk on fact_pemesanan.produk = dim_produk.no_produk";
                         root.status_content.Text = "Fakta Pemesanan";
                         break;

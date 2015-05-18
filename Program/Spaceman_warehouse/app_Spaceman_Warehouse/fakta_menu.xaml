@@ -7,7 +7,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel LastChildFill="True">
         <!--Fakta Pemesanan tombol-->
-        <DockPanel x:Name="fakta_pemesanan"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,10,0,3" LastChildFill="True" MouseEnter="fakta_pemesanan_MouseEnter" MouseLeave="fakta_pemesanan_MouseLeave">
+        <DockPanel x:Name="fakta_pemesanan"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,10,0,3" LastChildFill="True" MouseEnter="fakta_pemesanan_MouseEnter" MouseLeave="fakta_pemesanan_MouseLeave" MouseLeftButtonUp="fakta_pemesanan_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pemesanan_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -33,7 +33,7 @@
             </DockPanel>
         </DockPanel>
         <!--Fakta pop produk tombol-->
-        <DockPanel x:Name="fakta_pop_produk"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pop_produk_MouseEnter" MouseLeave="fakta_pop_produk_MouseLeave">
+        <DockPanel x:Name="fakta_pop_produk"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pop_produk_MouseEnter" MouseLeave="fakta_pop_produk_MouseLeave" MouseLeftButtonUp="fakta_pop_produk_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pop_produk_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -59,7 +59,7 @@
             </DockPanel>
         </DockPanel>
         <!-- fakta pop design tombol-->
-        <DockPanel x:Name="fakta_pop_design"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pop_design_MouseEnter" MouseLeave="fakta_pop_design_MouseLeave">
+        <DockPanel x:Name="fakta_pop_design"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pop_design_MouseEnter" MouseLeave="fakta_pop_design_MouseLeave" MouseLeftButtonUp="fakta_pop_design_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pop_design_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -85,7 +85,7 @@
             </DockPanel>
         </DockPanel>
         <!-- fakta Pembayaran Konsumen-->
-        <DockPanel x:Name="fakta_pembayaran"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pembayaran_MouseEnter" MouseLeave="fakta_pembayaran_MouseLeave">
+        <DockPanel x:Name="fakta_pembayaran"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pembayaran_MouseEnter" MouseLeave="fakta_pembayaran_MouseLeave" MouseLeftButtonUp="fakta_pembayaran_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pembayaran_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -112,7 +112,7 @@
         </DockPanel>
         
         <!--fakta size produk tombol-->
-        <DockPanel x:Name="fakta_size"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_size_MouseEnter" MouseLeave="fakta_size_MouseLeave">
+        <DockPanel x:Name="fakta_size"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_size_MouseEnter" MouseLeave="fakta_size_MouseLeave" MouseLeftButtonUp="fakta_size_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_size_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -139,7 +139,7 @@
         </DockPanel>
 
         <!--fakta pengiriman produk tombol-->
-        <DockPanel x:Name="fakta_pengiriman"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pengiriman_MouseEnter" MouseLeave="fakta_pengiriman_MouseLeave">
+        <DockPanel x:Name="fakta_pengiriman"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pengiriman_MouseEnter" MouseLeave="fakta_pengiriman_MouseLeave" MouseLeftButtonUp="fakta_pengiriman_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pengiriman_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>

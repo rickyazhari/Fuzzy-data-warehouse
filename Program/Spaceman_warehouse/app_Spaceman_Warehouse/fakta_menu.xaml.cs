@@ -158,5 +158,53 @@ namespace app_Spaceman_Warehouse
         {
             root.uc_handle("success");
         }
+
+        private void fakta_pop_produk_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.mc = new dimensi_fakta(root, "fakta", "pop-produk");
+            root.content_control.Children.Clear();
+            root.content_control.Children.Add(root.mc);
+            root.fading();
+        }
+
+        private void fakta_pop_design_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.mc = new dimensi_fakta(root, "fakta", "pop-design");
+            root.content_control.Children.Clear();
+            root.content_control.Children.Add(root.mc);
+            root.fading();
+        }
+
+        private void fakta_pembayaran_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.mc = new dimensi_fakta(root, "fakta", "pelunasan");
+            root.content_control.Children.Clear();
+            root.content_control.Children.Add(root.mc);
+            root.fading();
+        }
+
+        private void fakta_size_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.mc = new dimensi_fakta(root, "fakta", "size");
+            root.content_control.Children.Clear();
+            root.content_control.Children.Add(root.mc);
+            root.fading();
+        }
+
+        private void fakta_pengiriman_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.mc = new dimensi_fakta(root, "fakta", "pengiriman");
+            root.content_control.Children.Clear();
+            root.content_control.Children.Add(root.mc);
+            root.fading();
+        }
+
+        private void fakta_pemesanan_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.mc = new dimensi_fakta(root, "fakta", "");
+            root.content_control.Children.Clear();
+            root.content_control.Children.Add(root.mc);
+            root.fading();
+        }
     }
 }

@@ -24,11 +24,15 @@ namespace app_Spaceman_Warehouse
     {
         UserControl isi_content= null;
         public dimensi_fakta mc;
+        public etl_load staging;
         public Storyboard x,m = new Storyboard();
+        public mainmenu mn_utama;
         public MainWindow()
         {
             InitializeComponent();
             mc = new dimensi_fakta(this, "", "");
+            staging = new etl_load(this);
+            mn_utama = new mainmenu(this);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -243,21 +247,25 @@ namespace app_Spaceman_Warehouse
             {
 
                 case "Proses ETL":
-                    isi_content = new etl_load(this);
+                    staging = new etl_load(this);
                     content_control.Children.Clear();
-                    content_control.Children.Add(isi_content);
+                    content_control.Children.Add(staging);
                     status_content.Text = "Memproses ETL";
                     x = (Storyboard)TryFindResource("content_fading_in");
                     x.Begin();
                     break;
 
                 case "success":
-                    isi_content = new mainmenu(this);
+                    mn_utama = new mainmenu(this);
                     content_control.Children.Clear();
                     content_control.Children.Add(isi_content);
                     status_content.Text = "Main Menu";
                     x = (Storyboard)TryFindResource("content_fading_in");
                     x.Begin();
+                    break;
+                
+                case "failure":
+                    MessageBox.Show("proses ETL gagal", "Warning", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
                     break;
 
                 case "dimensi":
