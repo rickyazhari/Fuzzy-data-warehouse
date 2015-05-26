@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "olap_warehouse", "olap_warehouse\olap_warehouse.dwproj", "{E7BDB687-C30A-4774-9AF8-F6E1C2B31C17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7BDB687-C30A-4774-9AF8-F6E1C2B31C17}.Development|Default.ActiveCfg = Development
+		{E7BDB687-C30A-4774-9AF8-F6E1C2B31C17}.Development|Default.Build.0 = Development
+		{E7BDB687-C30A-4774-9AF8-F6E1C2B31C17}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

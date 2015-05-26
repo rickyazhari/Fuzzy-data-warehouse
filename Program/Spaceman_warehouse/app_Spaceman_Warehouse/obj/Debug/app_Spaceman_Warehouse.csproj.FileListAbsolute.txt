@@ -27,3 +27,10 @@ D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehous
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Resources\Package.dtsx
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\fakta_menu.baml
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\fakta_menu.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Microsoft.SqlServer.Management.IntegrationServices.dll
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\Microsoft.SqlServer.Smo.dll
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\FirstFloor.ModernUI.dll
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\FirstFloor.ModernUI.xml
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\App.baml

@@ -165,7 +165,7 @@
             </DockPanel>
         </DockPanel>
         <!--belanja buton-->
-        <DockPanel x:Name="fakta_belanja"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_belanja_MouseEnter" MouseLeave="fakta_belanja_MouseLeave">
+        <DockPanel x:Name="fakta_belanja"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_belanja_MouseEnter" MouseLeave="fakta_belanja_MouseLeave" MouseLeftButtonUp="fakta_belanja_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_belanja_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -186,13 +186,13 @@
                     <Rectangle x:Name="fakta_belanja_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="fakta_belanja_inner" Background="#FF008BFF">
-                    <TextBlock x:Name="fakta_belanja_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Belanja Bahan</TextBlock>
+                    <TextBlock x:Name="fakta_belanja_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Belanja</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
         
         <!--fact Biaya staff produksi button-->
-        <DockPanel x:Name="fakta_cost"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_cost_MouseEnter" MouseLeave="fakta_cost_MouseLeave">
+        <DockPanel x:Name="fakta_cost"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_cost_MouseEnter" MouseLeave="fakta_cost_MouseLeave" MouseLeftButtonUp="fakta_cost_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_cost_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>

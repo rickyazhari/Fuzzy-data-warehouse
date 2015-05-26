@@ -15,6 +15,9 @@ using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Threading;
 using System.ComponentModel;
+using Microsoft.SqlServer.Dts.Runtime;
+using FirstFloor.ModernUI.Windows.Controls;
+
 
 namespace app_Spaceman_Warehouse
 {
@@ -27,7 +30,7 @@ namespace app_Spaceman_Warehouse
         MainWindow root;
         Storyboard m = new Storyboard();
         string stat = "";
-        public Thread core;
+        
         public etl_load(MainWindow x)
         {
             InitializeComponent();
@@ -47,18 +50,24 @@ namespace app_Spaceman_Warehouse
         private void load_background()
         {
             var bw = new BackgroundWorker();
-
+            
 
             bw.DoWork += (sender, args) =>
             {
-                stat = paket.proses_etl();
+
+                paket.proses_etl().Execute();
+
             };
             bw.RunWorkerCompleted += (sender, args) =>
            {
-               root.uc_handle(stat);
+               stat = paket.proses_etl().ExecutionResult.ToString();
+               paket = null;
+               ModernDialog.ShowMessage("ETL Process execution " + stat, "Informasi", MessageBoxButton.OK);
+               root.uc_handle(stat.ToLower());
+               
            };
 
-            bw.RunWorkerAsync(); // starts the background worker
+            bw.RunWorkerAsync();
         }
     }
 }

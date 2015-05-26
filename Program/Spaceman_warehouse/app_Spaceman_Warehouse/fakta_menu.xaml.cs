@@ -206,5 +206,21 @@ namespace app_Spaceman_Warehouse
             root.content_control.Children.Add(root.mc);
             root.fading();
         }
+
+        private void fakta_belanja_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.mc = new dimensi_fakta(root, "fakta", "belanja");
+            root.content_control.Children.Clear();
+            root.content_control.Children.Add(root.mc);
+            root.fading();
+        }
+
+        private void fakta_cost_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.mc = new dimensi_fakta(root, "fakta", "produksi");
+            root.content_control.Children.Clear();
+            root.content_control.Children.Add(root.mc);
+            root.fading();
+        }
     }
 }

@@ -11,22 +11,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.SqlServer.Dts.Runtime;
+using System.Data.SqlClient;
+using Microsoft.SqlServer.Management.IntegrationServices;
 
 namespace app_Spaceman_Warehouse
 {
     class extract_transform_load
     {
-        private Package pkg = new Package();
-        Application app = new Application();
-        DTSExecResult res = new DTSExecResult();
+        public Package pkg = new Package();
+        private Application app = new Application();
         string location = "";
-        public string proses_etl()
+        
+        public Package proses_etl()
         {
             location = Environment.CurrentDirectory.ToString() + "\\Resources\\Package.dtsx";
-            
             pkg = app.LoadPackage(@location, null);
-            res = pkg.Execute();
-            return res.ToString().ToLower();
+            
+
+            return pkg;;
         }
     }
 }

@@ -18,7 +18,7 @@
             <Rectangle x:Name="load_border_left" Height="0" Width="1" DockPanel.Dock="Left" Fill="#FF008BFF" VerticalAlignment="Top" HorizontalAlignment="Right">
             </Rectangle>
             <Rectangle x:Name="load_border_right" Height="0" Width="1" DockPanel.Dock="Right" Fill="#FF008BFF" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Rectangle>
-            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Foreground="#FF008BFF">Memproses ETL, Silahakan Tunggu</TextBlock>      
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Foreground="#FF008BFF">Memproses ETL, Silahkan Tunggu</TextBlock>      
         </DockPanel>  
     </DockPanel>
     

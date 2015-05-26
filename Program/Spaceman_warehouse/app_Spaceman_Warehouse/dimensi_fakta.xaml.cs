@@ -154,6 +154,16 @@ namespace app_Spaceman_Warehouse
                         content_header.Text = "Fakta Pengiriman Produk";
                         com = "select dim_waktu.string_tanggal as 'Waktu', dim_produk.nama_produk as 'Produk', dim_pengiriman.jenis_pengiriman as 'Pengiriman', fact_pengiriman_produk.jumlah as 'Jumlah', fact_pengiriman_produk.saldo as 'Nominal' from fact_pengiriman_produk join dim_waktu on dim_waktu.no_waktu = fact_pengiriman_produk.waktu join dim_produk on dim_produk.no_produk = fact_pengiriman_produk.produk join dim_pengiriman on dim_pengiriman.no_pengiriman = fact_pengiriman_produk.pengiriman order by waktu asc";
                         break;
+                    
+                    case "belanja":
+                        content_header.Text = "Fakta Belanja";
+                        com = "select dim_waktu.string_tanggal as 'Waktu', dim_produk.nama_produk as 'Produk', dim_kredit.jenis_kredit as 'Kredit', fact_belanja.cost as 'Biaya' from fact_belanja join dim_waktu on fact_belanja.waktu = dim_waktu.no_waktu join dim_produk on fact_belanja.produk = dim_produk.no_produk join dim_kredit on fact_belanja.kredit = dim_kredit.no_kredit order by waktu asc";
+                        break;
+
+                    case "produksi":
+                        content_header.Text = "Fakta Produksi";
+                        com = "select dim_waktu.string_tanggal as 'Waktu', dim_produk.nama_produk as 'Produk', dim_job.keterangan_job as 'Job', dim_staff_produksi.nama_staff as'Staff', fact_biaya_produksi.jumlah as 'Jumlah', fact_biaya_produksi.biaya_produksi as 'Cost' from fact_biaya_produksi join dim_waktu on dim_waktu.no_waktu = fact_biaya_produksi.waktu join dim_produk on dim_produk.no_produk = fact_biaya_produksi.produk join dim_job on dim_job.no_job = fact_biaya_produksi.job join dim_staff_produksi on dim_staff_produksi.no_staff = fact_biaya_produksi.staff order by waktu";
+                        break;
 
                     default :
                         content_header.Text = "Fakta Pemesanan Produk";
