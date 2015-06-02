@@ -26,7 +26,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>snF1fQR6fdHcIyghqQ1g2qJ3V/A=25/05/2015 23:29:0925/05/2015 23:28:49</TimeStamp>
+        <TimeStamp>YWnpXaXDW+U8QLPATlx/RW24Y0I=02/06/2015 20:46:0225/05/2015 23:28:49</TimeStamp>
         <ID>
           <String>Dw Spaceman</String>
         </ID>
@@ -89,15 +89,50 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>zFgT+P9H8BTxQGwFi/ORQ84XPso=26/05/2015 0:49:5726/05/2015 0:41:59</TimeStamp>
+        <TimeStamp>TPDKcdqZ5QQXyBI/WUH8FZDQhLw=02/06/2015 21:17:5702/06/2015 21:17:56</TimeStamp>
+        <ID>
+          <String>Fuzzy Pop Produk</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>DrFd2SwVbhAgfGLWul7EjOZh82c=02/06/2015 22:05:5602/06/2015 21:40:35</TimeStamp>
         <ID>
           <String>Dim Waktu</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>+m8pQxt5hQlXpYDuTNrTJY865G0=03/06/2015 0:08:0602/06/2015 23:58:11</TimeStamp>
+        <ID>
+          <String>Fmt Populer Produk</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>yCYqlnPsGTr789ieUvqlawVNMYI=03/06/2015 0:30:1303/06/2015 0:15:20</TimeStamp>
+        <ID>
+          <String>Fmt Populer Produk1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>cFJtmcDg5giOAz25pXPoVVGScA0=03/06/2015 0:26:2203/06/2015 0:19:49mGQp5drAmzPhgL/5EIeO+azsBeA=03/06/2015 0:19:4903/06/2015 0:19:49</TimeStamp>
+        <ID>
+          <String>space_pop_produk</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>lMhU4lx3Sb0nVJ1OOwdt9a5UshM=03/06/2015 1:22:1803/06/2015 1:05:1959Bc0j3DFl728mxaAHVrW+znvoQ=03/06/2015 1:05:2203/06/2015 1:05:21</TimeStamp>
+        <ID>
+          <String>space_pemesanan</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>rqcJEFwaH+u7tPXh8cqIOX05Tuw=25/05/2015 23:26:3225/05/2015 23:26:25</TimeStamp>
+      <TimeStamp>88K7xssaTrjoqJUzwIiyOKbyV+g=02/06/2015 20:46:0525/05/2015 23:26:25</TimeStamp>
       <ID>
         <String>olap_warehouse</String>
       </ID>
@@ -106,5 +141,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2015-05-25T17:49:59.836667Z</LastDeployed>
+  <LastDeployed>2015-06-02T18:22:33.35Z</LastDeployed>
 </DeploymentSnapshot>

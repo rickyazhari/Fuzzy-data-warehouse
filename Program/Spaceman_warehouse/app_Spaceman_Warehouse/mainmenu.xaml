@@ -38,7 +38,7 @@
                     <TextBlock x:Name="fakta_content" Background="White" Foreground="#FF008BFF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold">FAKTA</TextBlock>
                 </Border>
             </DockPanel>
-            <DockPanel x:Name="menu_olap" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="20,0,0,0" Cursor="Hand" MouseEnter="menu_olap_MouseEnter" MouseLeave="menu_olap_MouseLeave">
+            <DockPanel x:Name="menu_olap" LastChildFill="True" Width="250" Height="350" HorizontalAlignment="Left" Margin="20,0,0,0" Cursor="Hand" MouseEnter="menu_olap_MouseEnter" MouseLeave="menu_olap_MouseLeave" MouseLeftButtonUp="menu_olap_MouseLeftButtonUp">
                 <Rectangle Name="olap_top" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>
                 <Rectangle Name="olap_left" DockPanel.Dock="Left" VerticalAlignment="Top" Width="1" Height="0" Fill="#FF008BFF"></Rectangle>
                 <Rectangle Name="olap_bottom" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="0" Height="1" Fill="#FF008BFF"></Rectangle>

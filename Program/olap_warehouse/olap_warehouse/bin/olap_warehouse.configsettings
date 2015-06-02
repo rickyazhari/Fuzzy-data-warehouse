@@ -36,9 +36,46 @@
         <ID>Dim Staff Produksi</ID>
       </Dimension>
       <Dimension>
+        <ID>Fuzzy Pop Produk</ID>
+      </Dimension>
+      <Dimension>
         <ID>Dim Waktu</ID>
       </Dimension>
+      <Dimension>
+        <ID>Fmt Populer Produk</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fmt Populer Produk1</ID>
+      </Dimension>
     </Dimensions>
+    <Cubes>
+      <Cube>
+        <ID>space_pop_produk</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fmt Populer Produk</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fmt Populer Produk</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>space_pemesanan</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Pemesanan</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Pemesanan</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+    </Cubes>
     <DataSourceImpersonationInfo>
       <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
       <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>

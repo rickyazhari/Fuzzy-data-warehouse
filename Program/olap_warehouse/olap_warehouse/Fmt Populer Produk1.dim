@@ -1,0 +1,511 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="42777abd-6e23-4838-a32b-991931e52584" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fmt Populer Produk1</ID>
+  <Name>Fmt Populer Produk1</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-230" scrolltop="-616" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10213" y="13811" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_waktu" left="6283" top="4278" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000b80b000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_waktu" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="fact_pop_produk" left="682" top="5125" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3201" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000810c0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_pop_produk" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_produk" left="782" top="10250" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000b80b000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_produk" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="fmt_populer_produk" left="20" top="0" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3863" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000170f0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fmt_populer_produk" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3583" top="6088" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_fact_pop_produk_dim_waktu]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="16" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6283" y="6487" />
+              <point x="3883" y="6487" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1883" top="7550" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_fact_pop_produk_dim_produk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2282" y="10250" />
+              <point x="2282" y="7850" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1651" top="2425" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="1031" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_fmt_populer_produk_fact_pop_produk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2282" y="5125" />
+              <point x="2282" y="3925" />
+              <point x="1951" y="3925" />
+              <point x="1951" y="2725" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-230</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-616</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="137">
+            <Shape Id="No Fmt Pop Produk" Expanded="false">
+              <Attributes>
+                <Attribute Id="No Fmt Pop Produk" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="No Pop Produk" Expanded="false">
+              <Attributes>
+                <Attribute Id="No Pop Produk" />
+              </Attributes>
+              <Position x="196" y="20" />
+            </Shape>
+            <Shape Id="No Produk" Expanded="false">
+              <Attributes>
+                <Attribute Id="No Produk" />
+                <Attribute Id="Nama Produk" />
+              </Attributes>
+              <Position x="372" y="20" />
+            </Shape>
+            <Shape Id="No Waktu" Expanded="false">
+              <Attributes>
+                <Attribute Id="No Waktu" />
+                <Attribute Id="Bulan" />
+                <Attribute Id="Full Date" />
+                <Attribute Id="Nama Bulan" />
+                <Attribute Id="Tahun" />
+              </Attributes>
+              <Position x="372" y="68" />
+            </Shape>
+            <Shape Id="Ca Populer Produk" Expanded="false">
+              <Attributes>
+                <Attribute Id="Ca Populer Produk" />
+              </Attributes>
+              <Position x="196" y="116" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="3f53e8ca-63d0-4dd1-ad92-0554d771be78">
+    <DataSourceViewID>Dw Spaceman</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="d391f274-e068-45d3-b060-ef15e4914e7c">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="86075320-bace-4a4e-9e30-dd171d745d0b">
+      <ID>No Fmt Pop Produk</ID>
+      <Name>No Fmt Pop Produk</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a5a8d05c-1be7-4727-8e6b-1dbc07568c48">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d635f5db-b90e-4614-9adb-638d41c86044">
+            <TableID>dbo_fmt_populer_produk</TableID>
+            <ColumnID>no_fmt_pop_produk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="19c5fe8d-ad83-4488-9f94-07ed7d4ccfdf">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="60a3f402-c3b7-4870-8c39-93078c7503b6">
+          <TableID>dbo_fmt_populer_produk</TableID>
+          <ColumnID>populer_produk</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="baf2fcdb-7168-490d-8356-ab1cdcb2dda8">
+          <AttributeID>Ca Populer Produk</AttributeID>
+          <Name>Ca Populer Produk</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="931552b2-e56d-4250-954d-8602c207b10e">
+          <AttributeID>No Pop Produk</AttributeID>
+          <Name>No Pop Produk</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a5aebd99-fb6a-4ccc-b01c-8811d4f6a7c5">
+      <ID>Ca Populer Produk</ID>
+      <Name>Ca Populer Produk</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7a087fd6-971d-4435-a1ab-eafb46f22297">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="be2b4c43-71f7-41b6-bfb4-bb4a6e5ce614">
+            <TableID>dbo_fmt_populer_produk</TableID>
+            <ColumnID>ca_populer_produk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="75e2bd67-5a6c-4157-aa39-f894f81c752e">
+      <ID>No Pop Produk</ID>
+      <Name>No Pop Produk</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="eb9e74d4-38f9-4d79-b257-51a26d7ca3cb">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="956fe446-94b7-41c0-a9d8-6bda2eb69786">
+            <TableID>dbo_fact_pop_produk</TableID>
+            <ColumnID>no_pop_produk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="13cdd83a-3040-48bd-98e8-d6a6384f33a6">
+          <AttributeID>No Waktu</AttributeID>
+          <Name>No Waktu</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="650b8dd5-d099-40ee-92a3-ded3239c29f7">
+          <AttributeID>No Produk</AttributeID>
+          <Name>No Produk</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b93f2092-4d9b-46fb-8021-d0613113fa01">
+      <ID>No Waktu</ID>
+      <Name>No Waktu</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9eadd3a-f92e-4c58-8a9a-c9a7c9f394e3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3bf6da35-d857-489c-9181-0e322a8fc01e">
+            <TableID>dbo_dim_waktu</TableID>
+            <ColumnID>no_waktu</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f5ef82af-d7ff-4efe-bf63-ba8d95829594">
+          <AttributeID>Nama Bulan</AttributeID>
+          <Name>Nama Bulan</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f3fd947d-9275-4e87-9fb3-4eb60c037bab">
+          <AttributeID>Bulan</AttributeID>
+          <Name>Bulan</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="77ae1f94-fbc9-46d6-8678-a88ab9808345">
+          <AttributeID>Tahun</AttributeID>
+          <Name>Tahun</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6b54473e-0920-4bad-926b-fdca14c4c98e">
+          <AttributeID>Full Date</AttributeID>
+          <Name>Full Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6357fd30-a65e-4117-b28f-7ab16bcc7471">
+      <ID>Nama Bulan</ID>
+      <Name>Nama Bulan</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="34a0d06f-81b3-4553-9927-d703197df98b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2184d81c-c851-44fc-9e81-ebdd6b04813f">
+            <TableID>dbo_dim_waktu</TableID>
+            <ColumnID>bulan</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="9c7571ca-c10f-4fa5-bee1-e47952c8ec30">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="79110f16-5b66-4456-98ba-9080e57edec1">
+            <TableID>dbo_dim_waktu</TableID>
+            <ColumnID>nama_bulan</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0e204293-579f-446f-a51b-ce1a26535b21">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="73776222-34f1-447f-9ec2-6832fe348c34">
+          <TableID>dbo_dim_waktu</TableID>
+          <ColumnID>nama_bulan</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="738b92a2-1341-4993-9cf0-d866cd403b1d">
+      <ID>Bulan</ID>
+      <Name>Bulan</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dabd4e12-546d-4d02-b958-0f5168f36926">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="498d8a50-cea9-4c1e-94a1-3eed945f215b">
+            <TableID>dbo_dim_waktu</TableID>
+            <ColumnID>bulan</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ab05a7ef-e8bc-483f-8d9c-f4c7624cf784">
+      <ID>Tahun</ID>
+      <Name>Tahun</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3a973b8b-054b-4289-95b8-801b76b453d7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1336fc5d-d582-490d-b7a0-e63d5eda5cec">
+            <TableID>dbo_dim_waktu</TableID>
+            <ColumnID>tahun</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6ff63e13-027e-4602-b5ae-5ffe86e400d3">
+      <ID>Full Date</ID>
+      <Name>Full Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b6a562b3-0a35-4c48-8a04-2e925d157448">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="419fecc8-e94a-4344-a396-f1d150c0beb0">
+            <TableID>dbo_dim_waktu</TableID>
+            <ColumnID>full_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="378d51c1-a585-494e-ab05-5ca7001281cb">
+      <ID>No Produk</ID>
+      <Name>No Produk</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="17ef9c73-8550-4ad8-9b23-754e75b674a4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="026b73b4-9544-4bcb-b1b8-aba7d5902c52">
+            <TableID>dbo_dim_produk</TableID>
+            <ColumnID>no_produk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="3632090b-90d0-4b46-bcf5-f94ff5d9fbf1">
+          <AttributeID>Nama Produk</AttributeID>
+          <Name>Nama Produk</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11c45f69-3ddb-4afe-b0fc-9d40f849526b">
+      <ID>Nama Produk</ID>
+      <Name>Nama Produk</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8ab3f9a4-e45e-4b53-9907-d35f59cebad7">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="89e92a41-63b7-455b-882e-0dcf403e86d8">
+            <TableID>dbo_dim_produk</TableID>
+            <ColumnID>nama_produk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="df5e4dfa-d6ea-442f-ba87-88b0164a7a59">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="5e261d8d-452c-44e8-898e-276f88272c68">
+          <ID>Ca Populer Produk</ID>
+          <Name>Ca Populer Produk</Name>
+          <SourceAttributeID>Ca Populer Produk</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b920938e-8ee8-4acc-9c29-949f16d1c77a">
+          <ID>No Fmt Pop Produk</ID>
+          <Name>No Fmt Pop Produk</Name>
+          <SourceAttributeID>No Fmt Pop Produk</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="14a891c1-7874-47fd-8634-270e2a88f265">
+      <ID>Hierarchy 1</ID>
+      <Name>Hierarchy 1</Name>
+      <Levels>
+        <Level dwd:design-time-name="203f981b-7d92-4fb4-936d-805d2335ac60">
+          <ID>Nama Produk</ID>
+          <Name>Nama Produk</Name>
+          <SourceAttributeID>Nama Produk</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="145ddf7e-fc13-4b1a-924e-13083914f6cb">
+          <ID>No Pop Produk</ID>
+          <Name>No Pop Produk</Name>
+          <SourceAttributeID>No Pop Produk</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="e0528acd-a85d-42a5-b014-225d74963d58">
+      <ID>Hierarchy 2</ID>
+      <Name>Hierarchy 2</Name>
+      <Levels>
+        <Level dwd:design-time-name="c7d31c2d-0d1a-4578-a500-bd5bc5be82a2">
+          <ID>Tahun</ID>
+          <Name>Tahun</Name>
+          <SourceAttributeID>Tahun</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="5444e1f1-de70-4bd2-a1f8-a6c8c6c1a9c4">
+          <ID>No Waktu</ID>
+          <Name>No Waktu</Name>
+          <SourceAttributeID>No Waktu</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="d1ca747e-7b40-452a-906b-0f0583ce874a">
+      <ID>Hierarchy 3</ID>
+      <Name>Hierarchy 3</Name>
+      <Levels>
+        <Level dwd:design-time-name="5393d91d-66f3-431f-9128-9110ef8898e1">
+          <ID>Nama Bulan</ID>
+          <Name>Nama Bulan</Name>
+          <SourceAttributeID>Nama Bulan</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f1b7090d-b742-4661-a376-b029186193fb">
+          <ID>No Waktu</ID>
+          <Name>No Waktu</Name>
+          <SourceAttributeID>No Waktu</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

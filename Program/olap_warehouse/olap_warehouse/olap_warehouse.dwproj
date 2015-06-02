@@ -6,6 +6,28 @@
     <Name>olap_warehouse.database</Name>
     <FullPath>olap_warehouse.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>space_pop_produk.cube</Name>
+      <FullPath>space_pop_produk.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>space_pop_produk.partitions</Name>
+          <FullPath>space_pop_produk.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>space_pemesanan.cube</Name>
+      <FullPath>space_pemesanan.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>space_pemesanan.partitions</Name>
+          <FullPath>space_pemesanan.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
   <Dimensions>
     <ProjectItem>
       <Name>Dim Design.dim</Name>
@@ -40,8 +62,20 @@
       <FullPath>Dim Staff Produksi.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Fuzzy Pop Produk.dim</Name>
+      <FullPath>Fuzzy Pop Produk.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Dim Waktu.dim</Name>
       <FullPath>Dim Waktu.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fmt Populer Produk.dim</Name>
+      <FullPath>Fmt Populer Produk.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fmt Populer Produk1.dim</Name>
+      <FullPath>Fmt Populer Produk1.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>

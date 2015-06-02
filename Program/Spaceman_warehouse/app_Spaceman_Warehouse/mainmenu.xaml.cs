@@ -99,5 +99,10 @@ namespace app_Spaceman_Warehouse
         {
             root.uc_handle("fakta");
         }
+
+        private void menu_olap_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            root.uc_handle("olap");
+        }
     }
 }

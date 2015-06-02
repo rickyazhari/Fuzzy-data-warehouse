@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="610de391-2d64-4815-95be-f598377b733c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c2694ab5-b4ab-4ba1-ade5-366bd9bd0dd6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Waktu</ID>
   <Name>Dim Waktu</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -65,201 +65,193 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
       <Value>100</Value>
     </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="109">
+            <Shape Id="No Waktu" Expanded="true">
+              <Attributes>
+                <Attribute Id="No Waktu" />
+                <Attribute Id="Hari" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Nama Bulan" Expanded="false">
+              <Attributes>
+                <Attribute Id="Nama Bulan" />
+              </Attributes>
+              <Position x="161" y="20" />
+            </Shape>
+            <Shape Id="Tahun" Expanded="false">
+              <Attributes>
+                <Attribute Id="Tahun" />
+              </Attributes>
+              <Position x="302" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="e0d6c14e-a341-4c76-a8e3-53c140ade207">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5caf49a7-d74f-4c16-b9ad-e09f0724420c">
     <DataSourceViewID>Dw Spaceman</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="3d2b13a0-5617-45ae-9355-fd2f6709bd71">
+  <Type>Time</Type>
+  <ErrorConfiguration dwd:design-time-name="8c7b8ee3-84e7-4e9f-9d97-937af191e8e6">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="3a8637d5-d8cc-4724-aa53-1b90195be381">
+    <Attribute dwd:design-time-name="618cdf8b-4b81-4ebe-82d8-e87558e855ae">
       <ID>No Waktu</ID>
       <Name>No Waktu</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c12cc065-0cf7-462c-81ad-cf904026f230">
+        <KeyColumn dwd:design-time-name="7e186d46-feeb-49d4-a307-e449af00eb61">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="404ebe25-26be-4c28-914a-f27bbc5d2465">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1f17eaec-6452-40cf-9692-8dc8693a6e76">
             <TableID>dbo_dim_waktu</TableID>
             <ColumnID>no_waktu</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="388f4d33-e1c3-4dc2-9f15-2d3d2db59c41">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="fac02a96-4d0f-4ae5-877f-b7ea095a3231">
+          <TableID>dbo_dim_waktu</TableID>
+          <ColumnID>full_date</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="1c6fbf86-1be1-4da3-9723-84925365fd8a">
-          <AttributeID>String Tanggal</AttributeID>
-          <Name>String Tanggal</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="0dcca46e-4b92-4f8f-b88f-0acb0843ff1f">
+        <AttributeRelationship dwd:design-time-name="d1e47ac0-3c62-44e8-84ca-156d8521c38f">
           <AttributeID>Hari</AttributeID>
           <Name>Hari</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="5fb2ed4d-7379-4f74-a81d-4c4fa0e51d0e">
-          <AttributeID>Tanggal</AttributeID>
-          <Name>Tanggal</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="4b805d9d-4d83-488a-aeca-81f0df58bb48">
+        <AttributeRelationship dwd:design-time-name="36961e08-7fae-4141-8aab-0fcdb6ac2694">
           <AttributeID>Nama Bulan</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Nama Bulan</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="ab4b2b3d-a50f-4353-8926-4be1b1e8c393">
-          <AttributeID>Bulan</AttributeID>
-          <Name>Bulan</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="0877ca0b-d950-4920-bdcb-e0449d108b8d">
-          <AttributeID>Tahun</AttributeID>
-          <Name>Tahun</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="0dbcc73c-d954-4b87-8512-b7b206619b71">
-          <AttributeID>Full Date</AttributeID>
-          <Name>Full Date</Name>
-        </AttributeRelationship>
       </AttributeRelationships>
-      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="b7a8a6f6-c6d2-4afd-9b30-3691685d65e9">
-      <ID>String Tanggal</ID>
-      <Name>String Tanggal</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="7318af76-cb00-403c-9e0d-ef05161a525d">
-          <DataType>WChar</DataType>
-          <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="8521b3b5-1c61-40f7-a025-895d8714a5fe">
-            <TableID>dbo_dim_waktu</TableID>
-            <ColumnID>string_tanggal</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="b28a7397-b907-4210-8f70-d2f1295e5bd6">
+    <Attribute dwd:design-time-name="d8ee5b2c-a48a-4792-aaeb-3301f3120c46">
       <ID>Hari</ID>
       <Name>Hari</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="a1707b44-e6b9-4678-8b87-12b937a65421">
+        <KeyColumn dwd:design-time-name="25337cea-5de5-48d7-86c7-8baee95d702d">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="1f1be0cc-65b4-4d2c-a2fc-f18b78d2000b">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2290d1bc-2a1a-4412-85bb-1bdd97e973bb">
             <TableID>dbo_dim_waktu</TableID>
             <ColumnID>hari</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="0fba89f1-7812-469d-97dc-01be8e9ed463">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="769c9b6a-ff04-4ffd-b0f4-33010e9f5ed7">
+          <TableID>dbo_dim_waktu</TableID>
+          <ColumnID>hari</ColumnID>
+        </Source>
+      </NameColumn>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="b6752cd3-29ed-4561-8ae8-aaf6290b0818">
-      <ID>Tanggal</ID>
-      <Name>Tanggal</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="0925c3ea-0db8-4e04-ab52-0c1cf1fab10a">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="50efd8b7-2921-4cc5-9940-dce2448ec143">
-            <TableID>dbo_dim_waktu</TableID>
-            <ColumnID>tanggal</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="9e161ae1-e762-428b-ab91-91238ac6ff34">
+    <Attribute dwd:design-time-name="d9515302-bb92-4613-9317-08bf26bf3f8d">
       <ID>Nama Bulan</ID>
       <Name>Nama Bulan</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="8c8451f0-04e3-4bb7-8ad5-8b4cc1cd5211">
+        <KeyColumn dwd:design-time-name="fdb62832-fe6b-409b-a31f-731dec131d1f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3bf2aab1-05c9-41fc-8951-186b5ddf353d">
+            <TableID>dbo_dim_waktu</TableID>
+            <ColumnID>tahun</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="106bcfd3-fbee-4a1a-8e38-63ba2edd65aa">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ab1c3398-602d-4dee-b4fe-fffc91e8d369">
+            <TableID>dbo_dim_waktu</TableID>
+            <ColumnID>bulan</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="b6cacd09-8a5d-4627-876d-d76081b5df65">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="c94ceae7-396d-4b59-9d8d-6369b93cf446">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ee63cd25-6e04-466d-9234-ef63253e2fef">
             <TableID>dbo_dim_waktu</TableID>
             <ColumnID>nama_bulan</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="d9e51e15-ac9b-4089-9a62-e1dd96f90555">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ddfe23f5-3392-418a-96a4-b70c9c402c7f">
+          <TableID>dbo_dim_waktu</TableID>
+          <ColumnID>nama_bulan</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="4757b90a-573e-4098-80d1-f0e425bad39a">
+          <AttributeID>Tahun</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Tahun</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="6bcda602-259c-4583-a5e5-608073a64082">
-      <ID>Bulan</ID>
-      <Name>Bulan</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="34867369-9c10-4e1c-aab2-0f2fe8689155">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="8fb6fe29-bf7d-40af-85d1-d7db9549a935">
-            <TableID>dbo_dim_waktu</TableID>
-            <ColumnID>bulan</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="406fdc05-a1c7-4712-afa6-cc677d8d4bf9">
+    <Attribute dwd:design-time-name="06104f90-b6cc-4eb3-bb35-855019ad866f">
       <ID>Tahun</ID>
       <Name>Tahun</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="59846333-a1fb-4feb-bd5b-1302a81ce3f8">
+        <KeyColumn dwd:design-time-name="55b13941-b5cd-42a6-9a0b-a8b23d8980fd">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="654fd3a9-d4c3-406d-a3a1-3c424367861a">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0ae3ec96-0c83-4638-aee8-9791cf5eeafc">
             <TableID>dbo_dim_waktu</TableID>
             <ColumnID>tahun</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="9503d117-5b12-4f45-a371-f7c82807c24f">
-      <ID>Full Date</ID>
-      <Name>Full Date</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="3733360d-2654-41e1-86af-de18b5f9f69e">
-          <DataType>Date</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="e6e098bb-6fe3-45df-a91a-ad6c66bc0125">
-            <TableID>dbo_dim_waktu</TableID>
-            <ColumnID>full_date</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy dwd:design-time-name="06d1c97d-c880-4978-b783-05873f47850f">
+    <Hierarchy dwd:design-time-name="ed79697a-874c-4192-8f41-15c2e6043d63">
       <ID>Hierarchy</ID>
-      <Name>Hierarchy</Name>
+      <Name>year</Name>
       <Levels>
-        <Level dwd:design-time-name="c7e5c39b-6997-42e8-b136-990c6164e761">
+        <Level dwd:design-time-name="f13e11a3-e498-47d9-9157-2f90f13ca004">
           <ID>Tahun</ID>
           <Name>Tahun</Name>
           <SourceAttributeID>Tahun</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="166335ad-1006-46d3-aae6-5a8a45fe8a89">
+        <Level dwd:design-time-name="e1b100b3-158e-49ce-a6de-d699f0cc84f0">
           <ID>Nama Bulan</ID>
           <Name>Nama Bulan</Name>
           <SourceAttributeID>Nama Bulan</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="cd2d8543-6ca7-437d-9c04-174bfad19cea">
-          <ID>Tanggal</ID>
-          <Name>Tanggal</Name>
-          <SourceAttributeID>Tanggal</SourceAttributeID>
+        <Level dwd:design-time-name="6c4e82eb-5ff7-4312-a12c-6ed38ba91754">
+          <ID>No Waktu</ID>
+          <Name>No Waktu</Name>
+          <SourceAttributeID>No Waktu</SourceAttributeID>
         </Level>
       </Levels>
     </Hierarchy>

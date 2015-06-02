@@ -27,12 +27,14 @@ namespace app_Spaceman_Warehouse
         public etl_load staging;
         public Storyboard x,m = new Storyboard();
         public mainmenu mn_utama;
+        public olap olp;
         public MainWindow()
         {
             InitializeComponent();
             mc = new dimensi_fakta(this, "", "");
             staging = new etl_load(this);
             mn_utama = new mainmenu(this);
+            olp = new olap(this,"");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -109,11 +111,18 @@ namespace app_Spaceman_Warehouse
                    content.Width = this.Width;
                    content_control.Width = content.Width;
                    mc.Width = content_control.Width;
-                   /*mc.sub_content_header.Width = this.Width - mc.sub_menu.Width-4;
-                   mc.tabel_header.Width = mc.sub_content_header.Width-4;
-                   mc.tabel_wrapper.Width = mc.sub_content_header.Width-4;
-                   mc.tabel_view.Width = mc.sub_content_header.Width-4;*/
-                   
+               }
+               if (olp.menu_olap.Height > this.Height - (header.Height + footer.Height))
+               {
+                   olp.Height = this.Height - (header.Height + footer.Height) - 4;
+                   olp.menu_olap.Height = content_control.Height - 4;
+                   olp.olap_content.Height = olp.menu_olap.Height - 100;
+               }
+               if (olp.Width > this.Width)
+               {
+                   content.Width = this.Width;
+                   content_control.Width = content.Width;
+                   olp.Width = content_control.Width;
                }
                m = (Storyboard)TryFindResource("window_open");
                m.Begin();
@@ -132,6 +141,7 @@ namespace app_Spaceman_Warehouse
                 {
                     mc.Height = this.Height - (header.Height + footer.Height)-4;
                     mc.sub_menu.Height = this.Height - (header.Height + footer.Height)-4;
+                   
                 }
 
                 if (mc.Width < this.Width)
@@ -139,10 +149,24 @@ namespace app_Spaceman_Warehouse
                     content.Width = this.Width;
                     content_control.Width = this.Width;
                     mc.Width = content_control.Width;
+                    
                     /*mc.sub_content_header.Width = mc.Width - mc.sub_menu.Width-4;
                     mc.tabel_header.Width = mc.sub_content_header.Width-4;
                     mc.tabel_wrapper.Width = mc.sub_content_header.Width-4;
                     mc.tabel_view.Width = mc.sub_content_header.Width-4;*/
+                }
+                if (olp.Height < this.Height - (header.Height + footer.Height))
+                {
+                    olp.Height = this.Height - (header.Height + footer.Height) - 4;
+                    olp.menu_olap.Height = this.Height - (header.Height + footer.Height) - 4;
+                    olp.olap_content.Height = olp.menu_olap.Height - 100;
+                }
+                if (olp.Width < this.Width)
+                {
+                    content.Width = this.Width;
+                    content_control.Width = this.Width;
+                    olp.Width = content_control.Width;
+                    
                 }
                 state_window_maximize();
                
@@ -258,7 +282,7 @@ namespace app_Spaceman_Warehouse
                 case "success":
                     mn_utama = new mainmenu(this);
                     content_control.Children.Clear();
-                    content_control.Children.Add(isi_content);
+                    content_control.Children.Add(mn_utama);
                     status_content.Text = "Main Menu";
                     x = (Storyboard)TryFindResource("content_fading_in");
                     x.Begin();
@@ -281,6 +305,15 @@ namespace app_Spaceman_Warehouse
                     content_control.Children.Clear();
                     content_control.Children.Add(mc);
                     status_content.Text = "Fakta";
+                    fading();
+                    break;
+
+                case "olap":
+                    olp = new olap(this,"");
+                    content_control.Children.Clear();
+                    content_control.Children.Add(olp);
+                    status_content.Text = "Olap";
+                    
                     fading();
                     break;
             }
