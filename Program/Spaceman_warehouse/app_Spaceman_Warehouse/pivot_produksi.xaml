@@ -1,0 +1,33 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" x:Class="app_Spaceman_Warehouse.pivot_produksi" 
+             mc:Ignorable="d" 
+             d:DesignHeight="364" d:DesignWidth="976">
+    <UserControl.Resources>
+        <dx:PivotOlapDataSource x:Key="PivotOlapDataSource" Cube="space_produksi" Catalog="olap_warehouse" ConnectionTimeout="60" LocaleIdentifier="1033" Password="{x:Null}" Provider="MSOLAP" QueryTimeout="30" Server="CORET\SPACEMAN" UserId="coret\kari">
+            <dx:DesignDataManager.DesignData>
+                <dx:DesignDataSettings RowCount="5"/>
+            </dx:DesignDataManager.DesignData>
+        </dx:PivotOlapDataSource>
+    </UserControl.Resources>
+    <Grid>
+
+        <dxpg:PivotGridControl HorizontalAlignment="Left" Height="364" x:Name="pivot" x:FieldModifier="public" VerticalAlignment="Top" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" OlapDataProvider="OleDb">
+            <dxpg:PivotGridControl.Fields>
+                <dxpg:PivotGridField Area="FilterArea" Caption="Job" FieldName="[Dim Job].[Hierarchy].[Keterangan Job]"/>
+                <dxpg:PivotGridField Area="FilterArea" Caption="Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]"/>
+                <dxpg:PivotGridField Area="FilterArea" Caption="Bagian" FieldName="[Dim Staff Produksi].[Hierarchy].[Nama Bagian]"/>
+                <dxpg:PivotGridField Area="FilterArea" Caption="Staff" FieldName="[Dim Staff Produksi].[Hierarchy].[Nama Staff]"/>
+                <dxpg:PivotGridField Area="FilterArea" Caption="Bulan" FieldName="[Dim Waktu].[year].[Nama Bulan]" SortMode="None"/>
+                <dxpg:PivotGridField Area="FilterArea" Caption="Tahun" FieldName="[Dim Waktu].[year].[Tahun]"/>
+                <dxpg:PivotGridField Area="DataArea" Caption="Produksi Count" FieldName="[Measures].[Fact Biaya Produksi Count]"/>
+                <dxpg:PivotGridField Area="DataArea" Caption="Jumlah" FieldName="[Measures].[Jumlah]"/>
+                <dxpg:PivotGridField Area="DataArea" Caption="Biaya Produksi" FieldName="[Measures].[Biaya Produksi]"/>
+            </dxpg:PivotGridControl.Fields>
+        </dxpg:PivotGridControl>
+
+    </Grid>
+</UserControl>

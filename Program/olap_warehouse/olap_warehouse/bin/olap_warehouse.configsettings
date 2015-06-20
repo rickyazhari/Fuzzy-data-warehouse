@@ -47,6 +47,12 @@
       <Dimension>
         <ID>Fmt Populer Produk1</ID>
       </Dimension>
+      <Dimension>
+        <ID>Fmt Populer Design</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fmt Rentang Pembayaran</ID>
+      </Dimension>
     </Dimensions>
     <Cubes>
       <Cube>
@@ -70,6 +76,84 @@
             <Partitions>
               <Partition>
                 <ID>Fact Pemesanan</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>space_belanja</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Belanja</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Belanja</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>space_produksi</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Biaya Produksi</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Biaya Produksi</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>space_pengiriman</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Pengiriman Produk</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Pengiriman Produk</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>space_size</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Size Produk</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Size Produk</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>space_pop_design</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fmt Populer Design</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fmt Populer Design</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>space_pelunasan</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fmt Rentang Pembayaran</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fmt Rentang Pembayaran</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

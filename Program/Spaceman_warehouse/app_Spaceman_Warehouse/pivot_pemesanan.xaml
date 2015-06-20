@@ -7,35 +7,47 @@
              mc:Ignorable="d" 
              d:DesignHeight="364" d:DesignWidth="976" Margin="0,0,8,0">
     <UserControl.Resources>
-        <dx:PivotOlapDataSource x:Key="PivotOlapDataSource" Cube="space_pemesanan" Catalog="olap_warehouse" ConnectionTimeout="60" LocaleIdentifier="33" Password="{x:Null}" Provider="MSOLAP" QueryTimeout="30" Server="CORET\SPACEMAN" UserId="coret\spaceman">
+        <dx:PivotOlapDataSource x:Key="PivotOlapDataSource" Cube="space_pemesanan" Catalog="olap_warehouse" ConnectionTimeout="60" LocaleIdentifier="33" Password="{x:Null}" Provider="MSOLAP" QueryTimeout="30" Server="CORET\SPACEMAN" UserId="coret\kari">
             <dx:DesignDataManager.DesignData>
                 <dx:DesignDataSettings RowCount="5"/>
             </dx:DesignDataManager.DesignData>
         </dx:PivotOlapDataSource>
     </UserControl.Resources>
-
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Top" Height="60" BorderBrush="#ff008bff" BorderThickness="0,1,0,0">
+            <DockPanel LastChildFill="True">
+            <TextBlock DockPanel.Dock="Top" Foreground="#ff008bff" FontSize="20" FontWeight="Bold"> Data Area</TextBlock>
+            <TextBlock Padding="10,0,0,0">
+                <RadioButton GroupName="da" x:Name="saldo_order" Foreground="#ff008bff" Margin="20,0,10,0" Checked="saldo_order_Checked">Saldo Order</RadioButton>
+                <RadioButton GroupName="da" x:Name="jumlah_produk" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_produk_Checked">Jumlah Produk</RadioButton>
+                <RadioButton GroupName="da" x:Name="jumlah_order" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_order_Checked">Jumlah Order</RadioButton>
+            </TextBlock>
+            </DockPanel>
+        </Border>
     <Grid>
-        <dxpg:PivotGridControl x:Name="pivot" x:FieldModifier="public" HorizontalAlignment="Left" VerticalAlignment="Top" Height="364" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="pivot_height" x:FieldModifier="public" Height="182"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition x:Name="chart_height"  x:FieldModifier="public" Height="0"/>
+        </Grid.RowDefinitions>
+        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" RowTotalsLocation="Far" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ChartDataProvidePriority="Columns" ChartMaxSeriesCount="50" ChartMaxPointCountInSeries="500" ChartFieldValuesProvideMode="Value">
             <dxpg:PivotGridControl.Fields>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Nama Konsumen" FieldName="[Dim Konsumen].[Hierarchy].[Nama Konsumen]"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Nama Kota" FieldName="[Dim Konsumen].[Hierarchy].[Nama Kota]"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Nama Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Nama Bulan" FieldName="[Dim Waktu].[year].[Nama Bulan]" SortMode="None"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Tahun" FieldName="[Dim Waktu].[year].[Tahun]"/>
-                <dxpg:PivotGridField Area="DataArea" Caption="Jumlah Order" FieldName="[Measures].[Fact Pemesanan Count]"/>
-                <dxpg:PivotGridField Area="DataArea" Caption="Jumlah Produk" FieldName="[Measures].[Jumlah]"/>
-                <dxpg:PivotGridField Area="DataArea" Caption="Nominal" FieldName="[Measures].[saldo]"/>
+                <dxpg:PivotGridField Area="RowArea" Caption="Nama Konsumen" FieldName="[Dim Konsumen].[Hierarchy].[Nama Konsumen]" AreaIndex="0"/>
+                <dxpg:PivotGridField Area="ColumnArea" Caption="Nama Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]" AreaIndex="1"/>
+                <dxpg:PivotGridField Area="ColumnArea" Caption="Tahun" FieldName="[Dim Waktu].[year].[Tahun]" AreaIndex="0"/>
+                <dxpg:PivotGridField x:Name="data_area" Area="DataArea" Caption="saldo" FieldName="[Measures].[saldo]" CellFormat="c2" AreaIndex="0"/>
             </dxpg:PivotGridControl.Fields>
-
-            <dxpg:PivotGridControl.Background>
-                <LinearGradientBrush EndPoint="0.5,0.992" SpreadMethod="Pad" StartPoint="0.5,0.003">
-                    <GradientStop Color="#FFB0D3FF" Offset="0"/>
-                    <GradientStop Color="#FF008BFF" Offset="1"/>
-                    <GradientStop Color="#FF55ADFF" Offset="0.173"/>
-                </LinearGradientBrush>
-            </dxpg:PivotGridControl.Background>
-
         </dxpg:PivotGridControl>
-
+        <dxc:ChartControl DataSource="{Binding ChartDataSource, ElementName=pivot}" Grid.Row="2">
+            <dxc:ChartControl.Legend>
+                <dxc:Legend ReverseItems="True"></dxc:Legend>
+            </dxc:ChartControl.Legend>
+            <dxc:XYDiagram2D SeriesDataMember="Series">
+                <dxc:XYDiagram2D.SeriesTemplate>
+                    <dxc:BarSideBySideSeries2D ArgumentDataMember="Arguments" ValueDataMember="Values"/>
+                </dxc:XYDiagram2D.SeriesTemplate>
+            </dxc:XYDiagram2D>
+        </dxc:ChartControl>
     </Grid>
+    </DockPanel>
 </UserControl>

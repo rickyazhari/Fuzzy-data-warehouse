@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel LastChildFill="True">
-        <DockPanel x:Name="fakta_pemesanan"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,10,0,3" LastChildFill="True">
+        <DockPanel x:Name="fakta_pemesanan"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,10,0,3" LastChildFill="True" MouseLeftButtonUp="fakta_pemesanan_MouseLeftButtonUp" MouseEnter="fakta_pemesanan_MouseEnter" MouseLeave="fakta_pemesanan_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pemesanan_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -27,12 +27,12 @@
                     <Rectangle x:Name="fakta_pemesanan_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="fakta_pemesanan_inner" Background="#FF008BFF">
-                    <TextBlock x:Name="fakta_pemesanan_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Pemesanan Produk</TextBlock>
+                    <TextBlock x:Name="fakta_pemesanan_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Pemesanan Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
         <!--Fakta pop produk tombol-->
-        <DockPanel x:Name="fakta_pop_produk"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True">
+        <DockPanel x:Name="fakta_pop_produk"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseLeftButtonUp="fakta_pop_produk_MouseLeftButtonUp" MouseEnter="fakta_pop_produk_MouseEnter" MouseLeave="fakta_pop_produk_MouseLeave">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pop_produk_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -53,12 +53,12 @@
                     <Rectangle x:Name="fakta_pop_produk_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="fakta_pop_produk_inner" Background="#FF008BFF">
-                    <TextBlock x:Name="fakta_pop_produk_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Kepopuleran Produk</TextBlock>
+                    <TextBlock x:Name="fakta_pop_produk_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Kepopuleran Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
         <!-- fakta pop design tombol-->
-        <DockPanel x:Name="fakta_pop_design"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True">
+        <DockPanel x:Name="fakta_pop_design"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pop_design_MouseEnter" MouseLeave="fakta_pop_design_MouseLeave" MouseLeftButtonUp="fakta_pop_design_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pop_design_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -79,12 +79,12 @@
                     <Rectangle x:Name="fakta_pop_design_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="fakta_pop_design_inner" Background="#FF008BFF">
-                    <TextBlock x:Name="fakta_pop_design_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Kepopuleran Design</TextBlock>
+                    <TextBlock x:Name="fakta_pop_design_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Kepopuleran Design</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
         <!-- fakta Pembayaran Konsumen-->
-        <DockPanel x:Name="fakta_pembayaran"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True">
+        <DockPanel x:Name="fakta_pembayaran"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pembayaran_MouseEnter" MouseLeave="fakta_pembayaran_MouseLeave" MouseLeftButtonUp="fakta_pembayaran_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pembayaran_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -105,13 +105,13 @@
                     <Rectangle x:Name="fakta_pembayaran_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="fakta_pembayaran_inner" Background="#FF008BFF">
-                    <TextBlock x:Name="fakta_pembayaran_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Pelunasan Konsumen</TextBlock>
+                    <TextBlock x:Name="fakta_pembayaran_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Pelunasan Konsumen</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
 
         <!--fakta size produk tombol-->
-        <DockPanel x:Name="fakta_size"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True">
+        <DockPanel x:Name="fakta_size"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_size_MouseEnter" MouseLeave="fakta_size_MouseLeave" MouseLeftButtonUp="fakta_size_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_size_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -132,13 +132,13 @@
                     <Rectangle x:Name="fakta_size_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="fakta_size_inner" Background="#FF008BFF">
-                    <TextBlock x:Name="fakta_size_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Size Produk</TextBlock>
+                    <TextBlock x:Name="fakta_size_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Size Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
 
         <!--fakta pengiriman produk tombol-->
-        <DockPanel x:Name="fakta_pengiriman"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True">
+        <DockPanel x:Name="fakta_pengiriman"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_pengiriman_MouseEnter" MouseLeave="fakta_pengiriman_MouseLeave" MouseLeftButtonUp="fakta_pengiriman_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_pengiriman_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -159,12 +159,12 @@
                     <Rectangle x:Name="fakta_pengiriman_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="fakta_pengiriman_inner" Background="#FF008BFF">
-                    <TextBlock x:Name="fakta_pengiriman_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Pengiriman Produk</TextBlock>
+                    <TextBlock x:Name="fakta_pengiriman_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Pengiriman Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
         <!--belanja buton-->
-        <DockPanel x:Name="fakta_belanja"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True">
+        <DockPanel x:Name="fakta_belanja"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_belanja_MouseEnter" MouseLeave="fakta_belanja_MouseLeave" MouseLeftButtonUp="fakta_belanja_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_belanja_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -185,13 +185,13 @@
                     <Rectangle x:Name="fakta_belanja_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="fakta_belanja_inner" Background="#FF008BFF">
-                    <TextBlock x:Name="fakta_belanja_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Belanja</TextBlock>
+                    <TextBlock x:Name="fakta_belanja_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Belanja</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
 
         <!--fact Biaya staff produksi button-->
-        <DockPanel x:Name="fakta_cost"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True">
+        <DockPanel x:Name="fakta_cost"  Cursor="Hand" Height="40" DockPanel.Dock="Top" Margin="5,0,0,3" LastChildFill="True" MouseEnter="fakta_cost_MouseEnter" MouseLeave="fakta_cost_MouseLeave" MouseLeftButtonUp="fakta_cost_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="fakta_cost_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>
@@ -212,13 +212,13 @@
                     <Rectangle x:Name="fakta_cost_border_split_left2" Height="0" Width="1" Fill="#FFFFFFFF" VerticalAlignment="Bottom"></Rectangle>
                 </DockPanel>
                 <Border x:Name="fakta_cost_inner" Background="#FF008BFF">
-                    <TextBlock x:Name="fakta_cost_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Fakta Produksi Produk</TextBlock>
+                    <TextBlock x:Name="fakta_cost_content" Background="#FF008BFF" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Padding="15,0,0,0">Produksi Produk</TextBlock>
                 </Border>
             </DockPanel>
         </DockPanel>
 
         <!--menu utama tombol-->
-        <DockPanel x:Name="dim_menu" Margin="5,0,0,0" Cursor="Hand" Height="40" DockPanel.Dock="Top">
+        <DockPanel x:Name="dim_menu" Margin="5,0,0,0" Cursor="Hand" Height="40" DockPanel.Dock="Top" MouseEnter="dim_menu_MouseEnter" MouseLeave="dim_menu_MouseLeave" MouseLeftButtonUp="dim_menu_MouseLeftButtonUp">
             <DockPanel DockPanel.Dock="Right" Width="15">
                 <Rectangle x:Name="dim_menu_span" Height="1" Width="0" Fill="#FFFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Right"></Rectangle>
             </DockPanel>

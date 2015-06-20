@@ -24,7 +24,31 @@ namespace app_Spaceman_Warehouse
         public pivot_pemesanan()
         {
             InitializeComponent();
+            saldo_order.IsChecked = true;
            
         }
+
+        private void saldo_order_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Saldo";
+            data_area.FieldName = "[Measures].[saldo]";
+            data_area.CellFormat = "c2";
+        }
+
+        private void jumlah_produk_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Jumlah Produk";
+            data_area.FieldName = "[Measures].[Jumlah]";
+            data_area.CellFormat = null;
+        }
+
+        private void jumlah_order_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Jumlah Order";
+            data_area.FieldName = "[Measures].[Fact Pemesanan Count]";
+            data_area.CellFormat = null;
+        }
+
+       
     }
 }

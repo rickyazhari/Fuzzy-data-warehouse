@@ -1,0 +1,25 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" x:Class="app_Spaceman_Warehouse.chart_pemesanan" 
+             mc:Ignorable="d" 
+             d:DesignHeight="440" d:DesignWidth="1276">
+
+    <dxc:ChartControl x:Name="bar_chart" HorizontalAlignment="Left"  VerticalAlignment="Top">
+        <dxc:ChartControl.Legend>
+            <dxc:Legend ReverseItems="True"/>
+        </dxc:ChartControl.Legend>
+        <dxc:ChartControl.Diagram>
+            <dxc:XYDiagram3D SeriesDataMember="Series">
+                <dxc:XYDiagram3D.SeriesTemplate>
+                    <dxc:BarSeries3D ValueDataMember="Value" ArgumentDataMember="Arguments">
+                        
+                    </dxc:BarSeries3D>
+                </dxc:XYDiagram3D.SeriesTemplate>
+            </dxc:XYDiagram3D>
+        </dxc:ChartControl.Diagram>
+    </dxc:ChartControl>
+
+</UserControl>

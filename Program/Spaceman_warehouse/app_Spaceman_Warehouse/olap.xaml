@@ -22,8 +22,38 @@
         <DockPanel x:Name="olap_header" DockPanel.Dock="Top" Height="50">
             <TextBlock Name="header_txt" Height="45" Foreground="#FF008bFF" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="24" Margin="5,0,0,10" Padding="0,10,0,0" FontWeight="Bold"> OLAP </TextBlock>
         </DockPanel>
-        <DockPanel x:Name="btn_control" DockPanel.Dock="Bottom" Height="50" Background="Red"></DockPanel>
-        <StackPanel x:Name="olap_content" x:FieldModifier="public" Height="364" VerticalAlignment="Top" SizeChanged="olap_content_SizeChanged" Background="#FFCD5F5F"></StackPanel>
+        <DockPanel x:Name="btn_control" DockPanel.Dock="Bottom" Height="50">
+            <DockPanel LastChildFill="True" DockPanel.Dock="Right" Width="600" HorizontalAlignment="Right" Margin="10,3,15,3">
+                <DockPanel LastChildFill="True" x:Name="btn_print" Width="150" DockPanel.Dock="Right" Height="45" HorizontalAlignment="Right" VerticalAlignment="Center" MouseEnter="btn_print_MouseEnter" Cursor="Hand" Margin="5,0,0,0" MouseLeave="btn_print_MouseLeave" MouseLeftButtonUp="btn_print_MouseLeftButtonUp">
+                    <Rectangle Height="1" x:Name="btn_pivot_top" Width="0" Fill="#ff008bff" DockPanel.Dock="Top" HorizontalAlignment="Right"></Rectangle>
+                    <Rectangle Height="0" x:Name="btn_pivot_left" Width="1" Fill="#ff008bff" DockPanel.Dock="Left" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle Height="1" x:Name="btn_pivot_right" Width="1" Fill="#ff008bff" DockPanel.Dock="Right" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle Height="1" x:Name="btn_pivot_btm" Width="0" Fill="#ff008bff" DockPanel.Dock="Bottom" HorizontalAlignment="Left"></Rectangle>
+                    <Border x:Name="btn_pivot_content" Background="#ffffffff" BorderBrush="#ff008bff" BorderThickness="1" Margin="3,3,3,3">
+                        <TextBlock x:Name="btn_pivot_content_content" Foreground="#ff008bff" Background="#ffffffff" HorizontalAlignment="Center" VerticalAlignment="Center">Print</TextBlock>   
+                    </Border>
+                </DockPanel>                
+                <DockPanel LastChildFill="True" x:Name="btn_chart" Width="150" DockPanel.Dock="Right" Height="45" HorizontalAlignment="Right" VerticalAlignment="Center" Cursor="Hand" MouseEnter="btn_chart_MouseEnter" MouseLeave="btn_chart_MouseLeave" MouseLeftButtonUp="btn_chart_MouseLeftButtonUp">
+                    <Rectangle Height="1" x:Name="btn_pivot_top1" Width="0" Fill="#ff008bff" DockPanel.Dock="Top" HorizontalAlignment="Right"></Rectangle>
+                    <Rectangle Height="0" x:Name="btn_pivot_left1" Width="1" Fill="#ff008bff" DockPanel.Dock="Left" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle Height="1" x:Name="btn_pivot_right1" Width="1" Fill="#ff008bff" DockPanel.Dock="Right" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle Height="1" x:Name="btn_pivot_btm1" Width="0" Fill="#ff008bff" DockPanel.Dock="Bottom" HorizontalAlignment="Left"></Rectangle>
+                    <Border x:Name="btn_pivot_content1" Background="#ffffffff" BorderBrush="#ff008bff" BorderThickness="1" Margin="3,3,3,3">
+                        <TextBlock x:Name="btn_pivot_content_content1" Foreground="#ff008bff" Background="#ffffffff" HorizontalAlignment="Center" VerticalAlignment="Center">Chart</TextBlock>
+                    </Border>
+                </DockPanel>
+                <DockPanel LastChildFill="True" x:Name="btn_pivot" Width="150" DockPanel.Dock="Right" Height="45" HorizontalAlignment="Right" VerticalAlignment="Center" Cursor="Hand" MouseEnter="btn_pivot_MouseEnter" MouseLeave="btn_pivot_MouseLeave" MouseLeftButtonUp="btn_pivot_MouseLeftButtonUp">
+                    <Rectangle Height="1" x:Name="btn_pivot_top2" Width="0" Fill="#ff008bff" DockPanel.Dock="Top" HorizontalAlignment="Right"></Rectangle>
+                    <Rectangle Height="0" x:Name="btn_pivot_left2" Width="1" Fill="#ff008bff" DockPanel.Dock="Left" VerticalAlignment="Top"></Rectangle>
+                    <Rectangle Height="1" x:Name="btn_pivot_right2" Width="1" Fill="#ff008bff" DockPanel.Dock="Right" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle Height="1" x:Name="btn_pivot_btm2" Width="0" Fill="#ff008bff" DockPanel.Dock="Bottom" HorizontalAlignment="Left"></Rectangle>
+                    <Border x:Name="btn_pivot_content2" Background="#ffffffff" BorderBrush="#ff008bff" BorderThickness="1" Margin="3,3,3,3">
+                        <TextBlock x:Name="btn_pivot_content_content2" Foreground="#ff008bff" Background="#ffffffff" HorizontalAlignment="Center" VerticalAlignment="Center">Pivot</TextBlock>
+                    </Border>
+                </DockPanel>
+            </DockPanel>
+        </DockPanel>
+        <StackPanel x:Name="olap_content" x:FieldModifier="public" Height="364" VerticalAlignment="Top" SizeChanged="olap_content_SizeChanged"></StackPanel>
     </DockPanel>
     
     <UserControl.Resources>
@@ -84,6 +114,163 @@
             <ThicknessAnimationUsingKeyFrames  Storyboard.TargetName="menu" Storyboard.TargetProperty="Margin" BeginTime="0:0:0:0.2">
                 <SplineThicknessKeyFrame Value="-50,0,0,0" KeyTime="0:0:0:0.1"></SplineThicknessKeyFrame>
             </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        
+        <!-- btn pivot print resource -->
+        <Storyboard x:Key="btn_pivot_enter">
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_top" Storyboard.TargetProperty="Width" To="150" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_btm" Storyboard.TargetProperty="Width" To="150" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_left" Storyboard.TargetProperty="Height" To="45" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_right" Storyboard.TargetProperty="Height" To="45" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#ffffffff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+        </Storyboard>
+
+        <Storyboard x:Key="btn_pivot_leave">
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_top" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_btm" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_left" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_right" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#ffffffff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#ffffffff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+        </Storyboard>
+
+        <Storyboard x:Key="btn_chart_enter">
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_top1" Storyboard.TargetProperty="Width" To="150" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_btm1" Storyboard.TargetProperty="Width" To="150" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_left1" Storyboard.TargetProperty="Height" To="45" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_right1" Storyboard.TargetProperty="Height" To="45" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content1" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content1" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content1" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#ffffffff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+        </Storyboard>
+
+        <Storyboard x:Key="btn_chart_leave">
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_top1" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_btm1" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_left1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_right1" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content1" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#ffffffff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content1" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#ffffffff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content1" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+        </Storyboard>
+
+        <Storyboard x:Key="btn_pivot_data_enter">
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_top2" Storyboard.TargetProperty="Width" To="150" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_btm2" Storyboard.TargetProperty="Width" To="150" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_left2" Storyboard.TargetProperty="Height" To="45" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_right2" Storyboard.TargetProperty="Height" To="45" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content2" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content2" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#ffffffff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+        </Storyboard>
+
+        <Storyboard x:Key="btn_pivot_data_leave">
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_top2" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_btm2" Storyboard.TargetProperty="Width" To="0" BeginTime="0:0:0:0" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_left2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="btn_pivot_right2" Storyboard.TargetProperty="Height" To="0" BeginTime="0:0:0:0.1" Duration="0:0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn"></QuadraticEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content2" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#ffffffff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content2" Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" To="#ffffffff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
+            <ColorAnimation Storyboard.TargetName="btn_pivot_content_content2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
         </Storyboard>
     </UserControl.Resources>
 </UserControl>

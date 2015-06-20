@@ -1,0 +1,254 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f3f11d4a-95f0-4462-a49f-ac5cb8c4fdcd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>space_produksi</ID>
+  <Name>space_produksi</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="7a90c476-c4f1-49f8-9586-0c2c27741f11">
+      <ID>Dim Staff Produksi</ID>
+      <Name>Dim Staff Produksi</Name>
+      <DimensionID>Dim Staff Produksi</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b002d804-61df-42f1-86e6-4ab2ada235c0">
+          <AttributeID>No Staff</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6b68f82e-4c0e-47ad-81fe-9159ede3d1e2">
+          <AttributeID>Nama Staff</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="75e62cdc-0ff4-480d-a754-94d285246b60">
+          <AttributeID>Nama Bagian</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="79632d1a-0d9c-4bd8-aa0a-52d0a870bc4b">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="5ffb0db5-e91e-4ed5-9c93-606b942c233a">
+      <ID>Dim Produk</ID>
+      <Name>Dim Produk</Name>
+      <DimensionID>Dim Produk</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ba4242d3-3d48-4c38-9b05-d8789a3beceb">
+          <AttributeID>No Produk</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ff94646d-46c1-47d4-9250-c17fef72e79c">
+          <AttributeID>Nama Produk</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="82303d78-030d-41d2-8489-73eb82afdf59">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="bcd6ebfa-293a-496c-99f9-ca039cdc88e7">
+      <ID>Dim Waktu</ID>
+      <Name>Dim Waktu</Name>
+      <DimensionID>Dim Waktu</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="91ebca38-baf3-4f24-8534-3d817aa73fbb">
+          <AttributeID>No Waktu</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e12ec544-9ca8-4bf7-9f60-3aae124751a6">
+          <AttributeID>Hari</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="67ec0384-dc01-4305-b106-7a700ba2ced1">
+          <AttributeID>Nama Bulan</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4672b601-a0a5-420b-b1ae-f0e9432b09ac">
+          <AttributeID>Tahun</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="4c0c7cdf-78c6-4f25-bbb9-19c748b4de7e">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="08b45e3e-02cf-4480-8871-afd13dc8d123">
+      <ID>Dim Job</ID>
+      <Name>Dim Job</Name>
+      <DimensionID>Dim Job</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f113db46-772e-476b-9f9b-8a9093fc543c">
+          <AttributeID>No Job</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="90dcd612-1462-40ba-89d4-6621f377c611">
+          <AttributeID>Keterangan Job</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="ba8f806e-3e03-4094-99b1-ffae1b358652">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="e09dfcac-d92d-4f5e-88e8-8a37c4394e87">
+      <ID>Fact Biaya Produksi</ID>
+      <Name>Fact Biaya Produksi</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="d9e05a03-970c-44cb-a6b0-ad983c1ff073">
+          <ID>Jumlah</ID>
+          <Name>Jumlah</Name>
+          <Source dwd:design-time-name="d55266e3-abf6-4a9d-bba1-b7ba2ad75921">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fe4c7d24-99de-44f9-b512-cb87777af55b">
+              <TableID>dbo_fact_biaya_produksi</TableID>
+              <ColumnID>jumlah</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="30e4cc14-4f89-4038-afcb-7a80cc287bc6">
+          <ID>Biaya Produksi</ID>
+          <Name>Biaya Produksi</Name>
+          <Source dwd:design-time-name="32a873f0-c964-4e3e-bc8f-65100d8b8a64">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c88fb612-9146-43ae-8547-e44d3c818234">
+              <TableID>dbo_fact_biaya_produksi</TableID>
+              <ColumnID>biaya_produksi</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="69f31075-d345-42b5-bd1c-b49253b0e848">
+          <ID>Fact Biaya Produksi Count</ID>
+          <Name>Fact Biaya Produksi Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="3e9a9157-8dbe-47fd-92a8-5d451badef85">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="a811629f-2beb-4844-b4e9-89712d104a24">
+              <TableID>dbo_fact_biaya_produksi</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d688c075-4c2b-4631-b326-ab0d2bf8eb16">
+          <CubeDimensionID>Dim Staff Produksi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cfe3087b-f058-4ef7-af85-479b441c3dc7">
+              <AttributeID>No Staff</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9cb1fe05-5b9d-4377-8917-050df5e45f54">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="675b4661-d133-4494-88ab-4922f16753bf">
+                    <TableID>dbo_fact_biaya_produksi</TableID>
+                    <ColumnID>staff</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="824200dc-e9d7-4bc4-aa80-ed219b2467cc">
+          <CubeDimensionID>Dim Produk</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fe196048-734b-43b4-b071-bfb39d429b5a">
+              <AttributeID>No Produk</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="74b69b2c-0828-4f31-96ae-36282d3b72cc">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b810d096-87ec-48ca-ad8a-ae4e8f4c6691">
+                    <TableID>dbo_fact_biaya_produksi</TableID>
+                    <ColumnID>produk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8dba6644-dad9-4a6a-8e7f-0bc9dbd8e1db">
+          <CubeDimensionID>Dim Waktu</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="85d1d789-5890-4c21-bd23-e51637ea5a1d">
+              <AttributeID>No Waktu</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="82b1bac1-0ab8-4f2b-823f-97cef953f81e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3de1e3d5-4463-452b-8151-d7959c3f404a">
+                    <TableID>dbo_fact_biaya_produksi</TableID>
+                    <ColumnID>waktu</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="94280afe-d56a-49fb-90dd-8746099377a3">
+          <CubeDimensionID>Dim Job</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8549e6e4-97e3-4692-b755-a9490559154a">
+              <AttributeID>No Job</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3548e6a4-17eb-44e7-b1e9-79a358b16e7b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a08a4c78-3e5b-4c18-ae9e-404c70ec1c17">
+                    <TableID>dbo_fact_biaya_produksi</TableID>
+                    <ColumnID>job</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="462bed9c-cfe7-4d97-b1a2-7809eb149298">
+    <DataSourceViewID>Dw Spaceman</DataSourceViewID>
+  </Source>
+</Cube>

@@ -116,6 +116,20 @@
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>AFS0iDcmidoDfCpunSgSjOs4cjA=03/06/2015 20:24:1403/06/2015 20:22:50</TimeStamp>
+        <ID>
+          <String>Fmt Populer Design</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Iq73jEOoSF1DAup/F3s4gqTY0Uk=03/06/2015 20:26:0603/06/2015 20:25:27</TimeStamp>
+        <ID>
+          <String>Fmt Rentang Pembayaran</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
         <TimeStamp>cFJtmcDg5giOAz25pXPoVVGScA0=03/06/2015 0:26:2203/06/2015 0:19:49mGQp5drAmzPhgL/5EIeO+azsBeA=03/06/2015 0:19:4903/06/2015 0:19:49</TimeStamp>
         <ID>
@@ -127,6 +141,48 @@
         <TimeStamp>lMhU4lx3Sb0nVJ1OOwdt9a5UshM=03/06/2015 1:22:1803/06/2015 1:05:1959Bc0j3DFl728mxaAHVrW+znvoQ=03/06/2015 1:05:2203/06/2015 1:05:21</TimeStamp>
         <ID>
           <String>space_pemesanan</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>jRc6XaOj2R2lRAvQ3dLVzHUni/A=03/06/2015 20:16:4403/06/2015 20:16:44gzlCRDUNjUgDTyjtt5wXepiYx0I=03/06/2015 20:16:4403/06/2015 20:16:44</TimeStamp>
+        <ID>
+          <String>space_belanja</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>Ec2LLzFIxzqP6E4KmjiYlRNTReM=03/06/2015 20:19:1403/06/2015 20:19:13vgOADrP871hBIAPNb7IGWbPBA3Q=03/06/2015 20:19:1403/06/2015 20:19:14</TimeStamp>
+        <ID>
+          <String>space_produksi</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>0dITGikeEFdhkt5vtIg5q6l4tFA=03/06/2015 20:20:0703/06/2015 20:20:07xYETJX9d1ADrIPrv918ljYwtSIs=03/06/2015 20:20:0703/06/2015 20:20:07</TimeStamp>
+        <ID>
+          <String>space_pengiriman</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>FjAfEHfYzZhH9yIgswsAn08scSg=03/06/2015 20:21:3103/06/2015 20:21:30cRprwTuyDy8OqwXIgdGqRDsi0+M=03/06/2015 20:21:3103/06/2015 20:21:30</TimeStamp>
+        <ID>
+          <String>space_size</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>6HnToag51F0a1U4K7hLvaIKLtlo=03/06/2015 20:29:2503/06/2015 20:27:40lIEq1J+1CKTN2HeXcoe1xsFUaAk=03/06/2015 20:27:4003/06/2015 20:27:40</TimeStamp>
+        <ID>
+          <String>space_pop_design</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>K8r4bNY9k6dPHvMieZAwM+PNiI4=03/06/2015 20:31:4403/06/2015 20:30:167BrTBy34yf7o6Q4fFmNQB5zhQ/U=03/06/2015 20:30:1603/06/2015 20:30:16</TimeStamp>
+        <ID>
+          <String>space_pelunasan</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
@@ -141,5 +197,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2015-06-02T18:22:33.35Z</LastDeployed>
+  <LastDeployed>2015-06-03T13:31:52.713333Z</LastDeployed>
 </DeploymentSnapshot>

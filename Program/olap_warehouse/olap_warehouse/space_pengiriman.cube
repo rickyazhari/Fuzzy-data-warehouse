@@ -1,0 +1,215 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="91f2d92a-0ba9-4860-a6f4-33fbb9029359" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>space_pengiriman</ID>
+  <Name>space_pengiriman</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="45ee81ab-bd21-4249-8a01-16435d258971">
+      <ID>Dim Waktu</ID>
+      <Name>Dim Waktu</Name>
+      <DimensionID>Dim Waktu</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a7892abd-6558-4308-b612-3842d18a3117">
+          <AttributeID>No Waktu</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bbfe9cb6-56c4-440e-938e-3d3a096e4a11">
+          <AttributeID>Hari</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7c23b509-687c-4dd7-a1ce-3b519d20034b">
+          <AttributeID>Nama Bulan</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b7cdffef-a916-4918-ad60-272bb231f1b8">
+          <AttributeID>Tahun</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="88393a37-aaba-4479-b660-cc03f7fc6186">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="fc2fd351-e7ac-4065-bf58-03efdf7eb1cb">
+      <ID>Dim Pengiriman</ID>
+      <Name>Dim Pengiriman</Name>
+      <DimensionID>Dim Pengiriman</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="da0949b0-dd5b-40c9-9123-e6108746faba">
+          <AttributeID>No Pengiriman</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ec274fd0-7982-49be-b8b8-2eb1bba9e9ff">
+          <AttributeID>Jenis Pengiriman</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="11c4f792-25ba-41c1-9d4e-97d9b4317414">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="adbe03fe-b6f1-47da-a7f6-b99b8bd21882">
+      <ID>Dim Produk</ID>
+      <Name>Dim Produk</Name>
+      <DimensionID>Dim Produk</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="081d1407-0298-4979-8d8c-610c62fad94b">
+          <AttributeID>No Produk</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a9607ff6-8595-4792-8a1a-e8bf6d91c150">
+          <AttributeID>Nama Produk</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="f86f30c3-5577-4719-b2a3-1f29f5713ae5">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="464052e2-8e24-43f3-916f-b020e56d9d2d">
+      <ID>Fact Pengiriman Produk</ID>
+      <Name>Fact Pengiriman Produk</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="b06dc41c-68d6-4a6c-8eea-3874b901fe45">
+          <ID>Jumlah</ID>
+          <Name>Jumlah</Name>
+          <Source dwd:design-time-name="f09680bd-3289-41f6-b81b-9fab99b51c50">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="75625082-9b82-49ad-b540-667f29a5a77d">
+              <TableID>dbo_fact_pengiriman_produk</TableID>
+              <ColumnID>jumlah</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f47601bb-e3d0-44ac-84dd-a8df3c6f0c60">
+          <ID>Saldo</ID>
+          <Name>Saldo</Name>
+          <Source dwd:design-time-name="a37528e5-26b9-42f4-8c23-6c4c980cb06c">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d9d6e562-79cb-491f-b38a-c4dc0e115243">
+              <TableID>dbo_fact_pengiriman_produk</TableID>
+              <ColumnID>saldo</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="68ca6474-6f3f-49f1-a8f7-18e85543d409">
+          <ID>Fact Pengiriman Produk Count</ID>
+          <Name>Fact Pengiriman Produk Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="12f4d4bd-f6e5-490e-843c-1ebe9a1f3802">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="eca5416e-676c-4856-81ad-ae0fde9935d6">
+              <TableID>dbo_fact_pengiriman_produk</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b27370aa-b2a3-4b41-9227-de12a9f71a2a">
+          <CubeDimensionID>Dim Waktu</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f508f0b1-7e4f-4871-9be5-c8d74b233b68">
+              <AttributeID>No Waktu</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="42c750ca-7c15-4c9c-af86-2864f219ab31">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4c0605e7-ab24-40db-a557-2f524d0d77ad">
+                    <TableID>dbo_fact_pengiriman_produk</TableID>
+                    <ColumnID>waktu</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="37bc6697-b36b-418e-87ff-350266d015e1">
+          <CubeDimensionID>Dim Pengiriman</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e654c75e-a10d-4cf7-80e0-3ba2897da388">
+              <AttributeID>No Pengiriman</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c0eebb81-3d13-4276-90fb-7487f96a0bec">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="232bcf64-b85c-4698-9291-9d67c3d38a53">
+                    <TableID>dbo_fact_pengiriman_produk</TableID>
+                    <ColumnID>pengiriman</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0ccecf67-910b-48b3-a80f-8e7f5316a8b0">
+          <CubeDimensionID>Dim Produk</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ca549d55-bc2f-44ca-b0d2-c1512243628b">
+              <AttributeID>No Produk</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9a00d1c7-c055-4ac9-aede-76549ad55f83">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="42b1d88e-d2c1-4a07-9e91-2a99c02241f4">
+                    <TableID>dbo_fact_pengiriman_produk</TableID>
+                    <ColumnID>produk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="ad1ef534-c3bd-48a1-8b83-3cbf7384b481">
+    <DataSourceViewID>Dw Spaceman</DataSourceViewID>
+  </Source>
+</Cube>

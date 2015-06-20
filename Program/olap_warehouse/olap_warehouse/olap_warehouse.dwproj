@@ -27,6 +27,66 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>space_belanja.cube</Name>
+      <FullPath>space_belanja.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>space_belanja.partitions</Name>
+          <FullPath>space_belanja.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>space_produksi.cube</Name>
+      <FullPath>space_produksi.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>space_produksi.partitions</Name>
+          <FullPath>space_produksi.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>space_pengiriman.cube</Name>
+      <FullPath>space_pengiriman.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>space_pengiriman.partitions</Name>
+          <FullPath>space_pengiriman.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>space_size.cube</Name>
+      <FullPath>space_size.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>space_size.partitions</Name>
+          <FullPath>space_size.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>space_pop_design.cube</Name>
+      <FullPath>space_pop_design.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>space_pop_design.partitions</Name>
+          <FullPath>space_pop_design.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>space_pelunasan.cube</Name>
+      <FullPath>space_pelunasan.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>space_pelunasan.partitions</Name>
+          <FullPath>space_pelunasan.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
@@ -76,6 +136,14 @@
     <ProjectItem>
       <Name>Fmt Populer Produk1.dim</Name>
       <FullPath>Fmt Populer Produk1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fmt Populer Design.dim</Name>
+      <FullPath>Fmt Populer Design.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fmt Rentang Pembayaran.dim</Name>
+      <FullPath>Fmt Rentang Pembayaran.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
