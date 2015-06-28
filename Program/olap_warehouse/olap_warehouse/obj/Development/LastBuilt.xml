@@ -174,31 +174,6 @@
       <b>90</b>
     </Hash>
   </Item>
-  <Item name="space_belanja.cube">
-    <Time>635689594044515678</Time>
-    <Hash length="20">
-      <b>141</b>
-      <b>23</b>
-      <b>58</b>
-      <b>93</b>
-      <b>163</b>
-      <b>163</b>
-      <b>217</b>
-      <b>29</b>
-      <b>165</b>
-      <b>68</b>
-      <b>11</b>
-      <b>208</b>
-      <b>221</b>
-      <b>210</b>
-      <b>213</b>
-      <b>204</b>
-      <b>117</b>
-      <b>39</b>
-      <b>139</b>
-      <b>240</b>
-    </Hash>
-  </Item>
   <Item name="space_pemesanan.partitions">
     <Time>635688903224551726</Time>
     <Hash length="20">
@@ -324,6 +299,31 @@
       <b>116</b>
     </Hash>
   </Item>
+  <Item name="space_pop_produk.partitions">
+    <Time>635688875895330478</Time>
+    <Hash length="20">
+      <b>152</b>
+      <b>100</b>
+      <b>41</b>
+      <b>229</b>
+      <b>218</b>
+      <b>192</b>
+      <b>155</b>
+      <b>51</b>
+      <b>225</b>
+      <b>128</b>
+      <b>191</b>
+      <b>249</b>
+      <b>16</b>
+      <b>135</b>
+      <b>142</b>
+      <b>249</b>
+      <b>172</b>
+      <b>236</b>
+      <b>5</b>
+      <b>224</b>
+    </Hash>
+  </Item>
   <Item name="Dim Waktu.dim">
     <Time>635688795561287300</Time>
     <Hash length="20">
@@ -349,29 +349,29 @@
       <b>103</b>
     </Hash>
   </Item>
-  <Item name="Dim Staff Produksi.dim">
-    <Time>635681976631939405</Time>
+  <Item name="space_pop_design.partitions">
+    <Time>635689600605013863</Time>
     <Hash length="20">
-      <b>64</b>
-      <b>10</b>
-      <b>77</b>
-      <b>231</b>
-      <b>98</b>
-      <b>37</b>
-      <b>117</b>
-      <b>31</b>
-      <b>98</b>
-      <b>91</b>
-      <b>46</b>
-      <b>39</b>
+      <b>148</b>
+      <b>129</b>
+      <b>42</b>
+      <b>212</b>
+      <b>159</b>
+      <b>181</b>
+      <b>8</b>
+      <b>164</b>
+      <b>205</b>
+      <b>216</b>
+      <b>119</b>
+      <b>151</b>
+      <b>114</b>
+      <b>135</b>
+      <b>181</b>
       <b>198</b>
-      <b>226</b>
-      <b>235</b>
-      <b>24</b>
-      <b>115</b>
-      <b>109</b>
-      <b>46</b>
-      <b>192</b>
+      <b>193</b>
+      <b>84</b>
+      <b>104</b>
+      <b>9</b>
     </Hash>
   </Item>
   <Item name="space_pengiriman.cube">
@@ -449,6 +449,31 @@
       <b>162</b>
     </Hash>
   </Item>
+  <Item name="space_produksi.cube">
+    <Time>635689595540643362</Time>
+    <Hash length="20">
+      <b>17</b>
+      <b>205</b>
+      <b>139</b>
+      <b>47</b>
+      <b>49</b>
+      <b>72</b>
+      <b>199</b>
+      <b>58</b>
+      <b>143</b>
+      <b>232</b>
+      <b>78</b>
+      <b>10</b>
+      <b>154</b>
+      <b>56</b>
+      <b>152</b>
+      <b>149</b>
+      <b>19</b>
+      <b>83</b>
+      <b>69</b>
+      <b>227</b>
+    </Hash>
+  </Item>
   <Item name="Fmt Populer Design.dim">
     <Time>635689598541581283</Time>
     <Hash length="20">
@@ -499,29 +524,29 @@
       <b>184</b>
     </Hash>
   </Item>
-  <Item name="space_produksi.cube">
-    <Time>635689595540643362</Time>
+  <Item name="Dim Job.dim">
+    <Time>635681954944644143</Time>
     <Hash length="20">
-      <b>17</b>
-      <b>205</b>
-      <b>139</b>
+      <b>204</b>
+      <b>94</b>
+      <b>62</b>
+      <b>12</b>
+      <b>188</b>
+      <b>166</b>
       <b>47</b>
-      <b>49</b>
-      <b>72</b>
-      <b>199</b>
-      <b>58</b>
-      <b>143</b>
-      <b>232</b>
-      <b>78</b>
-      <b>10</b>
-      <b>154</b>
-      <b>56</b>
-      <b>152</b>
-      <b>149</b>
-      <b>19</b>
-      <b>83</b>
-      <b>69</b>
-      <b>227</b>
+      <b>59</b>
+      <b>31</b>
+      <b>127</b>
+      <b>99</b>
+      <b>98</b>
+      <b>91</b>
+      <b>25</b>
+      <b>74</b>
+      <b>20</b>
+      <b>59</b>
+      <b>169</b>
+      <b>121</b>
+      <b>162</b>
     </Hash>
   </Item>
   <Item name="space_size.cube">
@@ -549,29 +574,29 @@
       <b>40</b>
     </Hash>
   </Item>
-  <Item name="space_pop_produk.partitions">
-    <Time>635688875895330478</Time>
+  <Item name="Dim Staff Produksi.dim">
+    <Time>635681976631939405</Time>
     <Hash length="20">
-      <b>152</b>
-      <b>100</b>
-      <b>41</b>
-      <b>229</b>
-      <b>218</b>
+      <b>64</b>
+      <b>10</b>
+      <b>77</b>
+      <b>231</b>
+      <b>98</b>
+      <b>37</b>
+      <b>117</b>
+      <b>31</b>
+      <b>98</b>
+      <b>91</b>
+      <b>46</b>
+      <b>39</b>
+      <b>198</b>
+      <b>226</b>
+      <b>235</b>
+      <b>24</b>
+      <b>115</b>
+      <b>109</b>
+      <b>46</b>
       <b>192</b>
-      <b>155</b>
-      <b>51</b>
-      <b>225</b>
-      <b>128</b>
-      <b>191</b>
-      <b>249</b>
-      <b>16</b>
-      <b>135</b>
-      <b>142</b>
-      <b>249</b>
-      <b>172</b>
-      <b>236</b>
-      <b>5</b>
-      <b>224</b>
     </Hash>
   </Item>
   <Item name="space_pelunasan.cube">
@@ -597,31 +622,6 @@
       <b>205</b>
       <b>136</b>
       <b>142</b>
-    </Hash>
-  </Item>
-  <Item name="space_pop_design.partitions">
-    <Time>635689600605013863</Time>
-    <Hash length="20">
-      <b>148</b>
-      <b>129</b>
-      <b>42</b>
-      <b>212</b>
-      <b>159</b>
-      <b>181</b>
-      <b>8</b>
-      <b>164</b>
-      <b>205</b>
-      <b>216</b>
-      <b>119</b>
-      <b>151</b>
-      <b>114</b>
-      <b>135</b>
-      <b>181</b>
-      <b>198</b>
-      <b>193</b>
-      <b>84</b>
-      <b>104</b>
-      <b>9</b>
     </Hash>
   </Item>
   <Item name="Dim Produk.dim">
@@ -724,29 +724,29 @@
       <b>109</b>
     </Hash>
   </Item>
-  <Item name="Dim Job.dim">
-    <Time>635681954944644143</Time>
+  <Item name="space_belanja.cube">
+    <Time>635689594044515678</Time>
     <Hash length="20">
+      <b>141</b>
+      <b>23</b>
+      <b>58</b>
+      <b>93</b>
+      <b>163</b>
+      <b>163</b>
+      <b>217</b>
+      <b>29</b>
+      <b>165</b>
+      <b>68</b>
+      <b>11</b>
+      <b>208</b>
+      <b>221</b>
+      <b>210</b>
+      <b>213</b>
       <b>204</b>
-      <b>94</b>
-      <b>62</b>
-      <b>12</b>
-      <b>188</b>
-      <b>166</b>
-      <b>47</b>
-      <b>59</b>
-      <b>31</b>
-      <b>127</b>
-      <b>99</b>
-      <b>98</b>
-      <b>91</b>
-      <b>25</b>
-      <b>74</b>
-      <b>20</b>
-      <b>59</b>
-      <b>169</b>
-      <b>121</b>
-      <b>162</b>
+      <b>117</b>
+      <b>39</b>
+      <b>139</b>
+      <b>240</b>
     </Hash>
   </Item>
   <Item name="space_pop_produk.cube">

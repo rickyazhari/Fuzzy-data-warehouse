@@ -59,3 +59,6 @@ D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehous
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\chart_pop_produk.g.cs
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\chart_pemesanan.baml
 D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\chart_pemesanan.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\print_wrapper.baml
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\obj\Debug\print_wrapper.g.cs
+D:\MK\VIII\Skripsi\Masterpieces\Program\Spaceman_warehouse\app_Spaceman_Warehouse\bin\Debug\DevExpress.Images.v15.1.dll

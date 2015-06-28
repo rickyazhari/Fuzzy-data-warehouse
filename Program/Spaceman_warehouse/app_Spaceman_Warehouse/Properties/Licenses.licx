@@ -2,3 +2,8 @@ DevExpress.Patch.InMemoryPatch, DevExpress.Patch.Common, Version=6.2.0.0, Cultur
 DevExpress.Xpf.Carousel.CarouselPanel, DevExpress.Xpf.Carousel.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.Xpf.Charts.ChartControl, DevExpress.Xpf.Charts.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.Xpf.PivotGrid.PivotGridControl, DevExpress.Xpf.PivotGrid.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.Printing.DocumentPreviewControl, DevExpress.Xpf.Printing.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.Ribbon.RibbonControl, DevExpress.Xpf.Ribbon.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.Ribbon.BackstageViewControl, DevExpress.Xpf.Ribbon.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.Ribbon.RibbonStatusBarControl, DevExpress.Xpf.Ribbon.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.ReportDesigner.ReportDesigner, DevExpress.Xpf.ReportDesigner.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

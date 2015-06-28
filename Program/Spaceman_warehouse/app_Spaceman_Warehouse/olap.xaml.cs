@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using FirstFloor.ModernUI.Windows.Controls;
+using DevExpress.Xpf.Printing;
 
 namespace app_Spaceman_Warehouse
 {
@@ -187,15 +188,23 @@ namespace app_Spaceman_Warehouse
 
         private void btn_print_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            ModernDialog.ShowMessage("Under Construction Bos", "Alert", MessageBoxButton.OK);
+            PrintableControlLink link = new PrintableControlLink(pivot.pivot);
+            link.PageHeaderTemplate = (DataTemplate)TryFindResource("header_pemesanan");
+            link.PageHeaderData = "SPACEMAN";
+            link.ShowPrintPreviewDialog(root,"Print Preview");
         }
 
         private void btn_chart_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             switch (pointer)
             {
+                case "pop_produk":
+                    populer_produk.pivot_height.Height = new GridLength(0);
+                    populer_produk.chart_height.Height = new GridLength(olap_content.Height);
+                    break;
                 default :
                     pivot.pivot_height.Height = new GridLength(0);
+                    //pivot.print_height.Height = new GridLength(0);
                     pivot.chart_height.Height = new GridLength(olap_content.Height - 60);
                     break;
             }
@@ -204,16 +213,37 @@ namespace app_Spaceman_Warehouse
 
         private void resizing_pivot()
         {
-            if (pivot.pivot_height.Height.Value > 0)
+            switch (pointer)
             {
-                pivot.pivot_height.Height = new GridLength(olap_content.Height-60);
+                case "pop_produk":
+                    if (populer_produk.pivot_height.Height.Value > 0)
+                    {
+                        populer_produk.pivot_height.Height = new GridLength(olap_content.Height);
+                    }
+                    else 
+                    {
+                        populer_produk.chart_height.Height = new GridLength(olap_content.Height);
+                    }
+                    break;
+
+                default :
+                    if (pivot.pivot_height.Height.Value > 0)
+                    {
+                        pivot.pivot_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    else
+                    {
+                        pivot.chart_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    //else
+                    //{
+                    //    pivot.print_height.Height = new GridLength(olap_content.Height - 60);
+                    //}
+                    break;
             }
-            else
-            {
-                pivot.chart_height.Height = new GridLength(olap_content.Height - 60);
-            }
+           
             
-            populer_produk.pivot.Height = olap_content.Height;
+           
             populer_design.pivot.Height = olap_content.Height;
             pelunasan.pivot.Height = olap_content.Height;
             size_produk.pivot.Height = olap_content.Height;
@@ -240,9 +270,14 @@ namespace app_Spaceman_Warehouse
         {
             switch (pointer)
             {
+                case "pop_produk":
+                    populer_produk.pivot_height.Height = new GridLength(olap_content.Height);
+                    populer_produk.chart_height.Height = new GridLength(0);
+                    break;
                 default:
                     pivot.pivot_height.Height = new GridLength(olap_content.Height - 60);
                     pivot.chart_height.Height = new GridLength(0);
+                    //pivot.print_height.Height = new GridLength(0);
                     break;
             }
         }

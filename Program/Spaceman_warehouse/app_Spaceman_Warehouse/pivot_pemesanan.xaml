@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" x:Class="app_Spaceman_Warehouse.pivot_pemesanan" 
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"
              mc:Ignorable="d" 
              d:DesignHeight="364" d:DesignWidth="976" Margin="0,0,8,0">
     <UserControl.Resources>
@@ -27,10 +28,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition x:Name="pivot_height" x:FieldModifier="public" Height="182"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition x:Name="print_height" x:FieldModifier="public" Height="0"/>
             <RowDefinition x:Name="chart_height"  x:FieldModifier="public" Height="0"/>
         </Grid.RowDefinitions>
-        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" RowTotalsLocation="Far" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ChartDataProvidePriority="Columns" ChartMaxSeriesCount="50" ChartMaxPointCountInSeries="500" ChartFieldValuesProvideMode="Value">
+        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" RowTotalsLocation="Far" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ChartDataProvidePriority="Columns" ChartMaxSeriesCount="50" ChartMaxPointCountInSeries="500" ChartFieldValuesProvideMode="Value" PrintHeadersOnEveryPage="True" PrintFilterHeaders="False" PrintDataHeaders="False" PrintColumnHeaders="False" PrintRowHeaders="False">
             <dxpg:PivotGridControl.Fields>
                 <dxpg:PivotGridField Area="RowArea" Caption="Nama Konsumen" FieldName="[Dim Konsumen].[Hierarchy].[Nama Konsumen]" AreaIndex="0"/>
                 <dxpg:PivotGridField Area="ColumnArea" Caption="Nama Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]" AreaIndex="1"/>
@@ -48,6 +49,7 @@
                 </dxc:XYDiagram2D.SeriesTemplate>
             </dxc:XYDiagram2D>
         </dxc:ChartControl>
-    </Grid>
+          
+        </Grid>
     </DockPanel>
 </UserControl>
