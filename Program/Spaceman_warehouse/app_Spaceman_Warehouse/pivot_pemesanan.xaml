@@ -31,7 +31,7 @@
             <RowDefinition x:Name="print_height" x:FieldModifier="public" Height="0"/>
             <RowDefinition x:Name="chart_height"  x:FieldModifier="public" Height="0"/>
         </Grid.RowDefinitions>
-        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" RowTotalsLocation="Far" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ChartDataProvidePriority="Columns" ChartMaxSeriesCount="50" ChartMaxPointCountInSeries="500" ChartFieldValuesProvideMode="Value" PrintHeadersOnEveryPage="True" PrintFilterHeaders="False" PrintDataHeaders="False" PrintColumnHeaders="False" PrintRowHeaders="False">
+        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" RowTotalsLocation="Far" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ChartDataProvidePriority="Columns" ChartMaxSeriesCount="50" ChartMaxPointCountInSeries="500" ChartFieldValuesProvideMode="Value" PrintHeadersOnEveryPage="True" PrintFilterHeaders="False" PrintDataHeaders="False" PrintColumnHeaders="False" PrintRowHeaders="False" AutoExpandGroups="True">
             <dxpg:PivotGridControl.Fields>
                 <dxpg:PivotGridField Area="RowArea" Caption="Nama Konsumen" FieldName="[Dim Konsumen].[Hierarchy].[Nama Konsumen]" AreaIndex="0"/>
                 <dxpg:PivotGridField Area="ColumnArea" Caption="Nama Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]" AreaIndex="1"/>

@@ -23,6 +23,21 @@ namespace app_Spaceman_Warehouse
         public pivot_belanja()
         {
             InitializeComponent();
+            kredit.IsChecked = true;
+        }
+
+        private void kredit_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Kredit";
+            data_area.FieldName = "[Measures].[Cost]";
+            data_area.CellFormat = "c2";
+        }
+
+        private void Jumlah_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Jumlah";
+            data_area.FieldName = "[Measures].[Jumlah Kredit]";
+            data_area.CellFormat = "";
         }
     }
 }

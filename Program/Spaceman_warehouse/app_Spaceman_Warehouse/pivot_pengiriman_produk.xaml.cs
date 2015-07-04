@@ -23,6 +23,28 @@ namespace app_Spaceman_Warehouse
         public pivot_pengiriman_produk()
         {
             InitializeComponent();
+            biaya_pengiriman.IsChecked = true;
+        }
+
+        private void biaya_pengiriman_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Biaya Pengiriman";
+            data_area.FieldName = "[Measures].[Saldo]";
+            data_area.CellFormat = "c2";
+        }
+
+        private void jumlah_produk_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Jumlah Produk";
+            data_area.FieldName = "[Measures].[Jumlah]";
+            data_area.CellFormat = "";
+        }
+
+        private void jumlah_jenis_pengiriman_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Jumlah Jenis Pengiriman";
+            data_area.FieldName = "[Measures].[Fact Pengiriman Produk Count]";
+            data_area.CellFormat = "";
         }
     }
 }

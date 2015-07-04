@@ -202,6 +202,30 @@ namespace app_Spaceman_Warehouse
                     populer_produk.pivot_height.Height = new GridLength(0);
                     populer_produk.chart_height.Height = new GridLength(olap_content.Height);
                     break;
+                case "pop_design":
+                    populer_design.pivot_height.Height = new GridLength(0);
+                    populer_design.chart_height.Height = new GridLength(olap_content.Height);
+                    break;
+                case "pelunasan":
+                    pelunasan.pivot_height.Height = new GridLength(0);
+                    pelunasan.chart_height.Height = new GridLength(olap_content.Height);
+                    break;
+                case "size":
+                    size_produk.pivot_height.Height = new GridLength(0);
+                    size_produk.chart_height.Height = new GridLength(olap_content.Height - 60);
+                    break;
+                case "pengiriman":
+                    pengiriman_produk.pivot_height.Height = new GridLength(0);
+                    pengiriman_produk.chart_height.Height = new GridLength(olap_content.Height - 60);
+                    break;
+                case "belanja":
+                    belanja.pivot_height.Height = new GridLength(0);
+                    belanja.chart_height.Height = new GridLength(olap_content.Height - 60);
+                    break;
+                case "produksi":
+                    produksi.pivot_height.Height = new GridLength(0);
+                    produksi.chart_height.Height = new GridLength(olap_content.Height - 60);
+                    break;
                 default :
                     pivot.pivot_height.Height = new GridLength(0);
                     //pivot.print_height.Height = new GridLength(0);
@@ -226,6 +250,72 @@ namespace app_Spaceman_Warehouse
                     }
                     break;
 
+                case "pop_design":
+                    if (populer_design.pivot_height.Height.Value > 0)
+                    {
+                        populer_design.pivot_height.Height = new GridLength(olap_content.Height);
+                    }
+                    else
+                    {
+                        populer_design.chart_height.Height = new GridLength(olap_content.Height);
+                    }
+                    break;
+
+                case "pelunasan":
+                    if (pelunasan.pivot_height.Height.Value > 0)
+                    {
+                        pelunasan.pivot_height.Height = new GridLength(olap_content.Height);
+                    }
+                    else
+                    {
+                        pelunasan.chart_height.Height = new GridLength(olap_content.Height);
+                    }
+                    break;
+
+                case "size":
+                    if (size_produk.pivot_height.Height.Value > 0)
+                    {
+                        size_produk.pivot_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    else
+                    {
+                        size_produk.chart_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    break;
+
+                case "pengiriman":
+                    if (pengiriman_produk.pivot_height.Height.Value > 0)
+                    {
+                        pengiriman_produk.pivot_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    else
+                    {
+                        pengiriman_produk.chart_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    break;
+
+                case "belanja":
+                    if (belanja.pivot_height.Height.Value > 0)
+                    {
+                        belanja.pivot_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    else
+                    {
+                        belanja.chart_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    break;
+
+                case "produksi":
+                    if (produksi.pivot_height.Height.Value > 0)
+                    {
+                        produksi.pivot_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    else
+                    {
+                        produksi.chart_height.Height = new GridLength(olap_content.Height - 60);
+                    }
+                    break;
+
                 default :
                     if (pivot.pivot_height.Height.Value > 0)
                     {
@@ -242,14 +332,6 @@ namespace app_Spaceman_Warehouse
                     break;
             }
            
-            
-           
-            populer_design.pivot.Height = olap_content.Height;
-            pelunasan.pivot.Height = olap_content.Height;
-            size_produk.pivot.Height = olap_content.Height;
-            pengiriman_produk.pivot.Height = olap_content.Height;
-            belanja.pivot.Height = olap_content.Height;
-            produksi.pivot.Height = olap_content.Height;
         }
 
         private void btn_pivot_MouseEnter(object sender, MouseEventArgs e)
@@ -273,6 +355,30 @@ namespace app_Spaceman_Warehouse
                 case "pop_produk":
                     populer_produk.pivot_height.Height = new GridLength(olap_content.Height);
                     populer_produk.chart_height.Height = new GridLength(0);
+                    break;
+                case "pop_design":
+                    populer_design.pivot_height.Height = new GridLength(olap_content.Height);
+                    populer_design.chart_height.Height = new GridLength(0);
+                    break;
+                case "pelunasan":
+                    pelunasan.pivot_height.Height = new GridLength(olap_content.Height);
+                    pelunasan.chart_height.Height = new GridLength(0);
+                    break;
+                case "size":
+                    size_produk.pivot_height.Height = new GridLength(olap_content.Height - 60);
+                    size_produk.chart_height.Height = new GridLength(0);
+                    break;
+                case "pengiriman":
+                    pengiriman_produk.pivot_height.Height = new GridLength(olap_content.Height - 60);
+                    pengiriman_produk.chart_height.Height = new GridLength(0);
+                    break;
+                case "belanja":
+                    belanja.pivot_height.Height = new GridLength(olap_content.Height - 60);
+                    belanja.chart_height.Height = new GridLength(0);
+                    break;
+                case "produksi":
+                    produksi.pivot_height.Height = new GridLength(olap_content.Height - 60);
+                    produksi.chart_height.Height = new GridLength(0);
                     break;
                 default:
                     pivot.pivot_height.Height = new GridLength(olap_content.Height - 60);

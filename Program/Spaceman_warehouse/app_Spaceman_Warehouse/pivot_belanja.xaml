@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" x:Class="app_Spaceman_Warehouse.pivot_belanja" 
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" x:Class="app_Spaceman_Warehouse.pivot_belanja" 
              mc:Ignorable="d" 
              d:DesignHeight="364" d:DesignWidth="976">
     <UserControl.Resources>
@@ -13,17 +13,41 @@
             </dx:DesignDataManager.DesignData>
         </dx:PivotOlapDataSource>
     </UserControl.Resources>
-    <Grid>
-
-        <dxpg:PivotGridControl Height="364" x:Name="pivot" x:FieldModifier="public" HorizontalAlignment="Left" VerticalAlignment="Top" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" OlapDataProvider="OleDb">
-            <dxpg:PivotGridControl.Fields>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Jenis Kredit" FieldName="[Dim Kredit].[Hierarchy].[Jenis Kredit]"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Bulan" FieldName="[Dim Waktu].[year].[Nama Bulan]" SortMode="None"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Tahun" FieldName="[Dim Waktu].[year].[Tahun]"/>
-                <dxpg:PivotGridField Area="DataArea" Caption="Cost" FieldName="[Measures].[Cost]"/>
-            </dxpg:PivotGridControl.Fields>
-        </dxpg:PivotGridControl>
-
-    </Grid>
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Top" Height="60" BorderBrush="#ff008bff" BorderThickness="0,1,0,0">
+            <DockPanel LastChildFill="True">
+                <TextBlock DockPanel.Dock="Top" Foreground="#ff008bff" FontSize="20" FontWeight="Bold"> Data Area</TextBlock>
+                <TextBlock Padding="10,0,0,0">
+                <RadioButton GroupName="da" x:Name="kredit" Foreground="#ff008bff" Margin="20,0,10,0" Checked="kredit_Checked" >Kredit</RadioButton>
+                <RadioButton GroupName="da" x:Name="Jumlah" Foreground="#ff008bff" Margin="0,0,20,0" Checked="Jumlah_Checked">Jumlah pemakaian</RadioButton>
+                
+                </TextBlock>
+            </DockPanel>
+        </Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="pivot_height" x:FieldModifier="public" Height="188"/>
+                <RowDefinition x:Name="chart_height" x:FieldModifier="public" Height="0"/>
+            </Grid.RowDefinitions>
+            <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" ChartMaxPointCountInSeries="5000" ChartMaxSeriesCount="500" RowTotalsLocation="Far" ShowColumnTotals="False" ShowFilterHeaders="False" ShowRowTotals="False" AutoExpandGroups="True">
+                <dxpg:PivotGridControl.Fields>
+                    <dxpg:PivotGridField Area="RowArea" Caption="Jenis Kredit" FieldName="[Dim Kredit].[Hierarchy].[Jenis Kredit]" AreaIndex="1"/>
+                    <dxpg:PivotGridField Area="RowArea" Caption="Nama Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]" AreaIndex="0"/>
+                    <dxpg:PivotGridField Area="ColumnArea" Caption="Nama Bulan" FieldName="[Dim Waktu].[year].[Nama Bulan]" AreaIndex="1"/>
+                    <dxpg:PivotGridField Area="ColumnArea" Caption="Tahun" FieldName="[Dim Waktu].[year].[Tahun]" AreaIndex="0"/>
+                    <dxpg:PivotGridField x:Name="data_area" Area="DataArea" Caption="Kredit" FieldName="[Measures].[Cost]" AreaIndex="0" CellFormat="c2"/>
+                </dxpg:PivotGridControl.Fields>
+            </dxpg:PivotGridControl>
+            <dxc:ChartControl DataSource="{Binding ChartDataSource, ElementName=pivot}" Grid.Row="1">
+                <dxc:ChartControl.Legend>
+                    <dxc:Legend ReverseItems="True"></dxc:Legend>
+                </dxc:ChartControl.Legend>
+                <dxc:XYDiagram2D SeriesDataMember="Series">
+                    <dxc:XYDiagram2D.SeriesTemplate>
+                        <dxc:BarSideBySideSeries2D ArgumentDataMember="Arguments" ValueDataMember="Values"/>
+                    </dxc:XYDiagram2D.SeriesTemplate>
+                </dxc:XYDiagram2D>
+            </dxc:ChartControl>
+        </Grid>
+    </DockPanel>
 </UserControl>

@@ -3,30 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" x:Class="app_Spaceman_Warehouse.pivot_pop_design" 
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" x:Class="app_Spaceman_Warehouse.pivot_pop_design" 
              mc:Ignorable="d" 
              d:DesignHeight="364" d:DesignWidth="976">
     <UserControl.Resources>
-        <dx:PivotOlapDataSource x:Key="PivotOlapDataSource" Cube="space_pop_design" Catalog="olap_warehouse" ConnectionTimeout="60" LocaleIdentifier="1057" Password="{x:Null}" Provider="MSOLAP" QueryTimeout="30" Server="CORET\SPACEMAN" UserId="coret\kari">
+        <dx:PivotOlapDataSource x:Key="PivotOlapDataSource" Cube="space_pop_design" Catalog="olap_warehouse" ConnectionTimeout="60" LocaleIdentifier="1057" Password="" Provider="MSOLAP" QueryTimeout="30" Server="CORET\SPACEMAN" UserId="coret\kari">
             <dx:DesignDataManager.DesignData>
                 <dx:DesignDataSettings RowCount="5"/>
             </dx:DesignDataManager.DesignData>
         </dx:PivotOlapDataSource>
     </UserControl.Resources>
-    <Grid>
 
-        <dxpg:PivotGridControl x:Name="pivot" x:FieldModifier="public" HorizontalAlignment="Left" Height="364" Margin="0,0,0,0" VerticalAlignment="Top" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" OlapDataProvider="OleDb">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="pivot_height" x:FieldModifier="public" Height="182"/>
+            <RowDefinition x:Name="chart_height" x:FieldModifier="public" Height="0"/>
+        </Grid.RowDefinitions>
+        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" ChartDataProvidePriority="Columns" ChartMaxPointCountInSeries="1000" ChartMaxSeriesCount="100" ShowColumnGrandTotalHeader="False" ShowColumnGrandTotals="False" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ShowRowGrandTotalHeader="False" ShowRowGrandTotals="False" RowTotalsLocation="Far" AutoExpandGroups="True">
+            <dxpg:PivotGridControl.FormatConditions>
+                <dxpg:ColorScaleFormatCondition ApplyToSpecificLevel="True" ColumnName="kelas" MeasureName="populer" RowName="design">
+                    <dx:ColorScaleFormat ColorMin="White" ColorMax="#FF63BE7B" ColorMiddle="#FFF5F774"/>
+                </dxpg:ColorScaleFormatCondition>
+            </dxpg:PivotGridControl.FormatConditions>
             <dxpg:PivotGridControl.Fields>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Klasifikasi" FieldName="[Fmt Populer Design].[Ca Pop Design].[Ca Pop Design]"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Bulan" FieldName="[Fmt Populer Design].[Nama Bulan].[Nama Bulan]"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Design" FieldName="[Fmt Populer Design].[Nama Design].[Nama Design]"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Produk" FieldName="[Fmt Populer Design].[Nama Produk].[Nama Produk]"/>
-                <dxpg:PivotGridField Area="FilterArea" Caption="Tahun" FieldName="[Fmt Populer Design].[Tahun].[Tahun]"/>
-                <dxpg:PivotGridField Area="DataArea" Caption="Jumlah" FieldName="[Measures].[Fmt Populer Design Count]"/>
-                <dxpg:PivotGridField Area="DataArea" Caption="SUM MDA" FieldName="[Measures].[Mda Pop Design]"/>
-                <dxpg:PivotGridField Area="DataArea" Caption="Derajat Keanggotaan" FieldName="[Measures].[avg_mda]"/>
+                <dxpg:PivotGridField x:Name="kelas" Area="ColumnArea" Caption="Klasifikasi" FieldName="[Fmt Populer Design].[Ca Pop Design].[Ca Pop Design]" AreaIndex="1"/>
+                <dxpg:PivotGridField x:Name="design" Area="RowArea" Caption="Design" FieldName="[Fmt Populer Design].[Nama Design].[Nama Design]" AreaIndex="0"/>
+                <dxpg:PivotGridField Area="ColumnArea" Caption="Tahun" FieldName="[Fmt Populer Design].[Tahun].[Tahun]" AreaIndex="0"/>
+                <dxpg:PivotGridField x:Name="populer" Area="DataArea" Caption="kepopuleran" FieldName="[Measures].[avg_mda]" AreaIndex="0" CellFormat="p2"/>
             </dxpg:PivotGridControl.Fields>
         </dxpg:PivotGridControl>
-
+        <dxc:ChartControl DataSource="{Binding ChartDataSource, ElementName=pivot}" Grid.Row="1">
+            <dxc:ChartControl.Legend>
+                <dxc:Legend ReverseItems="True"></dxc:Legend>
+            </dxc:ChartControl.Legend>
+            <dxc:XYDiagram2D SeriesDataMember="Series">
+                <dxc:XYDiagram2D.SeriesTemplate>
+                    <dxc:BarSideBySideSeries2D ArgumentDataMember="Arguments" ValueDataMember="Values"/>
+                </dxc:XYDiagram2D.SeriesTemplate>
+            </dxc:XYDiagram2D>
+        </dxc:ChartControl>
     </Grid>
 </UserControl>

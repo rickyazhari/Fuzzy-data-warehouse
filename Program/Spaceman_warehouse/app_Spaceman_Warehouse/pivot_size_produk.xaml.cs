@@ -23,6 +23,19 @@ namespace app_Spaceman_Warehouse
         public pivot_size_produk()
         {
             InitializeComponent();
+            jumlah_produk.IsChecked = true;
+        }
+
+        private void jumlah_produk_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Jumlah Produk";
+            data_area.FieldName = "[Measures].[Jumlah]";
+        }
+
+        private void jumlah_size_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Jumlah Size";
+            data_area.FieldName = "[Measures].[Fact Size Produk Count]";
         }
     }
 }

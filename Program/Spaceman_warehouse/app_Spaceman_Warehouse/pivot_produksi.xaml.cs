@@ -23,6 +23,21 @@ namespace app_Spaceman_Warehouse
         public pivot_produksi()
         {
             InitializeComponent();
+            biaya.IsChecked = true;
+        }
+
+        private void biaya_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Biaya Produksi";
+            data_area.FieldName = "[Measures].[Biaya Produksi]";
+            data_area.CellFormat = "c2";
+        }
+
+        private void jumlah_Checked(object sender, RoutedEventArgs e)
+        {
+            data_area.Caption = "Jumlah Produksi";
+            data_area.FieldName = "[Measures].[Jumlah]";
+            data_area.CellFormat = "";
         }
     }
 }
