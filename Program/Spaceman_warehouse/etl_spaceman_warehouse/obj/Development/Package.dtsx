@@ -12,8 +12,8 @@
   DTS:LocaleID="1057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="142"
-  DTS:VersionGUID="{AD891023-7D61-455B-8225-C3E99A4FAF67}">
+  DTS:VersionBuild="143"
+  DTS:VersionGUID="{9B2B292E-52AB-4D14-B9B8-4E37DAE6D94C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5150,139 +5150,139 @@
               startId="Package\building dimension\Merge 1.Outputs[Merge Output 1]" />
             <path
               refId="Package\building dimension.Paths[OLE DB Source Output13]"
-              endId="Package\building dimension\Sort 6.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\kredit source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output12]"
-              endId="Package\building dimension\Sort 10.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\waktu  belanja source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output11]"
-              endId="Package\building dimension\Sort 9.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\waktu pengiriman source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output9]"
-              endId="Package\building dimension\Sort 7.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\waktu pemesanan source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output8]"
-              endId="Package\building dimension\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\source jenis size.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output7]"
-              endId="Package\building dimension\dim design.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\design source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output10]"
-              endId="Package\building dimension\Sort 8.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\waktu pembayaran source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output5]"
-              endId="Package\building dimension\dim job.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\source job.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output4]"
-              endId="Package\building dimension\dim produk.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\produk source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output3]"
-              endId="Package\building dimension\Sort.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\konsumen source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output2]"
-              endId="Package\building dimension\Sort 3.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\staff source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output1]"
-              endId="Package\building dimension\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\source jasa kirim.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output]"
-              endId="Package\building dimension\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\building dimension\kota source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\building dimension.Paths[OLE DB Source Output6]"
               endId="Package\building dimension\Sort 4.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\building dimension\bagian source.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\building dimension.Paths[OLE DB Source Output12]"
+              endId="Package\building dimension\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\kota source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output11]"
+              endId="Package\building dimension\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\source jasa kirim.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output9]"
+              endId="Package\building dimension\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\konsumen source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output8]"
+              endId="Package\building dimension\dim produk.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\produk source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output7]"
+              endId="Package\building dimension\dim job.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\source job.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output10]"
+              endId="Package\building dimension\Sort 3.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\staff source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output5]"
+              endId="Package\building dimension\dim design.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\design source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output4]"
+              endId="Package\building dimension\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\source jenis size.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output3]"
+              endId="Package\building dimension\Sort 7.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\waktu pemesanan source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output2]"
+              endId="Package\building dimension\Sort 9.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\waktu pengiriman source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output1]"
+              endId="Package\building dimension\Sort 10.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\waktu  belanja source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output]"
+              endId="Package\building dimension\Sort 6.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\kredit source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\building dimension.Paths[OLE DB Source Output6]"
+              endId="Package\building dimension\Sort 8.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\building dimension\waktu pembayaran source.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\building dimension.Paths[Sort Output11]"
-              endId="Package\building dimension\Merge 2.Inputs[Merge Input 1]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 11.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output10]"
-              endId="Package\building dimension\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output9]"
-              endId="Package\building dimension\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output8]"
-              endId="Package\building dimension\Derived Column.Inputs[Derived Column Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 13.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output7]"
-              endId="Package\building dimension\Merge 1.Inputs[Merge Input 2]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 10.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output6]"
-              endId="Package\building dimension\merge staff dan bagian.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 3.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output3]"
-              endId="Package\building dimension\merge staff dan bagian.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 4.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output4]"
-              endId="Package\building dimension\dim konsumen.Inputs[OLE DB Destination Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 2.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output2]"
-              endId="Package\building dimension\Merge 1.Inputs[Merge Input 1]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 9.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output1]"
-              endId="Package\building dimension\dim staff produksi.Inputs[OLE DB Destination Input]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 5.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output]"
-              endId="Package\building dimension\Merge.Inputs[Merge Input 2]"
-              name="Sort Output"
-              startId="Package\building dimension\Sort 8.Outputs[Sort Output]" />
-            <path
-              refId="Package\building dimension.Paths[Sort Output12]"
               endId="Package\building dimension\Merge.Inputs[Merge Input 1]"
               name="Sort Output"
               startId="Package\building dimension\Sort 7.Outputs[Sort Output]" />
             <path
-              refId="Package\building dimension.Paths[Sort Output5]"
+              refId="Package\building dimension.Paths[Sort Output10]"
+              endId="Package\building dimension\Merge.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 8.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output9]"
+              endId="Package\building dimension\dim staff produksi.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 5.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output8]"
+              endId="Package\building dimension\Merge 1.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 9.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output7]"
+              endId="Package\building dimension\dim konsumen.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 2.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output6]"
+              endId="Package\building dimension\merge staff dan bagian.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 4.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output3]"
+              endId="Package\building dimension\Derived Column.Inputs[Derived Column Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 13.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output4]"
+              endId="Package\building dimension\Merge 1.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 10.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output2]"
+              endId="Package\building dimension\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output1]"
+              endId="Package\building dimension\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output]"
+              endId="Package\building dimension\Merge 2.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 11.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output12]"
               endId="Package\building dimension\Merge 2.Inputs[Merge Input 2]"
               name="Sort Output"
               startId="Package\building dimension\Sort 12.Outputs[Sort Output]" />
+            <path
+              refId="Package\building dimension.Paths[Sort Output5]"
+              endId="Package\building dimension\merge staff dan bagian.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\building dimension\Sort 3.Outputs[Sort Output]" />
             <path
               refId="Package\building dimension.Paths[Sort Output13]"
               endId="Package\building dimension\dim kredit.Inputs[OLE DB Destination Input]"
@@ -9696,13 +9696,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_R4)((DT_I4)#{Package\Fuzzy Meta tabel rentang pembayaran\fact pembayaran konsumen.Outputs[OLE DB Source Output].Columns[rentang_pembayaran]} == 0 ? 1.00 : (DT_I4)#{Package\Fuzzy Meta tabel rentang pembayaran\fact pembayaran konsumen.Outputs[OLE DB Source Output].Columns[rentang_pembayaran]} &gt; 0 &amp;&amp; (DT_I4)#{Package\Fuzzy Meta tabel rentang pembayaran\fact pembayaran konsumen.Outputs[OLE DB Source Output].Columns[rentang_pembayaran]} &lt; 10 ? (10 - (DT_I4)#{Package\Fuzzy Meta tabel rentang pembayaran\fact pembayaran konsumen.Outputs[OLE DB Source Output].Columns[rentang_pembayaran]}) / 10.00 : 0.00)</property>
+                          name="Expression">(DT_R4)((DT_I4)#{Package\Fuzzy Meta tabel rentang pembayaran\fact pembayaran konsumen.Outputs[OLE DB Source Output].Columns[rentang_pembayaran]} &lt;= 0 ? 1.00 : (DT_I4)#{Package\Fuzzy Meta tabel rentang pembayaran\fact pembayaran konsumen.Outputs[OLE DB Source Output].Columns[rentang_pembayaran]} &gt; 0 &amp;&amp; (DT_I4)#{Package\Fuzzy Meta tabel rentang pembayaran\fact pembayaran konsumen.Outputs[OLE DB Source Output].Columns[rentang_pembayaran]} &lt; 10 ? (10 - (DT_I4)#{Package\Fuzzy Meta tabel rentang pembayaran\fact pembayaran konsumen.Outputs[OLE DB Source Output].Columns[rentang_pembayaran]}) / 10.00 : 0.00)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_R4)((DT_I4)rentang_pembayaran == 0 ? 1.00 : (DT_I4)rentang_pembayaran &gt; 0 &amp;&amp; (DT_I4)rentang_pembayaran &lt; 10 ? (10 - (DT_I4)rentang_pembayaran) / 10.00 : 0.00)</property>
+                          name="FriendlyExpression">(DT_R4)((DT_I4)rentang_pembayaran &lt;= 0 ? 1.00 : (DT_I4)rentang_pembayaran &gt; 0 &amp;&amp; (DT_I4)rentang_pembayaran &lt; 10 ? (10 - (DT_I4)rentang_pembayaran) / 10.00 : 0.00)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -15559,64 +15559,64 @@ where [refTable].[jenis_kredit] = ?</property>
               startId="Package\populasi fact belanja\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\populasi fact belanja.Paths[OLE DB Source Output3]"
-              endId="Package\populasi fact belanja\Sort.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\populasi fact belanja\detail belanja source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[OLE DB Source Output2]"
-              endId="Package\populasi fact belanja\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\populasi fact belanja\belanja source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[OLE DB Source Output]"
-              endId="Package\populasi fact belanja\Sort 2.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\populasi fact belanja\kredit source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[OLE DB Source Output1]"
               endId="Package\populasi fact belanja\Sort 4.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\populasi fact belanja\service order.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\populasi fact belanja.Paths[OLE DB Source Output2]"
+              endId="Package\populasi fact belanja\Sort 2.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\populasi fact belanja\kredit source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[OLE DB Source Output]"
+              endId="Package\populasi fact belanja\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\populasi fact belanja\detail belanja source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[OLE DB Source Output1]"
+              endId="Package\populasi fact belanja\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\populasi fact belanja\belanja source.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\populasi fact belanja.Paths[Sort Output7]"
+              endId="Package\populasi fact belanja\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\populasi fact belanja\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact belanja.Paths[Sort Output]"
               endId="Package\populasi fact belanja\Lookup 1.Inputs[Lookup Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 5.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Sort Output]"
+              refId="Package\populasi fact belanja.Paths[Sort Output1]"
               endId="Package\populasi fact belanja\Lookup kredit.Inputs[Lookup Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 7.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Sort Output1]"
+              refId="Package\populasi fact belanja.Paths[Sort Output2]"
               endId="Package\populasi fact belanja\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Sort Output2]"
+              refId="Package\populasi fact belanja.Paths[Sort Output3]"
               endId="Package\populasi fact belanja\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 6.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Sort Output3]"
+              refId="Package\populasi fact belanja.Paths[Sort Output4]"
               endId="Package\populasi fact belanja\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Sort Output4]"
+              refId="Package\populasi fact belanja.Paths[Sort Output5]"
               endId="Package\populasi fact belanja\Merge Join 2.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort 4.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact belanja.Paths[Sort Output5]"
+              refId="Package\populasi fact belanja.Paths[Sort Output6]"
               endId="Package\populasi fact belanja\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populasi fact belanja\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact belanja.Paths[Sort Output6]"
-              endId="Package\populasi fact belanja\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\populasi fact belanja\Sort 1.Outputs[Sort Output]" />
             <path
               refId="Package\populasi fact belanja.Paths[Sort Output8]"
               endId="Package\populasi fact belanja\fact belanja.Inputs[OLE DB Destination Input]"
@@ -24677,64 +24677,64 @@ where [refTable].[string_tanggal] = ?</property>
               startId="Package\populasi fact pengiriman produk\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output3]"
-              endId="Package\populasi fact pengiriman produk\Sort 6.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\populasi fact pengiriman produk\pengiriman 2 source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output2]"
-              endId="Package\populasi fact pengiriman produk\Sort 3.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\populasi fact pengiriman produk\order service source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output]"
-              endId="Package\populasi fact pengiriman produk\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\populasi fact pengiriman produk\pemesananan source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output1]"
               endId="Package\populasi fact pengiriman produk\Sort.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\populasi fact pengiriman produk\pengiriman source.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output2]"
+              endId="Package\populasi fact pengiriman produk\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\populasi fact pengiriman produk\pemesananan source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output]"
+              endId="Package\populasi fact pengiriman produk\Sort 6.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\populasi fact pengiriman produk\pengiriman 2 source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output1]"
+              endId="Package\populasi fact pengiriman produk\Sort 3.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\populasi fact pengiriman produk\order service source.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\populasi fact pengiriman produk.Paths[Sort Output7]"
+              endId="Package\populasi fact pengiriman produk\Lookup.Inputs[Lookup Input]"
+              name="Sort Output"
+              startId="Package\populasi fact pengiriman produk\Sort 8.Outputs[Sort Output]" />
+            <path
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output]"
               endId="Package\populasi fact pengiriman produk\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 6.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output]"
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output1]"
               endId="Package\populasi fact pengiriman produk\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 4.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output1]"
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output2]"
               endId="Package\populasi fact pengiriman produk\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output2]"
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output3]"
               endId="Package\populasi fact pengiriman produk\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output3]"
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output4]"
               endId="Package\populasi fact pengiriman produk\join tabel.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output4]"
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output5]"
               endId="Package\populasi fact pengiriman produk\join tabel.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort.Outputs[Sort Output]" />
             <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output5]"
+              refId="Package\populasi fact pengiriman produk.Paths[Sort Output6]"
               endId="Package\populasi fact pengiriman produk\lookup dim produk.Inputs[Lookup Input]"
               name="Sort Output"
               startId="Package\populasi fact pengiriman produk\Sort 5.Outputs[Sort Output]" />
-            <path
-              refId="Package\populasi fact pengiriman produk.Paths[Sort Output6]"
-              endId="Package\populasi fact pengiriman produk\Lookup.Inputs[Lookup Input]"
-              name="Sort Output"
-              startId="Package\populasi fact pengiriman produk\Sort 8.Outputs[Sort Output]" />
             <path
               refId="Package\populasi fact pengiriman produk.Paths[Sort Output8]"
               endId="Package\populasi fact pengiriman produk\fact pengiriman produk.Inputs[OLE DB Destination Input]"
@@ -33875,9 +33875,9 @@ where [refTable].[string_tanggal] = ?</property>
               startId="Package\populasi fact produksi cost\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\populasi fact produksi cost.Paths[OLE DB Source Output2]"
-              endId="Package\populasi fact produksi cost\Sort 2.Inputs[Sort Input]"
+              endId="Package\populasi fact produksi cost\Sort.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\populasi fact produksi cost\pemesanan source.Outputs[OLE DB Source Output]" />
+              startId="Package\populasi fact produksi cost\produksi source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\populasi fact produksi cost.Paths[OLE DB Source Output1]"
               endId="Package\populasi fact produksi cost\Sort 1.Inputs[Sort Input]"
@@ -33885,9 +33885,9 @@ where [refTable].[string_tanggal] = ?</property>
               startId="Package\populasi fact produksi cost\order service source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\populasi fact produksi cost.Paths[OLE DB Source Output]"
-              endId="Package\populasi fact produksi cost\Sort.Inputs[Sort Input]"
+              endId="Package\populasi fact produksi cost\Sort 2.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\populasi fact produksi cost\produksi source.Outputs[OLE DB Source Output]" />
+              startId="Package\populasi fact produksi cost\pemesanan source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\populasi fact produksi cost.Paths[Sort Output]"
               endId="Package\populasi fact produksi cost\Merge Join 1.Inputs[Merge Join Left Input]"
@@ -37855,7 +37855,7 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\building dimension\dim staff produksi"
           TopLeft="1875.66666666667,341.166666666667" />
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output1]"
+          Id="Package\building dimension.Paths[OLE DB Source Output11]"
           TopLeft="1632.66666666667,57.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38083,7 +38083,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output]"
+          Id="Package\building dimension.Paths[Sort Output10]"
           TopLeft="312.25,122">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38119,7 +38119,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output10]"
+          Id="Package\building dimension.Paths[Sort Output1]"
           TopLeft="1459.16666666667,128.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38155,7 +38155,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output9]"
+          Id="Package\building dimension.Paths[Sort Output2]"
           TopLeft="1291.66666666667,125.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38191,7 +38191,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output8]"
+          Id="Package\building dimension.Paths[Sort Output3]"
           TopLeft="445.5,387">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38215,7 +38215,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output6]"
+          Id="Package\building dimension.Paths[Sort Output5]"
           TopLeft="1827.16666666667,155.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38251,7 +38251,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output7]"
+          Id="Package\building dimension.Paths[Sort Output4]"
           TopLeft="747.75,118.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38287,7 +38287,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output12]"
+          Id="Package\building dimension.Paths[Sort Output11]"
           TopLeft="94.75,118.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38323,7 +38323,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output11]"
+          Id="Package\building dimension.Paths[Sort Output]"
           TopLeft="618.75,244.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38359,7 +38359,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output4]"
+          Id="Package\building dimension.Paths[Sort Output7]"
           TopLeft="1365.91666666667,270.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38383,7 +38383,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output5]"
+          Id="Package\building dimension.Paths[Sort Output12]"
           TopLeft="244.25,247.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38419,7 +38419,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output3]"
+          Id="Package\building dimension.Paths[Sort Output6]"
           TopLeft="2025.16666666667,153.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38455,7 +38455,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output2]"
+          Id="Package\building dimension.Paths[Sort Output8]"
           TopLeft="537.25,119.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38491,7 +38491,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[Sort Output1]"
+          Id="Package\building dimension.Paths[Sort Output9]"
           TopLeft="1961.41666666667,309.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38515,7 +38515,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output12]"
+          Id="Package\building dimension.Paths[OLE DB Source Output1]"
           TopLeft="749.375,52">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38539,7 +38539,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output11]"
+          Id="Package\building dimension.Paths[OLE DB Source Output2]"
           TopLeft="537.875,53.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38563,7 +38563,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output10]"
+          Id="Package\building dimension.Paths[OLE DB Source Output6]"
           TopLeft="314.875,52">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38587,7 +38587,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output13]"
+          Id="Package\building dimension.Paths[OLE DB Source Output]"
           TopLeft="2372.41666666667,61.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38611,7 +38611,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output9]"
+          Id="Package\building dimension.Paths[OLE DB Source Output3]"
           TopLeft="97.4583333333333,52">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38635,7 +38635,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output8]"
+          Id="Package\building dimension.Paths[OLE DB Source Output4]"
           TopLeft="2742.66666666667,58.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38659,7 +38659,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output7]"
+          Id="Package\building dimension.Paths[OLE DB Source Output5]"
           TopLeft="2559.66666666667,58.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38683,7 +38683,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output]"
+          Id="Package\building dimension.Paths[OLE DB Source Output12]"
           TopLeft="1461.16666666667,57.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38707,7 +38707,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output5]"
+          Id="Package\building dimension.Paths[OLE DB Source Output7]"
           TopLeft="2205.66666666667,70.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38731,7 +38731,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output4]"
+          Id="Package\building dimension.Paths[OLE DB Source Output8]"
           TopLeft="1098.66666666667,57.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38755,7 +38755,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output3]"
+          Id="Package\building dimension.Paths[OLE DB Source Output9]"
           TopLeft="1293.41666666667,56.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38779,7 +38779,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output6]"
+          Id="Package\building dimension.Paths[OLE DB Source Output13]"
           TopLeft="2022.66666666667,68.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -38803,7 +38803,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\building dimension.Paths[OLE DB Source Output2]"
+          Id="Package\building dimension.Paths[OLE DB Source Output10]"
           TopLeft="1828.41666666667,70.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40573,7 +40573,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output1]"
+          Id="Package\populasi fact belanja.Paths[Sort Output2]"
           TopLeft="540,104">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40603,7 +40603,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output]"
+          Id="Package\populasi fact belanja.Paths[Sort Output1]"
           TopLeft="664,296">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40627,7 +40627,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output7]"
+          Id="Package\populasi fact belanja.Paths[Sort Output]"
           TopLeft="988.5,194">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40663,7 +40663,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output6]"
+          Id="Package\populasi fact belanja.Paths[Sort Output7]"
           TopLeft="283,102">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40693,7 +40693,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output5]"
+          Id="Package\populasi fact belanja.Paths[Sort Output6]"
           TopLeft="189,99">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40723,7 +40723,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output4]"
+          Id="Package\populasi fact belanja.Paths[Sort Output5]"
           TopLeft="708.5,126">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40759,7 +40759,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output3]"
+          Id="Package\populasi fact belanja.Paths[Sort Output4]"
           TopLeft="520,219">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40783,7 +40783,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[Sort Output2]"
+          Id="Package\populasi fact belanja.Paths[Sort Output3]"
           TopLeft="284,209">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40819,7 +40819,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[OLE DB Source Output2]"
+          Id="Package\populasi fact belanja.Paths[OLE DB Source Output1]"
           TopLeft="339,56">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40843,7 +40843,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[OLE DB Source Output3]"
+          Id="Package\populasi fact belanja.Paths[OLE DB Source Output]"
           TopLeft="142.5,53">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40867,7 +40867,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[OLE DB Source Output]"
+          Id="Package\populasi fact belanja.Paths[OLE DB Source Output2]"
           TopLeft="521,56">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40903,7 +40903,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact belanja.Paths[OLE DB Source Output1]"
+          Id="Package\populasi fact belanja.Paths[OLE DB Source Output3]"
           TopLeft="687,56">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42350,7 +42350,7 @@ where [refTable].[no_produk] = ?</property>
           Id="Package\populasi fact pengiriman produk\derive tanggal kirim"
           TopLeft="851,223" />
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output3]"
+          Id="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output]"
           TopLeft="720.5,55">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42374,7 +42374,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output]"
+          Id="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output2]"
           TopLeft="314.5,54">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42398,7 +42398,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output1]"
+          Id="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output3]"
           TopLeft="113.5,56">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42638,7 +42638,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output1]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output2]"
           TopLeft="512.75,128">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42662,7 +42662,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output1]"
           TopLeft="585,250">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42686,7 +42686,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output7]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output]"
           TopLeft="720,132">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42710,7 +42710,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output6]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output7]"
           TopLeft="540,298">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42734,7 +42734,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output5]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output6]"
           TopLeft="870,385">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42770,7 +42770,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output4]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output5]"
           TopLeft="115,127">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42806,7 +42806,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output3]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output4]"
           TopLeft="316.5,128">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42842,7 +42842,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[Sort Output2]"
+          Id="Package\populasi fact pengiriman produk.Paths[Sort Output3]"
           TopLeft="419,185.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -42866,7 +42866,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output2]"
+          Id="Package\populasi fact pengiriman produk.Paths[OLE DB Source Output1]"
           TopLeft="514.25,55">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -44420,7 +44420,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact produksi cost.Paths[OLE DB Source Output2]"
+          Id="Package\populasi fact produksi cost.Paths[OLE DB Source Output]"
           TopLeft="578,58">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -44464,7 +44464,7 @@ where [refTable].[no_produk] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populasi fact produksi cost.Paths[OLE DB Source Output]"
+          Id="Package\populasi fact produksi cost.Paths[OLE DB Source Output2]"
           TopLeft="119.75,64">
           <EdgeLayout.Curve>
             <mssgle:Curve
