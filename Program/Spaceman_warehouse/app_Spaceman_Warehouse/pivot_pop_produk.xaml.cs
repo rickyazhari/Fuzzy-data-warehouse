@@ -22,9 +22,6 @@ namespace app_Spaceman_Warehouse
     /// </summary>
     public partial class pivot_pop_produk : UserControl
     {
-        int col = 1;
-        int row = 0;
-        int appearindex = 1;
         public pivot_pop_produk()
         {
             InitializeComponent();

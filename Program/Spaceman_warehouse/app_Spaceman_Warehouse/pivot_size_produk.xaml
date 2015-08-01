@@ -19,8 +19,8 @@
             <DockPanel LastChildFill="True">
                 <TextBlock DockPanel.Dock="Top" Foreground="#ff008bff" FontSize="20" FontWeight="Bold"> Data Area</TextBlock>
                 <TextBlock Padding="10,0,0,0">
-                <RadioButton GroupName="da" x:Name="jumlah_produk" Foreground="#ff008bff" Margin="20,0,10,0" Checked="jumlah_produk_Checked">Jumlah Produk</RadioButton>
-                <RadioButton GroupName="da" x:Name="jumlah_size" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_size_Checked">Jumlah size</RadioButton>
+                <RadioButton GroupName="da" x:Name="jumlah_produk" x:FieldModifier="public" Foreground="#ff008bff" Margin="20,0,10,0" Checked="jumlah_produk_Checked">Jumlah Produk</RadioButton>
+                <RadioButton GroupName="da" x:Name="jumlah_size" x:FieldModifier="public" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_size_Checked">Jumlah size</RadioButton>
 
                 </TextBlock>
             </DockPanel>
@@ -30,7 +30,7 @@
                 <RowDefinition x:Name="pivot_height" Height="128"/>
                 <RowDefinition x:Name="chart_height" Height="0"/>
             </Grid.RowDefinitions>
-            <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" ShowFilterHeaders="False" RowTotalsLocation="Far" ShowRowTotals="False" ChartMaxPointCountInSeries="5000" ChartMaxSeriesCount="5000" AutoExpandGroups="True" ShowColumnTotals="False">
+            <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" ShowFilterHeaders="False" RowTotalsLocation="Far" ShowRowTotals="False" ChartMaxPointCountInSeries="5000" ChartMaxSeriesCount="5000" AutoExpandGroups="True" ShowColumnTotals="False" PrintColumnHeaders="False" PrintDataHeaders="False" PrintFilterHeaders="False" PrintRowHeaders="False" PrintLayoutMode="MultiplePagesLayout">
                 <dxpg:PivotGridControl.Fields>
                     <dxpg:PivotGridField Area="RowArea" Caption="Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]" AreaIndex="0"/>
                     <dxpg:PivotGridField Area="RowArea" Caption="Size" FieldName="[Dim Size].[Hierarchy].[Nama Size]" AreaIndex="1" SortMode="None"/>

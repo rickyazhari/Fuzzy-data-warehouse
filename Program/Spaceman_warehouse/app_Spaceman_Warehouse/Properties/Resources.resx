@@ -148,4 +148,28 @@
   <data name="Package" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Package.dtsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Spaceman_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spaceman_Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Spaceman_Logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spaceman_Logo_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Spaceman_Logo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spaceman_Logo_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spaceman_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spaceman_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spaceman_header" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spaceman_header.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_header" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_header.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_header" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_header.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_header1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_header.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

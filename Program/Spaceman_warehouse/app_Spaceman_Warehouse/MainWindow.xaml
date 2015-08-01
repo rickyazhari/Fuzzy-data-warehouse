@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
         Title="MainWindow" Height="600" Width="1280" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Loaded="Window_Loaded"  SizeChanged="Window_SizeChanged">
+    
     <Grid>
         <Border Name="wrapper" BorderBrush="#FF008BFF" BorderThickness="2">
             <Border.Background>
@@ -25,7 +26,14 @@
                             		<ImageBrush ImageSource="Resources/close_mouse_leave.png" Stretch="Uniform"/>
                             	</Label.Background></Label>
                         </TextBlock>
-                        <TextBlock Foreground="#FF008BFF" FontSize="36" VerticalAlignment="Center" Margin="20,0,0,0">Spaceman Industries Warehouse</TextBlock>
+                        <TextBlock Foreground="#FF008BFF" FontSize="36" VerticalAlignment="Stretch"  HorizontalAlignment="Left" Margin="10,0,0,0" Height="77" Width="858">
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="858" Height="77">
+                            	<Label.Background>
+                            		<ImageBrush ImageSource="Resources/spaceman_header.png"/>
+                            	</Label.Background>
+                 
+                            	</Label>
+                        </TextBlock>
                     </DockPanel>
                 </StackPanel>
 
@@ -46,10 +54,15 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <!--isi user control-->
-                    <StackPanel Name="content_control" DockPanel.Dock="Top" HorizontalAlignment="Left"></StackPanel>
+                    <StackPanel Name="content_control" DockPanel.Dock="Top" HorizontalAlignment="Left">
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="Resources/spaceman_background.png" Opacity="0.7" AlignmentX="Right" AlignmentY="Bottom" Stretch="Uniform" TileMode="Tile"/>
+                        </StackPanel.Background>
+                    </StackPanel>
                 </DockPanel>
             </DockPanel>
         </Border>
+       
     </Grid>
 
 

@@ -18,9 +18,9 @@
             <DockPanel LastChildFill="True">
                 <TextBlock DockPanel.Dock="Top" Foreground="#ff008bff" FontSize="20" FontWeight="Bold"> Data Area</TextBlock>
                 <TextBlock Padding="10,0,0,0">
-                <RadioButton GroupName="da" x:Name="biaya_pengiriman" Foreground="#ff008bff" Margin="20,0,10,0" Checked="biaya_pengiriman_Checked">Biaya Pengiriman</RadioButton>
-                <RadioButton GroupName="da" x:Name="jumlah_produk" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_produk_Checked">Jumlah Produk</RadioButton>
-                <RadioButton GroupName="da" x:Name="jumlah_jenis_pengiriman" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_jenis_pengiriman_Checked">Jumlah Jenis Pengiriman</RadioButton>
+                <RadioButton GroupName="da" x:Name="biaya_pengiriman" x:FieldModifier="public" Foreground="#ff008bff" Margin="20,0,10,0" Checked="biaya_pengiriman_Checked">Biaya Pengiriman</RadioButton>
+                <RadioButton GroupName="da" x:Name="jumlah_produk" x:FieldModifier="public" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_produk_Checked">Jumlah Produk</RadioButton>
+                <RadioButton GroupName="da" x:Name="jumlah_jenis_pengiriman" x:FieldModifier="public" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_jenis_pengiriman_Checked">Jumlah Jenis Pengiriman</RadioButton>
                 </TextBlock>
             </DockPanel>
         </Border>
@@ -29,7 +29,7 @@
                 <RowDefinition x:Name="pivot_height" x:FieldModifier="public" Height="188"/>
                 <RowDefinition x:Name="chart_height" x:FieldModifier="public" Height="0"/>
             </Grid.RowDefinitions>
-            <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" AutoExpandGroups="True" ShowColumnTotals="False" ShowFilterHeaders="False" ShowRowTotals="False" RowTotalsLocation="Far" ChartMaxPointCountInSeries="5000" ChartDataProvidePriority="Columns" ChartMaxSeriesCount="500">
+            <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" AutoExpandGroups="True" ShowColumnTotals="False" ShowFilterHeaders="False" ShowRowTotals="False" RowTotalsLocation="Far" ChartMaxPointCountInSeries="5000" ChartDataProvidePriority="Columns" ChartMaxSeriesCount="500" PrintColumnHeaders="False" PrintDataHeaders="False" PrintFilterHeaders="False" PrintRowHeaders="False" PrintLayoutMode="MultiplePagesLayout">
                 <dxpg:PivotGridControl.Fields>
                     <dxpg:PivotGridField Area="RowArea" Caption="Jenis Pengiriman" FieldName="[Dim Pengiriman].[Hierarchy].[Jenis Pengiriman]" AreaIndex="1"/>
                     <dxpg:PivotGridField Area="RowArea" Caption="Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]" AreaIndex="0"/>

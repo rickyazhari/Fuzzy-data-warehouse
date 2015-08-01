@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using FirstFloor.ModernUI.Windows.Controls;
 using DevExpress.Xpf.Printing;
+using DevExpress.Xpf.Utils;
 
 namespace app_Spaceman_Warehouse
 {
@@ -188,10 +189,108 @@ namespace app_Spaceman_Warehouse
 
         private void btn_print_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            PrintableControlLink link = new PrintableControlLink(pivot.pivot);
-            link.PageHeaderTemplate = (DataTemplate)TryFindResource("header_pemesanan");
-            link.PageHeaderData = "SPACEMAN";
-            link.ShowPrintPreviewDialog(root,"Print Preview");
+            PrintableControlLink pcl = new PrintableControlLink(pivot.pivot);
+            switch (pointer)
+            {
+
+                case "pop_produk":
+                    pcl = new PrintableControlLink(populer_produk.pivot);
+                    pcl.PageHeaderTemplate = (DataTemplate)TryFindResource("page_header");
+                    pcl.PageHeaderData = "KEPOPULERAN PRODUK";
+                    break;
+
+                case "pop_design":
+                    pcl = new PrintableControlLink(populer_design.pivot);
+                    pcl.PageHeaderTemplate = (DataTemplate)TryFindResource("page_header");
+                    pcl.PageHeaderData = "KEPOPULERAN PRODUK";
+                    break;
+
+                case "pelunasan":
+                    pcl = new PrintableControlLink(pelunasan.pivot);
+                    pcl.PageHeaderTemplate = (DataTemplate)TryFindResource("page_header");
+                    pcl.PageHeaderData = "PELUNASAN KONSUMEN";
+                    break;
+
+                case "size":
+                    pcl = new PrintableControlLink(size_produk.pivot);
+                    pcl.PageHeaderTemplate = (DataTemplate)TryFindResource("page_header");
+                    if (size_produk.jumlah_size.IsChecked == true)
+                    {
+                        pcl.PageHeaderData = "SIZE PRODUK - JUMLAH SIZE";
+                    }
+                    else
+                    {
+                        pcl.PageHeaderData = "SIZE PRODUK - JUMLAH PRODUK";
+                    }
+                    break;
+
+                case "pengiriman":
+                    pcl = new PrintableControlLink(pengiriman_produk.pivot);
+                    pcl.PageHeaderTemplate = (DataTemplate)TryFindResource("page_header");
+                    if (pengiriman_produk.jumlah_produk.IsChecked == true)
+                    {
+                        pcl.PageHeaderData = "PENGIRIMAN PRODUK - JUMLAH PRODUK";
+                    }
+                    else if (pengiriman_produk.jumlah_jenis_pengiriman.IsChecked == true)
+                    {
+                        pcl.PageHeaderData = "PENGIRIMAN PRODUK - JUMLAH JENIS PENGIRIMAN";
+                    }
+                    else
+                    {
+                        pcl.PageHeaderData = "PENGIRIMAN PRODUK - BIAYA PENGIRIMAN";
+                    }
+                    break;
+
+                case "belanja":
+                    pcl = new PrintableControlLink(belanja.pivot);
+                    pcl.PageHeaderTemplate = (DataTemplate)TryFindResource("page_header");
+                    if (belanja.Jumlah.IsChecked == true)
+                    {
+                        pcl.PageHeaderData = "BELANJA - JUMLAH PEMAKAIAN";
+                    }
+                    else
+                    {
+                        pcl.PageHeaderData = "BELANJA - KREDIT";
+                    }
+                    break;
+
+                case "produksi":
+                    pcl = new PrintableControlLink(produksi.pivot);
+                    pcl.PageHeaderTemplate = (DataTemplate)TryFindResource("page_header");
+                    if (produksi.jumlah.IsChecked == true)
+                    {
+                        pcl.PageHeaderData = "PRODUKSI PRODUK - JUMLAH PRODUKSI";
+                    }
+                    else
+                    {
+                        pcl.PageHeaderData = "PRODUKSI PRODUK - BIAYA PRODUKSI";
+                    }
+                    break;
+
+                default :
+                   pcl = new PrintableControlLink(pivot.pivot);
+                    pcl.PageHeaderTemplate = (DataTemplate)TryFindResource("page_header");
+                    if (pivot.jumlah_produk.IsChecked == true)
+                    {
+                        pcl.PageHeaderData = "PEMESANAN PRODUK - JUMLAH PRODUK";
+                    }
+                    else if (pivot.jumlah_order.IsChecked == true)
+                    {
+                        pcl.PageHeaderData = "PEMESANAN PRODUK - JUMLAH ORDER";
+                    }
+                    else
+                    {
+                        pcl.PageHeaderData = "PEMESANAN PRODUK - SALDO ORDER";
+                    }
+                    break;
+            }
+           
+            pcl.Landscape = true;
+            pcl.PaperKind = System.Drawing.Printing.PaperKind.A4; 
+            pcl.CreateDocument(true);
+            pcl.ShowPrintPreviewDialog(root, "Print Preview");
+            
+
         }
 
         private void btn_chart_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

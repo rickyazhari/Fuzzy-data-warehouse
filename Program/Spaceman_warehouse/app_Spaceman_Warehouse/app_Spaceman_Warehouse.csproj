@@ -56,6 +56,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\DevExpress 15.1\Components\Bin\Framework\DevExpress.Xpf.DocumentViewer.v15.1.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.PivotGrid.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Printing.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.PropertyGrid.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -337,6 +338,30 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Spaceman_Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Spaceman_Logo_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Spaceman_Logo_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\spaceman_header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\spaceman_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\document_header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo_header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo_header.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

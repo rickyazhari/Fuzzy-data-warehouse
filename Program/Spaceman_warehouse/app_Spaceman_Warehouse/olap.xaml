@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
-             d:DesignHeight="464" d:DesignWidth="500" Width="1276" Loaded="UserControl_Loaded">
+             d:DesignHeight="464" d:DesignWidth="500" Width="1276" Loaded="UserControl_Loaded" Background="White">
     
     <DockPanel LastChildFill="True">
         <DockPanel x:Name="menu_olap" x:FieldModifier="public" LastChildFill="True" DockPanel.Dock="Left" Width="35" Background="#FFFFFF" SizeChanged="menu_olap_SizeChanged">
@@ -275,10 +275,19 @@
             <ColorAnimation Storyboard.TargetName="btn_pivot_content_content2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#ff008bff" BeginTime="0:0:0:0.2" Duration="0:0:0:0.1"></ColorAnimation>
         </Storyboard>
         
-        <DataTemplate x:Key="header_pemesanan">
-            
-                <dxe:TextEdit VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="70" Text="{Binding Path=Content, Mode=OneWay}"></dxe:TextEdit>
-            
+        <DataTemplate x:Key="report_header">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                
+                
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="page_header">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                <dxe:ImageEdit IsPrintingMode="True" Source="Resources/logo_header.jpg" ShowMenu="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                
+                <dxe:TextEdit IsPrintingMode="True" VerticalAlignment="Center" HorizontalAlignment="Center" EditValue="{Binding Path=Content, Mode=OneWay}" FontWeight="Bold" FontSize="16" Margin="0,20,0,10" MinWidth="500" Padding="50,0"/>
+            </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
 </UserControl>

@@ -43,7 +43,7 @@ namespace app_Spaceman_Warehouse
             status_content.Text = "Home";
             m = (Storyboard)TryFindResource("window_open");
             m.Begin();
-            isi_content = new mainmenu(this);
+            isi_content = new home(this);
             content_control.Children.Add(isi_content);
             x = (Storyboard)TryFindResource("content_fading_in");
             x.Begin();

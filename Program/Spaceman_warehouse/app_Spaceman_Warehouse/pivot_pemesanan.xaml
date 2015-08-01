@@ -19,9 +19,9 @@
             <DockPanel LastChildFill="True">
             <TextBlock DockPanel.Dock="Top" Foreground="#ff008bff" FontSize="20" FontWeight="Bold"> Data Area</TextBlock>
             <TextBlock Padding="10,0,0,0">
-                <RadioButton GroupName="da" x:Name="saldo_order" Foreground="#ff008bff" Margin="20,0,10,0" Checked="saldo_order_Checked">Saldo Order</RadioButton>
-                <RadioButton GroupName="da" x:Name="jumlah_produk" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_produk_Checked">Jumlah Produk</RadioButton>
-                <RadioButton GroupName="da" x:Name="jumlah_order" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_order_Checked">Jumlah Order</RadioButton>
+                <RadioButton GroupName="da" x:Name="saldo_order" x:FieldModifier="public" Foreground="#ff008bff" Margin="20,0,10,0" Checked="saldo_order_Checked">Saldo Order</RadioButton>
+                <RadioButton GroupName="da" x:Name="jumlah_produk" x:FieldModifier="public" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_produk_Checked">Jumlah Produk</RadioButton>
+                <RadioButton GroupName="da" x:Name="jumlah_order" x:FieldModifier="public" Foreground="#ff008bff" Margin="0,0,20,0" Checked="jumlah_order_Checked">Jumlah Order</RadioButton>
             </TextBlock>
             </DockPanel>
         </Border>
@@ -31,12 +31,12 @@
             <RowDefinition x:Name="print_height" x:FieldModifier="public" Height="0"/>
             <RowDefinition x:Name="chart_height"  x:FieldModifier="public" Height="0"/>
         </Grid.RowDefinitions>
-        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" RowTotalsLocation="Far" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ChartDataProvidePriority="Columns" ChartMaxSeriesCount="50" ChartMaxPointCountInSeries="500" ChartFieldValuesProvideMode="Value" PrintHeadersOnEveryPage="True" PrintFilterHeaders="False" PrintDataHeaders="False" PrintColumnHeaders="False" PrintRowHeaders="False" AutoExpandGroups="True">
+        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" RowTotalsLocation="Far" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ChartDataProvidePriority="Columns" ChartMaxSeriesCount="50" ChartMaxPointCountInSeries="500" ChartFieldValuesProvideMode="Value" PrintHeadersOnEveryPage="True" PrintFilterHeaders="False" PrintDataHeaders="False" PrintColumnHeaders="False" PrintRowHeaders="False" AutoExpandGroups="True" PrintLayoutMode="MultiplePagesLayout">
             <dxpg:PivotGridControl.Fields>
                 <dxpg:PivotGridField Area="RowArea" Caption="Nama Konsumen" FieldName="[Dim Konsumen].[Hierarchy].[Nama Konsumen]" AreaIndex="0"/>
                 <dxpg:PivotGridField Area="ColumnArea" Caption="Nama Produk" FieldName="[Dim Produk].[Hierarchy].[Nama Produk]" AreaIndex="1"/>
                 <dxpg:PivotGridField Area="ColumnArea" Caption="Tahun" FieldName="[Dim Waktu].[year].[Tahun]" AreaIndex="0"/>
-                <dxpg:PivotGridField x:Name="data_area" Area="DataArea" Caption="saldo" FieldName="[Measures].[saldo]" CellFormat="c2" AreaIndex="0"/>
+                <dxpg:PivotGridField x:Name="data_area" Area="DataArea" Caption="saldo" FieldName="[Measures].[saldo]" CellFormat="C2" AreaIndex="0"/>
             </dxpg:PivotGridControl.Fields>
         </dxpg:PivotGridControl>
         <dxc:ChartControl DataSource="{Binding ChartDataSource, ElementName=pivot}" Grid.Row="2">

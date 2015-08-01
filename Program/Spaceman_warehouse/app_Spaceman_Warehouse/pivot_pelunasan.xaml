@@ -19,7 +19,7 @@
             <RowDefinition x:Name="pivot_height" x:FieldModifier="public" Height="182"/>
             <RowDefinition x:Name="chart_height" x:FieldModifier="public" Height="0"/>
         </Grid.RowDefinitions>
-        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" RowTotalsLocation="Far" ShowColumnGrandTotals="False" ShowColumnGrandTotalHeader="False" ShowColumnTotals="False" ShowFilterHeaders="False" ShowRowGrandTotalHeader="False" ShowRowGrandTotals="False" ShowRowTotals="False" AutoExpandGroups="True">
+        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" RowTotalsLocation="Far" ShowColumnGrandTotals="False" ShowColumnGrandTotalHeader="False" ShowColumnTotals="False" ShowFilterHeaders="False" ShowRowGrandTotalHeader="False" ShowRowGrandTotals="False" ShowRowTotals="False" AutoExpandGroups="True" PrintColumnHeaders="False" PrintDataHeaders="False" PrintFilterHeaders="False" PrintRowHeaders="False" PrintLayoutMode="MultiplePagesLayout">
             <dxpg:PivotGridControl.FormatConditions>
                 <dxpg:ColorScaleFormatCondition ApplyToSpecificLevel="True" ColumnName="klasifikasi" MeasureName="persentase" RowName="konsumen">
                     <dx:ColorScaleFormat ColorMin="White" ColorMax="#FF63BE7B" ColorMiddle="#FFF5F774"/>

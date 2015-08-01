@@ -83,6 +83,36 @@ namespace app_Spaceman_Warehouse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap document_header {
+            get {
+                object obj = ResourceManager.GetObject("document_header", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_header {
+            get {
+                object obj = ResourceManager.GetObject("logo_header", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_header1 {
+            get {
+                object obj = ResourceManager.GetObject("logo_header1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maximized_mouse_enter {
             get {
                 object obj = ResourceManager.GetObject("maximized_mouse_enter", resourceCulture);
@@ -157,6 +187,56 @@ namespace app_Spaceman_Warehouse.Properties {
             get {
                 object obj = ResourceManager.GetObject("Package", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spaceman_background {
+            get {
+                object obj = ResourceManager.GetObject("spaceman_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spaceman_header {
+            get {
+                object obj = ResourceManager.GetObject("spaceman_header", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spaceman_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Spaceman_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spaceman_Logo_1 {
+            get {
+                object obj = ResourceManager.GetObject("Spaceman_Logo_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spaceman_Logo_2 {
+            get {
+                object obj = ResourceManager.GetObject("Spaceman_Logo_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

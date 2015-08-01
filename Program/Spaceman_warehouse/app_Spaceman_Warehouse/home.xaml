@@ -85,7 +85,7 @@
     
     <!-- Main Content
     -->
-    <Grid Background="#ffffff" Width="1276">
+    <Grid Width="1276">
         <DockPanel LastChildFill="True">
             <StackPanel DockPanel.Dock="Top" Width="638" Height="60" HorizontalAlignment="Left" Margin="20,20,0,0">
                 <Label Foreground="#FF008BFF" FontSize="24" FontWeight="Bold" FontFamily="Kalinga" HorizontalAlignment="Left" Width="600" Padding="10,0,0,0" Grid.IsSharedSizeScope="True">Welcome</Label>

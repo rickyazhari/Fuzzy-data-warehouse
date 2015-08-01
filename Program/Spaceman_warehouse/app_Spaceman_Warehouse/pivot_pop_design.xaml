@@ -19,7 +19,7 @@
             <RowDefinition x:Name="pivot_height" x:FieldModifier="public" Height="182"/>
             <RowDefinition x:Name="chart_height" x:FieldModifier="public" Height="0"/>
         </Grid.RowDefinitions>
-        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" ChartDataProvidePriority="Columns" ChartMaxPointCountInSeries="1000" ChartMaxSeriesCount="100" ShowColumnGrandTotalHeader="False" ShowColumnGrandTotals="False" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ShowRowGrandTotalHeader="False" ShowRowGrandTotals="False" RowTotalsLocation="Far" AutoExpandGroups="True">
+        <dxpg:PivotGridControl x:Name="pivot" ChartSelectionOnly="False" Grid.Row="0" OlapDataProvider="OleDb" OlapConnectionString="{Binding ConnectionString, Source={StaticResource PivotOlapDataSource}}" ChartDataProvidePriority="Columns" ChartMaxPointCountInSeries="1000" ChartMaxSeriesCount="100" ShowColumnGrandTotalHeader="False" ShowColumnGrandTotals="False" ShowColumnTotals="False" ShowRowTotals="False" ShowFilterHeaders="False" ShowRowGrandTotalHeader="False" ShowRowGrandTotals="False" RowTotalsLocation="Far" AutoExpandGroups="True" PrintDataHeaders="False" PrintColumnHeaders="False" PrintLayoutMode="MultiplePagesLayout" PrintRowHeaders="False">
             <dxpg:PivotGridControl.FormatConditions>
                 <dxpg:ColorScaleFormatCondition ApplyToSpecificLevel="True" ColumnName="kelas" MeasureName="populer" RowName="design">
                     <dx:ColorScaleFormat ColorMin="White" ColorMax="#FF63BE7B" ColorMiddle="#FFF5F774"/>
